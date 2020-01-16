@@ -1,0 +1,1267 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Database Security  · OWASP Cheat Sheet Series</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Denial_of_Service_Cheat_Sheet.html" />
+    
+    
+    <link rel="prev" href="DOM_based_XSS_Prevention_Cheat_Sheet.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Cheatsheets</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Index.html">
+            
+                <a href="Index.html">
+            
+                    
+                    Index Alphabetical
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="IndexASVS.html">
+            
+                <a href="IndexASVS.html">
+            
+                    
+                    Index ASVS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="IndexProactiveControls.html">
+            
+                <a href="IndexProactiveControls.html">
+            
+                    
+                    Index Proactive Controls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="AJAX_Security_Cheat_Sheet.html">
+            
+                <a href="AJAX_Security_Cheat_Sheet.html">
+            
+                    
+                    AJAX Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Abuse_Case_Cheat_Sheet.html">
+            
+                <a href="Abuse_Case_Cheat_Sheet.html">
+            
+                    
+                    Abuse Case 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Access_Control_Cheat_Sheet.html">
+            
+                <a href="Access_Control_Cheat_Sheet.html">
+            
+                    
+                    Access Control 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Attack_Surface_Analysis_Cheat_Sheet.html">
+            
+                <a href="Attack_Surface_Analysis_Cheat_Sheet.html">
+            
+                    
+                    Attack Surface Analysis 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Authentication_Cheat_Sheet.html">
+            
+                <a href="Authentication_Cheat_Sheet.html">
+            
+                    
+                    Authentication 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Authorization_Testing_Automation.html">
+            
+                <a href="Authorization_Testing_Automation.html">
+            
+                    
+                    Authorization Testing Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="Bean_Validation_Cheat_Sheet.html">
+            
+                <a href="Bean_Validation_Cheat_Sheet.html">
+            
+                    
+                    Bean Validation 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="C-Based_Toolchain_Hardening.html">
+            
+                <a href="C-Based_Toolchain_Hardening.html">
+            
+                    
+                    C-Based Toolchain Hardening
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="C-Based_Toolchain_Hardening_Cheat_Sheet.html">
+            
+                <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html">
+            
+                    
+                    C-Based Toolchain Hardening 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Choosing_and_Using_Security_Questions_Cheat_Sheet.html">
+            
+                <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html">
+            
+                    
+                    Choosing and Using Security Questions 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="Clickjacking_Defense_Cheat_Sheet.html">
+            
+                <a href="Clickjacking_Defense_Cheat_Sheet.html">
+            
+                    
+                    Clickjacking Defense 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Content_Security_Policy_Cheat_Sheet.html">
+            
+                <a href="Content_Security_Policy_Cheat_Sheet.html">
+            
+                    
+                    Content Security Policy 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="Credential_Stuffing_Prevention_Cheat_Sheet.html">
+            
+                <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html">
+            
+                    
+                    Credential Stuffing Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">
+            
+                <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">
+            
+                    
+                    Cross-Site Request Forgery Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">
+            
+                <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">
+            
+                    
+                    Cross Site Scripting Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="Cryptographic_Storage_Cheat_Sheet.html">
+            
+                <a href="Cryptographic_Storage_Cheat_Sheet.html">
+            
+                    
+                    Cryptographic Storage 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="DOM_based_XSS_Prevention_Cheat_Sheet.html">
+            
+                <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html">
+            
+                    
+                    DOM based XSS Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.22" data-path="Database_Security_Cheat_Sheet.html">
+            
+                <a href="Database_Security_Cheat_Sheet.html">
+            
+                    
+                    Database Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="Denial_of_Service_Cheat_Sheet.html">
+            
+                <a href="Denial_of_Service_Cheat_Sheet.html">
+            
+                    
+                    Denial of Service 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="Deserialization_Cheat_Sheet.html">
+            
+                <a href="Deserialization_Cheat_Sheet.html">
+            
+                    
+                    Deserialization 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="Docker_Security_Cheat_Sheet.html">
+            
+                <a href="Docker_Security_Cheat_Sheet.html">
+            
+                    
+                    Docker Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="DotNet_Security_Cheat_Sheet.html">
+            
+                <a href="DotNet_Security_Cheat_Sheet.html">
+            
+                    
+                    DotNet Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="Error_Handling_Cheat_Sheet.html">
+            
+                <a href="Error_Handling_Cheat_Sheet.html">
+            
+                    
+                    Error Handling 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="Forgot_Password_Cheat_Sheet.html">
+            
+                <a href="Forgot_Password_Cheat_Sheet.html">
+            
+                    
+                    Forgot Password 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="HTML5_Security_Cheat_Sheet.html">
+            
+                <a href="HTML5_Security_Cheat_Sheet.html">
+            
+                    
+                    HTML5 Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="HTTP_Strict_Transport_Security_Cheat_Sheet.html">
+            
+                <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html">
+            
+                    
+                    HTTP Strict Transport Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="Injection_Prevention_Cheat_Sheet.html">
+            
+                <a href="Injection_Prevention_Cheat_Sheet.html">
+            
+                    
+                    Injection Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="Injection_Prevention_Cheat_Sheet_in_Java.html">
+            
+                <a href="Injection_Prevention_Cheat_Sheet_in_Java.html">
+            
+                    
+                    Injection Prevention  in Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="Input_Validation_Cheat_Sheet.html">
+            
+                <a href="Input_Validation_Cheat_Sheet.html">
+            
+                    
+                    Input Validation 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">
+            
+                <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">
+            
+                    
+                    Insecure Direct Object Reference Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="JAAS_Cheat_Sheet.html">
+            
+                <a href="JAAS_Cheat_Sheet.html">
+            
+                    
+                    JAAS 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="JSON_Web_Token_Cheat_Sheet_for_Java.html">
+            
+                <a href="JSON_Web_Token_Cheat_Sheet_for_Java.html">
+            
+                    
+                    JSON Web Token  for Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="Key_Management_Cheat_Sheet.html">
+            
+                <a href="Key_Management_Cheat_Sheet.html">
+            
+                    
+                    Key Management 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="LDAP_Injection_Prevention_Cheat_Sheet.html">
+            
+                <a href="LDAP_Injection_Prevention_Cheat_Sheet.html">
+            
+                    
+                    LDAP Injection Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="Logging_Cheat_Sheet.html">
+            
+                <a href="Logging_Cheat_Sheet.html">
+            
+                    
+                    Logging 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="Mass_Assignment_Cheat_Sheet.html">
+            
+                <a href="Mass_Assignment_Cheat_Sheet.html">
+            
+                    
+                    Mass Assignment 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html">
+            
+                <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html">
+            
+                    
+                    Microservices based Security Arch Doc 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="Multifactor_Authentication_Cheat_Sheet.html">
+            
+                <a href="Multifactor_Authentication_Cheat_Sheet.html">
+            
+                    
+                    Multifactor Authentication 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="Nodejs_security_cheat_sheet.html">
+            
+                <a href="Nodejs_security_cheat_sheet.html">
+            
+                    
+                    Nodejs security cheat sheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="OS_Command_Injection_Defense_Cheat_Sheet.html">
+            
+                <a href="OS_Command_Injection_Defense_Cheat_Sheet.html">
+            
+                    
+                    OS Command Injection Defense 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="PHP_Configuration_Cheat_Sheet.html">
+            
+                <a href="PHP_Configuration_Cheat_Sheet.html">
+            
+                    
+                    PHP Configuration 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="Password_Storage_Cheat_Sheet.html">
+            
+                <a href="Password_Storage_Cheat_Sheet.html">
+            
+                    
+                    Password Storage 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="Pinning_Cheat_Sheet.html">
+            
+                <a href="Pinning_Cheat_Sheet.html">
+            
+                    
+                    Pinning 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="Protect_FileUpload_Against_Malicious_File.html">
+            
+                <a href="Protect_FileUpload_Against_Malicious_File.html">
+            
+                    
+                    Protect FileUpload Against Malicious File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="Query_Parameterization_Cheat_Sheet.html">
+            
+                <a href="Query_Parameterization_Cheat_Sheet.html">
+            
+                    
+                    Query Parameterization 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="REST_Assessment_Cheat_Sheet.html">
+            
+                <a href="REST_Assessment_Cheat_Sheet.html">
+            
+                    
+                    REST Assessment 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="REST_Security_Cheat_Sheet.html">
+            
+                <a href="REST_Security_Cheat_Sheet.html">
+            
+                    
+                    REST Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="Ruby_on_Rails_Cheatsheet.html">
+            
+                <a href="Ruby_on_Rails_Cheatsheet.html">
+            
+                    
+                    Ruby on Rails Cheatsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="SAML_Security_Cheat_Sheet.html">
+            
+                <a href="SAML_Security_Cheat_Sheet.html">
+            
+                    
+                    SAML Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="SQL_Injection_Prevention_Cheat_Sheet.html">
+            
+                <a href="SQL_Injection_Prevention_Cheat_Sheet.html">
+            
+                    
+                    SQL Injection Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="Securing_Cascading_Style_Sheets_Cheat_Sheet.html">
+            
+                <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html">
+            
+                    
+                    Securing Cascading Style Sheets 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html">
+            
+                <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html">
+            
+                    
+                    Server Side Request Forgery Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="Session_Management_Cheat_Sheet.html">
+            
+                <a href="Session_Management_Cheat_Sheet.html">
+            
+                    
+                    Session Management 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="TLS_Cipher_String_Cheat_Sheet.html">
+            
+                <a href="TLS_Cipher_String_Cheat_Sheet.html">
+            
+                    
+                    TLS Cipher String 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="Third_Party_Javascript_Management_Cheat_Sheet.html">
+            
+                <a href="Third_Party_Javascript_Management_Cheat_Sheet.html">
+            
+                    
+                    Third Party Javascript Management 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="Threat_Modeling_Cheat_Sheet.html">
+            
+                <a href="Threat_Modeling_Cheat_Sheet.html">
+            
+                    
+                    Threat Modeling 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="Transaction_Authorization_Cheat_Sheet.html">
+            
+                <a href="Transaction_Authorization_Cheat_Sheet.html">
+            
+                    
+                    Transaction Authorization 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="Transport_Layer_Protection_Cheat_Sheet.html">
+            
+                <a href="Transport_Layer_Protection_Cheat_Sheet.html">
+            
+                    
+                    Transport Layer Protection 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html">
+            
+                <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html">
+            
+                    
+                    Unvalidated Redirects and Forwards 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="User_Privacy_Protection_Cheat_Sheet.html">
+            
+                <a href="User_Privacy_Protection_Cheat_Sheet.html">
+            
+                    
+                    User Privacy Protection 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="Virtual_Patching_Cheat_Sheet.html">
+            
+                <a href="Virtual_Patching_Cheat_Sheet.html">
+            
+                    
+                    Virtual Patching 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="Vulnerability_Disclosure_Cheat_Sheet.html">
+            
+                <a href="Vulnerability_Disclosure_Cheat_Sheet.html">
+            
+                    
+                    Vulnerability Disclosure 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="Vulnerable_Dependency_Management_Cheat_Sheet.html">
+            
+                <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html">
+            
+                    
+                    Vulnerable Dependency Management 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="Web_Service_Security_Cheat_Sheet.html">
+            
+                <a href="Web_Service_Security_Cheat_Sheet.html">
+            
+                    
+                    Web Service Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="XML_External_Entity_Prevention_Cheat_Sheet.html">
+            
+                <a href="XML_External_Entity_Prevention_Cheat_Sheet.html">
+            
+                    
+                    XML External Entity Prevention 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="XML_Security_Cheat_Sheet.html">
+            
+                <a href="XML_Security_Cheat_Sheet.html">
+            
+                    
+                    XML Security 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Database Security </a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="database-security-cheat-sheet"><a name="database-security-cheat-sheet" class="plugin-anchor" href="#database-security-cheat-sheet"><i class="fa fa-link" aria-hidden="true"></i></a>Database Security Cheat Sheet</h1>
+<h2 id="introduction"><a name="introduction" class="plugin-anchor" href="#introduction"><i class="fa fa-link" aria-hidden="true"></i></a>Introduction</h2>
+<p>This cheat sheet provides guidance on securely configuring and using the SQL and NoSQL databases. It is intended to be used by application developers when they are responsible for managing the databases, in the absence of a dedicated database administrator (DBA). For details about protecting against SQL Injection attacks, see the <a href="SQL_Injection_Prevention_Cheat_Sheet.html">SQL Injection Prevention Cheat Sheet</a>.</p>
+<h2 id="contents"><a name="contents" class="plugin-anchor" href="#contents"><i class="fa fa-link" aria-hidden="true"></i></a>Contents</h2>
+<ul>
+<li><a href="#connecting-to-the-database">Connecting to the Database</a><ul>
+<li><a href="#transport-layer-protection">Transport Layer Protection</a></li>
+</ul>
+</li>
+<li><a href="#authentication">Authentication</a><ul>
+<li><a href="#storing-database-credentials">Storing Database Credentials</a></li>
+</ul>
+</li>
+<li><a href="#permissions">Permissions</a></li>
+<li><a href="#database-configuration-and-hardening">Database Configuration and Hardening</a><ul>
+<li><a href="#microsoft-sql-server">Microsoft SQL Server</a></li>
+<li><a href="#mysql-and-mariadb">MySQL and MariaDB</a></li>
+<li><a href="#postgresql">PostgreSQL</a></li>
+<li><a href="#mongodb">MongoDB</a></li>
+<li><a href="#redis">Redis</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="connecting-to-the-database"><a name="connecting-to-the-database" class="plugin-anchor" href="#connecting-to-the-database"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting to the Database</h2>
+<p>The backend database used by the application should be isolated as much as possible, in order to prevent malicious or undesirable users from being able to connect to it. Exactly how this is achieved will depend on the system and network architecture. The following options could be used to protect it:</p>
+<ul>
+<li>Disabling network (TCP) access and requiring all access is over a local socket file or named pipe.</li>
+<li>Configuring the database to only bind on localhost.</li>
+<li>Restricting access to the network port to specific hosts with firewall rules.</li>
+<li>Placing the database server in a separate DMZ isolated from the application server.</li>
+</ul>
+<p>Similar protection should be implemented to protect any web-based management tools used with the database, such as phpMyAdmin.</p>
+<p>When an application is running on an untrusted system (such as a thick-client), it should always connect to the backend through an API that can enforce appropriate access control and restrictions. Direct connections should <strong>never</strong> be made from a thick client to the backend database.</p>
+<h3 id="transport-layer-protection"><a name="transport-layer-protection" class="plugin-anchor" href="#transport-layer-protection"><i class="fa fa-link" aria-hidden="true"></i></a>Transport Layer Protection</h3>
+<p>Most databases will allow unencrypted network connections in their default configurations. Although some will encrypt the initial authentication (such as Microsoft SQL Server), the rest of the traffic will be unencrypted, meaning that all kinds of sensitive information will be sent across the network in clear text. The following steps should be taken to prevent unencrypted traffic:</p>
+<ul>
+<li>Configure the database to only allow encrypted connections.</li>
+<li>Install a trusted digital certificate on the server.</li>
+<li>Configure the client application to connect using TLSv1.2+ with modern ciphers (e.g, AES-GCM or ChaCha20).</li>
+<li>Configure the client application to verify that the digital certificate is correct.</li>
+</ul>
+<p>The <a href="Transport_Layer_Protection_Cheat_Sheet.html">Transport Layer Protection</a> and <a href="TLS_Cipher_String_Cheat_Sheet.html">TLS Cipher String</a> Cheat Sheets contain further guidance on securely configuring TLS.</p>
+<h2 id="authentication"><a name="authentication" class="plugin-anchor" href="#authentication"><i class="fa fa-link" aria-hidden="true"></i></a>Authentication</h2>
+<p>The database should be configured to always require authentication, including connections from the local server. Database accounts should be:</p>
+<ul>
+<li>Protected with strong and unique passwords.</li>
+<li>Used by a single application or service.</li>
+<li>Configured with the minimum permissions required as discussed in the <a href="#permissions">permissions section below</a>.</li>
+</ul>
+<p>As with any system that has its own user accounts, the usual account management processes should be followed, including:</p>
+<ul>
+<li>Regular reviews of the accounts to ensure that they are still required.</li>
+<li>Regular reviews of permissions.</li>
+<li>Removing user accounts when an application is decommissioned.</li>
+<li>Changing the passwords when staff leave, or there is reason to believe that they may have been compromised.</li>
+</ul>
+<p>For Microsoft SQL Server, consider the use of <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server" target="_blank">Windows or Integrated-Authentication</a>, which uses existing Windows accounts rather than SQL Server accounts. This also removes the requirement to store credentials in the application, as it will connect using the credentials of the Windows user it is running under. The <a href="https://dev.mysql.com/doc/connector-net/en/connector-net-programming-authentication-windows-native.html" target="_blank">Windows Native Authentication Plugins</a> provides similar functionality for MySQL.</p>
+<h3 id="storing-database-credentials"><a name="storing-database-credentials" class="plugin-anchor" href="#storing-database-credentials"><i class="fa fa-link" aria-hidden="true"></i></a>Storing Database Credentials</h3>
+<p>Database credentials should never be stored in the application source code, especially if they are unencrypted. Instead, they should be stored in a configuration file that:</p>
+<ul>
+<li>Is outside of the webroot.</li>
+<li>Has appropriate permissions so that it can only be read by the required user(s).</li>
+<li>Is not checked into source code repositories.</li>
+</ul>
+<p>Where possible, these credentials should also be encrypted or otherwise protected using built in functionality, such as the <code>web.config</code> encryption available in <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files#encrypting-configuration-file-sections-using-protected-configuration" target="_blank">ASP.NET</a>.</p>
+<h2 id="permissions"><a name="permissions" class="plugin-anchor" href="#permissions"><i class="fa fa-link" aria-hidden="true"></i></a>Permissions</h2>
+<p>The permissions assigned to database user accounts should be based on the principle of least privilege (i.e, the accounts should only have the minimal permissions required for the application to function). This can be applied at a number of increasingly granular levels levels depending on the functionality available in the database. The following steps should be applicable to all environments:</p>
+<ul>
+<li>Do not use the built in <code>root</code>, <code>sa</code> or <code>SYS</code> accounts.</li>
+<li>Do not grant the account administrative rights over the database instance.</li>
+<li>Only allow the account to connect from whitelisted hosts.<ul>
+<li>This would often be <code>localhost</code> or the address of the application server.</li>
+</ul>
+</li>
+<li>Only grant the account access to the specific databases it needs.<ul>
+<li>Development, UAT and Production environments should all use separate databases and accounts.</li>
+</ul>
+</li>
+<li>Only grant the required permissions on the databases.<ul>
+<li>Most applications would only need <code>SELECT</code>, <code>UPDATE</code> and <code>DELETE</code> permissions.</li>
+<li>The account should not be the owner of the database as this can lead to privilege escalation vulnerabilities.</li>
+</ul>
+</li>
+<li>Avoid using database links or linked servers.<ul>
+<li>Where they are required, use an account that has been granted access to only the minimum databases, tables, and system privileges required.</li>
+</ul>
+</li>
+</ul>
+<p>For more security-critical applications, it is possible to apply permissions are more granular levels, including:</p>
+<ul>
+<li>Table-level permissions.</li>
+<li>Column-level permissions.</li>
+<li>Row-level permissions</li>
+<li>Blocking access to the underlying tables, and requiring all access through restricted <a href="https://en.wikipedia.org/wiki/View_(SQL" target="_blank">views</a>).</li>
+</ul>
+<h2 id="database-configuration-and-hardening"><a name="database-configuration-and-hardening" class="plugin-anchor" href="#database-configuration-and-hardening"><i class="fa fa-link" aria-hidden="true"></i></a>Database Configuration and Hardening</h2>
+<p>The underlying operating system for the database server should be hardened in the same way as any other server, based on a secure baseline such as the <a href="https://www.cisecurity.org/cis-benchmarks/" target="_blank">CIS Benchmarks</a> or the <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-security-baselines" target="_blank">Microsoft Security Baselines</a>.</p>
+<p>The database application should also be properly configured and hardened. The following principles should apply to any database application and platform:</p>
+<ul>
+<li>Install any required security updates and patches.</li>
+<li>Configure the database services to run under a low privileged user account.</li>
+<li>Remove any default accounts and databases.</li>
+<li>Store <a href="https://en.wikipedia.org/wiki/Transaction_log" target="_blank">transaction logs</a> on a separate disk to the main database files.</li>
+<li>Configure a regular backup of the database.<ul>
+<li>Ensure that the backups are protected with appropriate permissions, and ideally encrypted.</li>
+</ul>
+</li>
+</ul>
+<p>The following sections gives some further recommendations for specific database software, in addition to the more general recommendations given above.</p>
+<h3 id="microsoft-sql-server"><a name="microsoft-sql-server" class="plugin-anchor" href="#microsoft-sql-server"><i class="fa fa-link" aria-hidden="true"></i></a>Microsoft SQL Server</h3>
+<ul>
+<li>Disable <code>xp_cmdshell</code>.</li>
+<li>Disable the SQL Browser service.</li>
+<li>Disable <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15" target="_blank">Mixed Mode Authentication</a> unless if it&apos;s not required.</li>
+<li>Ensure that the sample <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases" target="_blank">Northwind and AdventureWorks databases</a> have been removed.</li>
+<li>See the <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/securing-sql-server" target="_blank">Microsoft</a>.</li>
+</ul>
+<h3 id="mysql-and-mariadb"><a name="mysql-and-mariadb" class="plugin-anchor" href="#mysql-and-mariadb"><i class="fa fa-link" aria-hidden="true"></i></a>MySQL and MariaDB</h3>
+<ul>
+<li>Run the <code>mysql_secure_installation</code> script to remove the default databases and accounts.</li>
+<li>Disable the <a href="https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html#priv_file" target="_blank">FILE</a> privilege for all users to prevent them reading or writing files.</li>
+<li>See the <a href="https://dev.mysql.com/doc/refman/8.0/en/security-guidelines.html" target="_blank">Oracle MySQL</a> and <a href="https://mariadb.com/kb/en/library/securing-mariadb/" target="_blank">MariaDB</a> hardening guides.</li>
+</ul>
+<h3 id="postgresql"><a name="postgresql" class="plugin-anchor" href="#postgresql"><i class="fa fa-link" aria-hidden="true"></i></a>PostgreSQL</h3>
+<ul>
+<li>See the <a href="https://www.postgresql.org/docs/12/runtime.html" target="_blank">PostgreSQL Server Setup and Operation documentation</a> and the older <a href="https://www.postgresql.org/docs/7.0/security.htm" target="_blank">Security documentation</a></li>
+</ul>
+<h3 id="mongodb"><a name="mongodb" class="plugin-anchor" href="#mongodb"><i class="fa fa-link" aria-hidden="true"></i></a>MongoDB</h3>
+<ul>
+<li>See the <a href="https://docs.mongodb.com/manual/administration/security-checklist/" target="_blank">MongoDB security checklist</a>.</li>
+</ul>
+<h3 id="redis"><a name="redis" class="plugin-anchor" href="#redis"><i class="fa fa-link" aria-hidden="true"></i></a>Redis</h3>
+<ul>
+<li>See the <a href="https://redis.io/topics/security" target="_blank">Redis security guide</a>.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="navigation navigation-prev " aria-label="Previous page: DOM based XSS Prevention ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Denial_of_Service_Cheat_Sheet.html" class="navigation navigation-next " aria-label="Next page: Denial of Service ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Database Security ","level":"1.22","depth":1,"next":{"title":"Denial of Service ","level":"1.23","depth":1,"path":"cheatsheets/Denial_of_Service_Cheat_Sheet.md","ref":"cheatsheets/Denial_of_Service_Cheat_Sheet.md","articles":[]},"previous":{"title":"DOM based XSS Prevention ","level":"1.21","depth":1,"path":"cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.md","ref":"cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors"],"root":"./cheatsheets","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"Preface.md","glossary":"GLOSSARY.md","summary":"TOC.md"},"variables":{},"title":"OWASP Cheat Sheet Series","language":"en","gitbook":"*","description":"Website with the collection of all the cheat sheets of the project."},"file":{"path":"cheatsheets/Database_Security_Cheat_Sheet.md","mtime":"2020-01-16T19:26:56.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T19:27:34.087Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
