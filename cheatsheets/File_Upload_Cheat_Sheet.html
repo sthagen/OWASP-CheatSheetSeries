@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PHP Configuration  · OWASP Cheat Sheet Series</title>
+        <title>File Upload  · OWASP Cheat Sheet Series</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Password_Storage_Cheat_Sheet.html" />
+    <link rel="next" href="Forgot_Password_Cheat_Sheet.html" />
     
     
-    <link rel="prev" href="OS_Command_Injection_Defense_Cheat_Sheet.html" />
+    <link rel="prev" href="Error_Handling_Cheat_Sheet.html" />
     
 
     </head>
@@ -446,7 +446,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.28" data-path="File_Upload_Cheat_Sheet.html">
+        <li class="chapter active" data-level="1.28" data-path="File_Upload_Cheat_Sheet.html">
             
                 <a href="File_Upload_Cheat_Sheet.html">
             
@@ -680,7 +680,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.46" data-path="PHP_Configuration_Cheat_Sheet.html">
+        <li class="chapter " data-level="1.46" data-path="PHP_Configuration_Cheat_Sheet.html">
             
                 <a href="PHP_Configuration_Cheat_Sheet.html">
             
@@ -1035,7 +1035,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >PHP Configuration </a>
+        <a href=".." >File Upload </a>
     </h1>
 </div>
 
@@ -1050,89 +1050,164 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction"><a name="introduction" class="plugin-anchor" href="#introduction"><i class="fa fa-link" aria-hidden="true"></i></a>Introduction</h1>
-<p>This page is meant to help those configuring PHP and the web server it is running on to be very secure.</p>
-<p>Below you will find information on the proper settings for the <code>php.ini</code> file and instructions on configuring Apache, Nginx, and Caddy web servers.</p>
-<p>For general PHP codebase security please refer to the two following great guides:</p>
+                                <h1 id="file-upload-cheat-sheet"><a name="file-upload-cheat-sheet" class="plugin-anchor" href="#file-upload-cheat-sheet"><i class="fa fa-link" aria-hidden="true"></i></a>File Upload Cheat Sheet</h1>
+<h2 id="introduction"><a name="introduction" class="plugin-anchor" href="#introduction"><i class="fa fa-link" aria-hidden="true"></i></a>Introduction</h2>
+<p>File upload is becoming a more and more essential part of any application, where the user is able to upload their photo, their CV, or a video showcasing a project they are working on. The application should be able to fend off bogus and malicious files in a way to keep the application and the users safe.</p>
+<p>In short, the following principles should be followed to reach a secure file upload implementation:</p>
 <ul>
-<li><a href="https://paragonie.com/blog/2017/12/2018-guide-building-secure-php-software" target="_blank">Paragonie&apos;s 2018 PHP Security Guide</a></li>
-<li><a href="https://github.com/guardrailsio/awesome-php-security" target="_blank">Awesome PHP Security</a></li>
+<li><strong>Whitelist allowed extensions. Only allow safe and critical extensions for business functionality</strong><ul>
+<li><strong>Ensure that <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Input_Validation_Cheat_Sheet.md#validating-free-form-unicode-text" target="_blank">input validation</a> is applied before validating the extensions.</strong></li>
 </ul>
-<h1 id="php-configuration-and-deployment"><a name="php-configuration-and-deployment" class="plugin-anchor" href="#php-configuration-and-deployment"><i class="fa fa-link" aria-hidden="true"></i></a>PHP Configuration and Deployment</h1>
-<h2 id="phpini"><a name="phpini" class="plugin-anchor" href="#phpini"><i class="fa fa-link" aria-hidden="true"></i></a>php.ini</h2>
-<p>Some of following settings need to be adapted to your system, in particular <code>session.save_path</code>, <code>session.cookie_path</code> (e.g. <code>/var/www/mysite</code>), and <code>session.cookie_domain</code> (e.g. <code>ExampleSite.com</code>). </p>
-<p>You should also be running PHP 7.2 or later. If running PHP 7.0 and 7.1, you will use slightly different values in a couple of places below (see inline comments). Finally look through the <a href="http://www.php.net/manual/ini.core.php" target="_blank">PHP Manual</a> for a complete reference on every value in the php.ini configuration file.</p>
-<p>You can find a copy of the following values in a ready-to-go php.ini file <a href="https://github.com/danehrlich1/very-secure-php-ini" target="_blank">here</a>.</p>
-<h4 id="php-error-handling"><a name="php-error-handling" class="plugin-anchor" href="#php-error-handling"><i class="fa fa-link" aria-hidden="true"></i></a>PHP error handling</h4>
-<pre><code class="lang-text">expose_php              = Off
-error_reporting         = E_ALL
-display_errors          = Off
-display_startup_errors  = Off
-log_errors              = On
-error_log               = /valid_path/PHP-logs/php_error.log
-ignore_repeated_errors  = Off
-</code></pre>
-<p>Keep in mind that you need to have <code>display_errors</code> to <code>Off</code> on a production server and it&apos;s a good idea to frequently notice the logs. </p>
-<h4 id="php-general-settings"><a name="php-general-settings" class="plugin-anchor" href="#php-general-settings"><i class="fa fa-link" aria-hidden="true"></i></a>PHP general settings</h4>
-<pre><code class="lang-text">doc_root                = /path/DocumentRoot/PHP-scripts/
-open_basedir            = /path/DocumentRoot/PHP-scripts/
-include_path            = /path/PHP-pear/
-extension_dir           = /path/PHP-extensions/
-mime_magic.magicfile    = /path/PHP-magic.mime
-allow_url_fopen         = Off
-allow_url_include       = Off
-variables_order         = &quot;GPCS&quot;
-allow_webdav_methods    = Off
-session.gc_maxlifetime  = 600
-</code></pre>
-<p><code>allow_url_*</code> prevents <a href="https://www.acunetix.com/blog/articles/local-file-inclusion-lfi/" target="_blank">LFI</a>s to be easily escalated to <a href="https://www.acunetix.com/blog/articles/remote-file-inclusion-rfi/" target="_blank">RFI</a>s.</p>
-<h4 id="php-file-upload-handling"><a name="php-file-upload-handling" class="plugin-anchor" href="#php-file-upload-handling"><i class="fa fa-link" aria-hidden="true"></i></a>PHP file upload handling</h4>
-<pre><code class="lang-text">file_uploads            = On
-upload_tmp_dir          = /path/PHP-uploads/
-upload_max_filesize     = 2M
-max_file_uploads        = 2
-</code></pre>
-<p>If your application is not using file uploads, and say the only data the user will enter / upload is forms that do not require any document attachments, <code>file_uploads</code> should be turned <code>Off</code>.</p>
-<h4 id="php-executable-handling"><a name="php-executable-handling" class="plugin-anchor" href="#php-executable-handling"><i class="fa fa-link" aria-hidden="true"></i></a>PHP executable handling</h4>
-<pre><code class="lang-text">enable_dl               = Off
-disable_functions       = system, exec, shell_exec, passthru, phpinfo, show_source, highlight_file, popen, proc_open, fopen_with_path, dbmopen, dbase_open, putenv, move_uploaded_file, chdir, mkdir, rmdir, chmod, rename, filepro, filepro_rowcount, filepro_retrieve, posix_mkfifo
-# see also: http://ir.php.net/features.safe-mode
-disable_classes         =
-</code></pre>
-<p>These are dangerous PHP functions. You should disable all that you don&apos;t use.</p>
-<h4 id="php-session-handling"><a name="php-session-handling" class="plugin-anchor" href="#php-session-handling"><i class="fa fa-link" aria-hidden="true"></i></a>PHP session handling</h4>
-<p>Session settings are some of the MOST important values to concentrate on in configuring. It is a good practice to change <code>session.name</code> to something new. </p>
-<pre><code class="lang-text"> session.save_path                = /path/PHP-session/
- session.name                     = myPHPSESSID
- session.auto_start               = Off
- session.use_trans_sid            = 0
- session.cookie_domain            = full.qualified.domain.name
- #session.cookie_path             = /application/path/
- session.use_strict_mode          = 1
- session.use_cookies              = 1
- session.use_only_cookies         = 1
- session.cookie_lifetime          = 14400 # 4 hours 
- session.cookie_secure            = 1
- session.cookie_httponly          = 1
- session.cookie_samesite          = Strict
- session.cache_expire             = 30 
- session.sid_length               = 256
- session.sid_bits_per_character   = 6 # PHP 7.2+
- session.hash_function            = 1 # PHP 7.0-7.1
- session.hash_bits_per_character  = 6 # PHP 7.0-7.1
-</code></pre>
-<h4 id="some-more-security-paranoid-checks"><a name="some-more-security-paranoid-checks" class="plugin-anchor" href="#some-more-security-paranoid-checks"><i class="fa fa-link" aria-hidden="true"></i></a>Some more security paranoid checks</h4>
-<pre><code class="lang-text">session.referer_check   = /application/path
-memory_limit            = 50M
-post_max_size           = 20M
-max_execution_time      = 60
-report_memleaks         = On
-track_errors            = Off
-html_errors             = Off
-</code></pre>
-<h2 id="suhosin"><a name="suhosin" class="plugin-anchor" href="#suhosin"><i class="fa fa-link" aria-hidden="true"></i></a>Suhosin</h2>
-<p><a href="http://www.hardened-php.net/suhosin/index.html" target="_blank">Suhosin</a> is a patch to PHP which provides a number of hardening and security features that are not available in the default PHP build. However, Suhosin only works with PHP 5, which is <strong>unsupported</strong> and <strong>should not be used</strong>.</p>
-<p>There are a number of projects that have attempted to implement similar features for PHP 7 such as <a href="https://snuffleupagus.readthedocs.io/" target="_blank">Snuffleupagus</a> and <a href="https://github.com/sektioneins/suhosin-ng/wiki/News" target="_blank">Suhosin-ng</a>, but these are both in the pre-release stage, and as such <strong>should not be used in production</strong>.</p>
+</li>
+<li><strong>Validate the file type, don&apos;t trust the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type" target="_blank">Content-Type header</a> as it can be spoofed</strong></li>
+<li><strong>Change the file name to something generated by the application</strong></li>
+<li><strong>Set a file name length limit. Restrict the allowed characters if possible</strong></li>
+<li><strong>Set a file size limit</strong></li>
+<li><strong>Only allow authorised users to upload files</strong></li>
+<li><strong>Store the files on a different server. If that&apos;s not possible, store them outside of the webroot</strong><ul>
+<li><strong>In the case of public access to the files, use a handler that gets mapped to file names inside the application (someid -&gt; file.ext)</strong></li>
+</ul>
+</li>
+<li><strong>Run the file through an antivirus or a sandbox if available to validate that it doesn&apos;t contain malicious data</strong></li>
+<li><strong>Ensure that any libraries used are securely configured and kept up to date</strong></li>
+<li><strong>Protect the file upload from <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">CSRF</a> attacks</strong></li>
+</ul>
+<h2 id="contents"><a name="contents" class="plugin-anchor" href="#contents"><i class="fa fa-link" aria-hidden="true"></i></a>Contents</h2>
+<ul>
+<li><a href="#file-upload-threats">File Upload Threats</a><ul>
+<li><a href="#malicious-files">Malicious Files</a></li>
+<li><a href="#public-file-retrieval">Public File Retrieval</a></li>
+</ul>
+</li>
+<li><a href="#file-upload-protection">File Upload Protection</a><ul>
+<li><a href="#extension-validation">Extension Validation</a><ul>
+<li><a href="#whitelist-extensions">Whitelist Extensions</a></li>
+<li><a href="#blacklist-extensions">Blacklist Extensions</a></li>
+</ul>
+</li>
+<li><a href="#content-type-validation">Content-Type Validation</a></li>
+<li><a href="#magic-number-validation">Magic Number Validation</a></li>
+<li><a href="#file-name-sanitization">File Name Sanitization</a></li>
+<li><a href="#file-content-validation">File Content Validation</a></li>
+<li><a href="#file-storage-location">File Storage Location</a></li>
+<li><a href="#user-permissions">User Permissions</a></li>
+<li><a href="#system-permissions">System Permissions</a></li>
+<li><a href="#upload-and-download-limits">Upload and Download Limits</a></li>
+</ul>
+</li>
+<li><a href="#java-code-snippets">Java Code Snippets</a></li>
+</ul>
+<h2 id="file-upload-threats"><a name="file-upload-threats" class="plugin-anchor" href="#file-upload-threats"><i class="fa fa-link" aria-hidden="true"></i></a>File Upload Threats</h2>
+<p>In order to assess and know exactly what controls to implement, knowing what you&apos;re facing is essential to protect your assets. The following sections will hopefully showcase the risks accompanying the file upload functionality.</p>
+<h3 id="malicious-files"><a name="malicious-files" class="plugin-anchor" href="#malicious-files"><i class="fa fa-link" aria-hidden="true"></i></a>Malicious Files</h3>
+<p>The attacker delivers a file for malicious intent, such as:</p>
+<ol>
+<li>Exploit vulnerabilities in the file parser or processing module (<em>e.g.</em> <a href="https://imagetragick.com/" target="_blank">ImageTrick Exploit</a>, <a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE" target="_blank">XXE</a>_Processing))</li>
+<li>Use the file for phishing (<em>e.g.</em> careers form)</li>
+<li>Send ZIP bombs, XML bombs (otherwise known as billion laughs attack), or simply huge files in a way to fill the server storage which hinders and damages the server&apos;s availability</li>
+<li>Overwrite an existing file on the system</li>
+<li>Client-side active content (XSS, CSRF, etc.) that could endanger other users if the files are publicly retrievable.</li>
+</ol>
+<h3 id="public-file-retrieval"><a name="public-file-retrieval" class="plugin-anchor" href="#public-file-retrieval"><i class="fa fa-link" aria-hidden="true"></i></a>Public File Retrieval</h3>
+<p>If the file uploaded is publicly retrievable, additional threats can be addressed:</p>
+<ol>
+<li>Public disclosure of other files</li>
+<li>Initiate a DoS attack by requesting lots of files. Requests are small, yet responses are much larger</li>
+<li>File content that could be deemed as illegal, offensive, or dangerous (<em>e.g.</em> personal data, copyrighted data, etc.) which will make you a host for such malicious files.</li>
+</ol>
+<h2 id="file-upload-protection"><a name="file-upload-protection" class="plugin-anchor" href="#file-upload-protection"><i class="fa fa-link" aria-hidden="true"></i></a>File Upload Protection</h2>
+<p>There is no silver bullet in validating user content. Implementing a defense in depth approach is key to make the upload process harder and more locked down to the needs and requirements for the service. Implementing multiple techniques is key and recommended, as no one technique is enough to secure the service.</p>
+<h3 id="extension-validation"><a name="extension-validation" class="plugin-anchor" href="#extension-validation"><i class="fa fa-link" aria-hidden="true"></i></a>Extension Validation</h3>
+<p>Ensure that the validation occurs after decoding the file name, and that a proper filter is set in place in order to avoid certain known bypasses, such as the following:</p>
+<ul>
+<li>Double extensions, <em>e.g.</em> <code>.jpg.php</code>, where it circumvents easily the regex <code>\.jpg</code></li>
+<li>Null bytes, <em>e.g.</em> <code>.php%00.jpg</code>, where <code>.jpg</code> gets truncated and <code>.php</code> becomes the new extension</li>
+<li>Generic bad regex that isn&apos;t properly tested and well reviewed. Refrain from building your own logic unless you have enough knowledge on this topic.</li>
+</ul>
+<p>Refer to the <a href="Input_Validation_Cheat_Sheet.html">Input Validation CS</a> to properly parse and process the extension.</p>
+<h4 id="whitelist-extensions"><a name="whitelist-extensions" class="plugin-anchor" href="#whitelist-extensions"><i class="fa fa-link" aria-hidden="true"></i></a>Whitelist Extensions</h4>
+<p>Ensure the usage of <em>business-critical</em> extensions only, without allowing any type of <em>non-required</em> extensions. For example if the system requires:</p>
+<ul>
+<li>image upload, allow one type that is agreed upon to fit the business requirement;</li>
+<li>cv upload, allow <code>docx</code> and <code>pdf</code> extensions.</li>
+</ul>
+<p>Based on the needs of the application, ensure the <strong>least harmful</strong> and the <strong>lowest risk</strong> file types to be used.</p>
+<h4 id="blacklist-extensions"><a name="blacklist-extensions" class="plugin-anchor" href="#blacklist-extensions"><i class="fa fa-link" aria-hidden="true"></i></a>Blacklist Extensions</h4>
+<p>Blacklisting extensions is a bad idea and is very dangerous. Don&apos;t do it unless you have no other choice!</p>
+<p>In order to perform this validation, specifying and identifying which patterns that could should be rejected are used in order to protect the service.</p>
+<h3 id="content-type-validation"><a name="content-type-validation" class="plugin-anchor" href="#content-type-validation"><i class="fa fa-link" aria-hidden="true"></i></a>Content-Type Validation</h3>
+<p><em>The Content-Type for uploaded files is provided by the user, and as such cannot be trusted, as it is trivial to spoof. Although it should not be relied upon for security, it provides a quick check to prevent users from unintentionally uploading files with the incorrect type.</em></p>
+<p>Other than defining the extension of the uploaded file, its MIME-type can be checked for a quick protection against simple file upload attacks.</p>
+<p>This can be done preferrably in a whitelist approach; otherwise, this can be done in a blacklist approach.</p>
+<h3 id="file-signature-validation"><a name="file-signature-validation" class="plugin-anchor" href="#file-signature-validation"><i class="fa fa-link" aria-hidden="true"></i></a>File Signature Validation</h3>
+<p>In conjunction with <a href="#content-type-validation">content-type validation</a>, validating the file&apos;s signature can be checked and verified against the expected file that should be received.</p>
+<blockquote>
+<p>This should not be used on its own, as bypassing it is pretty common and easy.</p>
+</blockquote>
+<h3 id="file-name-sanitization"><a name="file-name-sanitization" class="plugin-anchor" href="#file-name-sanitization"><i class="fa fa-link" aria-hidden="true"></i></a>File Name Sanitization</h3>
+<p>File-names can endager the system in multiple ways, either by using non acceptable characters, or by using special and restricted filenames. For Windows, refer to the following <a href="https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file?redirectedfrom=MSDN#naming-conventions" target="_blank">MSDN guide</a>. For a wider overview on different filesystems and how they treat files, refer to <a href="https://en.wikipedia.org/wiki/Filename" target="_blank">Wikipedia&apos;s Filename page</a>.</p>
+<p>In order to avoid the above mentioned threat, creating a <strong>random string</strong> as a file-name, such as generating a UUID/GUID, is essential. If the file-name is required by the business needs, proper input validation should be done for client-side (<em>e.g.</em> active content that results in XSS and CSRF attacks) and back-end side (<em>e.g.</em> special files overwrite or creation) attack vectors. File-name length limits should be taken into consideration based on the system storing the files, as each system has its own file name length limit. If user file-names are required, consider implementing the following:</p>
+<ul>
+<li>Implement a maximum length</li>
+<li>Restrict characters to an allowed subset specifically, such as alphanumeric characters, hyphen, spaces, and periods<ul>
+<li>If this is not possible, blacklist dangerous characters that could endanger the framework and system that is storing and using the files.</li>
+</ul>
+</li>
+</ul>
+<h3 id="file-content-validation"><a name="file-content-validation" class="plugin-anchor" href="#file-content-validation"><i class="fa fa-link" aria-hidden="true"></i></a>File Content Validation</h3>
+<p>As mentioned in the <a href="#public-file-retrieval">Public File Retrieval</a> section, file content can contain malicious, inappropriate, or illegal data.</p>
+<p>Based on the expected type, special file content validation can be applied:</p>
+<ul>
+<li>For <strong>images</strong>, applying image rewriting techniques destroys any kind of malicious content injected in an image; this could be done through <a href="https://security.stackexchange.com/a/8625/118367" target="_blank">randomization</a>.</li>
+<li>For <strong>Microsoft documents</strong>, the usage of <a href="https://poi.apache.org/" target="_blank">Apache POI</a> helps validating the uploaded documents.</li>
+<li><strong>ZIP files</strong> are not recommended since they can contain all types of files, and the attack vectors pertaining to them are numerous.</li>
+</ul>
+<p>The File Upload service should allow users to report illegal content, and copyright owners to report abuse.</p>
+<p>If there are enough resources, manual file review should be conducted in a sandboxed environment before releasing the files to the public.</p>
+<p>Adding some automation to the review could be helpful, which is a harsh process and should be well studied before its usage. Some services (<em>e.g.</em> Virus Total) provide APIs to scan files against well known malicious file hashes. Some frameworks can check and validate the raw content type and validating it against predefined file types, such as in <a href="https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.imageformat" target="_blank">ASP.NET Drawing Library</a>. Beware of data leakage threats and information gathering by public services.</p>
+<h3 id="file-storage-location"><a name="file-storage-location" class="plugin-anchor" href="#file-storage-location"><i class="fa fa-link" aria-hidden="true"></i></a>File Storage Location</h3>
+<p>The location where the files should be stored must be chosen based on security and business requirements. The following points are set by security priority, and are inclusive:</p>
+<ol>
+<li>Store the files on a <strong>different host</strong>, which allows for complete segragation of duties between the application serving the user, and the host handling file uploads and their storage.</li>
+<li>Store the files <strong>outside the webroot</strong>, where only administrative access is allowed.</li>
+<li>Store the files <strong>inside the webroot</strong>, and set them in write permissions only.<ul>
+<li>If read access is required, setting proper controls is a must (<em>e.g.</em> internal IP, authorized user, etc.)</li>
+</ul>
+</li>
+</ol>
+<p>Storing files in a studied manner in databases is one additional technique. This is sometimes used for automatic backup processes, non file-system attacks, and permissions issues. In return, this opens up the door to performance issues (in some cases), storage considerations for the database and its backups, and this opens up the door to SQLi attack. This is advised only when a DBA is on the team and that this process shows to be an improvement on storing them on the file-system.</p>
+<blockquote>
+<p>Some files are emailed or processed once they are uploaded, and are not stored on the server. It is essential to conduct the security measures discussed in this sheet before doing any actions on them.</p>
+</blockquote>
+<h3 id="user-permissions"><a name="user-permissions" class="plugin-anchor" href="#user-permissions"><i class="fa fa-link" aria-hidden="true"></i></a>User Permissions</h3>
+<p>Before any file upload service is accessed, proper validation should occur on two levels for the user uploading a file:</p>
+<ul>
+<li>Authentication level<ul>
+<li>The user should be a registered user, or an identifiable user, in order to set restrictions and limitations for their upload capabilities</li>
+</ul>
+</li>
+<li>Authorization level<ul>
+<li>The user should have appropriate permissions to access or modify the files</li>
+</ul>
+</li>
+</ul>
+<h3 id="filesystem-permissions"><a name="filesystem-permissions" class="plugin-anchor" href="#filesystem-permissions"><i class="fa fa-link" aria-hidden="true"></i></a>Filesystem Permissions</h3>
+<blockquote>
+<p>Set the files permissions on the principle of least privilege.</p>
+</blockquote>
+<p>Files should be stored in a way that ensures:</p>
+<ul>
+<li>Allowed system users are the only ones capable of reading the files</li>
+<li>Required modes only are set for the file<ul>
+<li>If execution is required, scanning the file before running it is required as a security best practice, to ensure that no macros or hidden scripts are available.</li>
+</ul>
+</li>
+</ul>
+<h3 id="upload-and-download-limits"><a name="upload-and-download-limits" class="plugin-anchor" href="#upload-and-download-limits"><i class="fa fa-link" aria-hidden="true"></i></a>Upload and Download Limits</h3>
+<p>The application should set proper size limits for the upload service in order to protect the file storage capacity. If the system is going to extract the files or process them, the file size limit should be considered after file decompression is conducted and by using secure methods to calculate zip files size. For more on this, see how to <a href="https://wiki.sei.cmu.edu/confluence/display/java/IDS04-J.+Safely+extract+files+from+ZipInputStream" target="_blank">Safely extract files from ZipInputStream</a>, Java&apos;s input stream to handle ZIP files.</p>
+<p>The application should set proper request limits as well for the download service if available to protect the server from DoS attacks.</p>
+<h2 id="java-code-snippets"><a name="java-code-snippets" class="plugin-anchor" href="#java-code-snippets"><i class="fa fa-link" aria-hidden="true"></i></a>Java Code Snippets</h2>
+<p><a href="https://github.com/righettod/document-upload-protection" target="_blank">Document Upload Protection</a> repository written by Dominique for certain document types in Java.</p>
 
                                 
                                 </section>
@@ -1160,12 +1235,12 @@ html_errors             = Off
 
             
                 
-                <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="navigation navigation-prev " aria-label="Previous page: OS Command Injection Defense ">
+                <a href="Error_Handling_Cheat_Sheet.html" class="navigation navigation-prev " aria-label="Previous page: Error Handling ">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Password_Storage_Cheat_Sheet.html" class="navigation navigation-next " aria-label="Next page: Password Storage ">
+                <a href="Forgot_Password_Cheat_Sheet.html" class="navigation navigation-next " aria-label="Next page: Forgot Password ">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1176,7 +1251,7 @@ html_errors             = Off
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PHP Configuration ","level":"1.46","depth":1,"next":{"title":"Password Storage ","level":"1.47","depth":1,"path":"cheatsheets/Password_Storage_Cheat_Sheet.md","ref":"cheatsheets/Password_Storage_Cheat_Sheet.md","articles":[]},"previous":{"title":"OS Command Injection Defense ","level":"1.45","depth":1,"path":"cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.md","ref":"cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors"],"root":"./cheatsheets","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"Preface.md","glossary":"GLOSSARY.md","summary":"TOC.md"},"variables":{},"title":"OWASP Cheat Sheet Series","language":"en","gitbook":"*","description":"Website with the collection of all the cheat sheets of the project."},"file":{"path":"cheatsheets/PHP_Configuration_Cheat_Sheet.md","mtime":"2020-02-21T20:39:48.134Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-21T20:40:17.551Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"File Upload ","level":"1.28","depth":1,"next":{"title":"Forgot Password ","level":"1.29","depth":1,"path":"cheatsheets/Forgot_Password_Cheat_Sheet.md","ref":"cheatsheets/Forgot_Password_Cheat_Sheet.md","articles":[]},"previous":{"title":"Error Handling ","level":"1.27","depth":1,"path":"cheatsheets/Error_Handling_Cheat_Sheet.md","ref":"cheatsheets/Error_Handling_Cheat_Sheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors"],"root":"./cheatsheets","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"Preface.md","glossary":"GLOSSARY.md","summary":"TOC.md"},"variables":{},"title":"OWASP Cheat Sheet Series","language":"en","gitbook":"*","description":"Website with the collection of all the cheat sheets of the project."},"file":{"path":"cheatsheets/File_Upload_Cheat_Sheet.md","mtime":"2020-02-21T20:39:48.134Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-21T20:40:17.551Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
