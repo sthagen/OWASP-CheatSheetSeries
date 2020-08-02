@@ -1,4 +1,6 @@
-# What is Attack Surface Analysis and Why is it Important?
+# Attack Surface Analysis Cheat Sheet
+
+## What is Attack Surface Analysis and Why is it Important
 
 This article describes a simple and pragmatic way of doing Attack Surface Analysis and managing an application's Attack Surface. It is targeted to be used by developers to understand and manage application security risks as they design and change an application, as well as by application security specialists doing a security risk assessment. The focus here is on protecting an application from external attack - it does not take into account attacks on the users or operators of the system (e.g. malware injection, social engineering attacks), and there is less focus on insider threats, although the principles remain the same. The internal attack surface is likely to be different to the external attack surface and some users may have a lot of access.
 
@@ -8,20 +10,20 @@ Attack Surface Analysis is usually done by security architects and pen testers. 
 
 Attack Surface Analysis helps you to:
 
-1.  identify what functions and what parts of the system you need to review/test for security vulnerabilities
-2.  identify high risk areas of code that require defense-in-depth protection - what parts of the system that you need to defend
-3.  identify when you have changed the attack surface and need to do some kind of threat assessment
+1. identify what functions and what parts of the system you need to review/test for security vulnerabilities
+2. identify high risk areas of code that require defense-in-depth protection - what parts of the system that you need to defend
+3. identify when you have changed the attack surface and need to do some kind of threat assessment
 
-# Defining the Attack Surface of an Application
+## Defining the Attack Surface of an Application
 
 The Attack Surface describes all of the different points where an attacker could get into a system, and where they could get data out.
 
 The Attack Surface of an application is:
 
-1.  the sum of all paths for data/commands into and out of the application, and
-2.  the code that protects these paths (including resource connection and authentication, authorization, activity logging, data validation and encoding), and
-3.  all valuable data used in the application, including secrets and keys, intellectual property, critical business data, personal data and PII, and
-4.  the code that protects these data (including encryption and checksums, access auditing, and data integrity and operational security controls).
+1. the sum of all paths for data/commands into and out of the application, and
+2. the code that protects these paths (including resource connection and authentication, authorization, activity logging, data validation and encoding)
+3. all valuable data used in the application, including secrets and keys, intellectual property, critical business data, personal data and PII, and
+4. the code that protects these data (including encryption and checksums, access auditing, and data integrity and operational security controls).
 
 You overlay this model with the different types of users - roles, privilege levels - that can access the system (whether authorized or not). Complexity increases with the number of different types of users. But it is important to focus especially on the two extremes: unauthenticated, anonymous users and highly privileged admin users (e.g. database administrators, system administrators).
 
@@ -29,7 +31,7 @@ Group each type of attack point into buckets based on risk (external-facing or i
 
 With this approach, you don't need to understand every endpoint in order to understand the Attack Surface and the potential risk profile of a system. Instead, you can count the different general type of endpoints and the number of points of each type. With this you can budget what it will take to assess risk at scale, and you can tell when the risk profile of an application has significantly changed.
 
-# Identifying and Mapping the Attack Surface
+## Identifying and Mapping the Attack Surface
 
 You can start building a baseline description of the Attack Surface in a picture and notes. Spend a few hours reviewing design and architecture documents from an attacker's perspective. Read through the source code and identify different points of entry/exit:
 
@@ -40,7 +42,7 @@ You can start building a baseline description of the Attack Surface in a picture
 - Databases
 - Other local storage
 - Email or other kinds of messages
-- Run-time arguments
+- Runtime arguments
 - ...Your points of entry/exit
 
 The total number of different attack points can easily add up into the thousands or more. To make this manageable, break the model into different types based on function, design and technology:
@@ -63,14 +65,14 @@ Validate and fill in your understanding of the Attack Surface by walking through
 
 The Attack Surface model may be rough and incomplete to start, especially if you haven't done any security work on the application before. Fill in the holes as you dig deeper in a security analysis, or as you work more with the application and realize that your understanding of the Attack Surface has improved.
 
-# Measuring and Assessing the Attack Surface
+## Measuring and Assessing the Attack Surface
 
 Once you have a map of the Attack Surface, identify the high risk areas. Focus on remote entry points – interfaces with outside systems and to the Internet – and especially where the system allows anonymous, public access.
 
 - Network-facing, especially internet-facing code
 - Web forms
 - Files from outside of the network
-- Backwards compatible interfaces with other systems – old protocols, sometimes old code and libraries, hard to maintain and test multiple versions
+- Backward compatible interfaces with other systems – old protocols, sometimes old code and libraries, hard to maintain and test multiple versions
 - Custom APIs – protocols etc – likely to have mistakes in design and implementation
 - Security code: anything to do with cryptography, authentication, authorization (access control) and session management
 
@@ -82,7 +84,7 @@ Note that deploying multiple versions of an application, leaving features in tha
 
 Backups of code and data - online, and on offline media - are an important but often ignored part of a system's Attack Surface. Protecting your data and IP by writing secure software and hardening the infrastructure will all be wasted if you hand everything over to bad guys by not protecting your backups.
 
-# Managing the Attack Surface
+## Managing the Attack Surface
 
 Once you have a baseline understanding of the Attack Surface, you can use it to incrementally identify and manage risks going forward as you make changes to the application. Ask yourself:
 
@@ -94,7 +96,7 @@ The first web page that you create opens up the system's Attack Surface signific
 
 If you add another web page that follows the same design and using the same technology as existing web pages, it's easy to understand how much security testing and review it needs. If you add a new web services API or file that can be uploaded from the Internet, each of these changes have a different risk profile again - see if if the change fits in an existing bucket, see if the existing controls and protections apply. If you're adding something that doesn't fall into an existing bucket, this means that you have to go through a more thorough risk assessment to understand what kind of security holes you may open and what protections you need to put in place.
 
-Changes to session management, authentication and password management directly affect the Attack Surface and need to be reviewed. So do changes to authorization and access control logic, especially adding or changing role definitions, adding admin users or admin functions with high privileges. Similarly for changes to the code that handles encryption and secrets. Fundamental changes to how data validation is done. And major architectural changes to layering and trust relationships, or fundamental changes in technical architecture – swapping out your web server or database platform, or changing the run-time operating system.
+Changes to session management, authentication and password management directly affect the Attack Surface and need to be reviewed. So do changes to authorization and access control logic, especially adding or changing role definitions, adding admin users or admin functions with high privileges. Similarly for changes to the code that handles encryption and secrets. Fundamental changes to how data validation is done. And major architectural changes to layering and trust relationships, or fundamental changes in technical architecture – swapping out your web server or database platform, or changing the runtime operating system.
 
 As you add new user types or roles or privilege levels, you do the same kind of analysis and risk assessment. Overlay the type of access across the data and functions and look for problems and inconsistencies. It's important to understand the access model for the application, whether it is positive (access is deny by default) or negative (access is allow by default). In a positive access model, any mistakes in defining what data or functions are permitted to a new user type or role are easy to see. In a negative access model, you have to be much more careful to ensure that a user does not get access to data/functions that they should not be permitted to.
 
