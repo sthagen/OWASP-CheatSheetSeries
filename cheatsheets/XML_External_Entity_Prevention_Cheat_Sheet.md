@@ -111,12 +111,14 @@ try {
     // Xerces 1 - http://xerces.apache.org/xerces-j/features.html#external-general-entities
     // Xerces 2 - http://xerces.apache.org/xerces2-j/features.html#external-general-entities
     // JDK7+ - http://xml.org/sax/features/external-general-entities
+    //This feature has to be used together with the following one, otherwise it will not protect you from XXE for sure
     FEATURE = "http://xml.org/sax/features/external-general-entities";
     dbf.setFeature(FEATURE, false);
 
     // Xerces 1 - http://xerces.apache.org/xerces-j/features.html#external-parameter-entities
     // Xerces 2 - http://xerces.apache.org/xerces2-j/features.html#external-parameter-entities
     // JDK7+ - http://xml.org/sax/features/external-parameter-entities
+    //This feature has to be used together with the previous one, otherwise it will not protect you from XXE for sure
     FEATURE = "http://xml.org/sax/features/external-parameter-entities";
     dbf.setFeature(FEATURE, false);
 
@@ -180,6 +182,24 @@ To protect a Java `XMLInputFactory` from XXE, do this:
 xmlInputFactory.setProperty(XMLInputFactory.SUPPORT_DTD, false);
 // disable external entities
 xmlInputFactory.setProperty("javax.xml.stream.isSupportingExternalEntities", false);
+```
+
+### Oracle DOM Parser
+
+Follow [Oracle reomendation]('https://docs.oracle.com/en/database/oracle/oracle-database/18/adxdk/security-considerations-oracle-xml-developers-kit.html#GUID-45303542-41DE-4455-93B3-854A826EF8BB') e.g.:
+
+``` java
+    // Extend oracle.xml.parser.v2.XMLParser
+    DOMParser domParser = new DOMParser();
+
+    // Do not expand entity references
+    domParser.setAttribute(DOMParser.EXPAND_ENTITYREF, false);
+
+    // dtdObj is an instance of oracle.xml.parser.v2.DTD
+    domParser.setAttribute(DOMParser.DTD_OBJECT, dtdObj);
+
+    // Do not allow more than 11 levels of entity expansion
+    domParser.setAttribute(DOMParser.ENTITY_EXPANSION_DEPTH, 12);
 ```
 
 ### TransformerFactory
@@ -312,10 +332,6 @@ JAXBContext jc = JAXBContext.newInstance(Object.class);
 Unmarshaller um = jc.createUnmarshaller();
 um.unmarshal(xmlSource);
 ```
-
-#### Java 8 and up
-
-Since [JDK-8010393](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8010393), which is in OpenJDK 8 beta 86, `javax.xml.bind.Unmarshaller` instances are safe by default. The other classes mentioned here are still unsafe by default in Java 8.
 
 ### XPathExpression
 
@@ -572,6 +588,49 @@ The following table gives an overview of various modules in Python 3 used for XM
 | Decompression Bomb        | Safe       | Safe       | Safe       | Safe       | Vulnerable |
 
 To protect your application from the applicable attacks, [two packages](https://docs.python.org/3/library/xml.html#the-defusedxml-and-defusedexpat-packages) exist to help you sanitize your input and protect your application against DDoS and remote attacks.
+
+## Semgrep Rules
+
+[Semgrep](https://semgrep.dev/) is a command-line tool for offline static analysis. Use pre-built or custom rules to enforce code and security standards in your codebase.
+
+### Java
+
+Below are the rules for different XML parsers in Java
+
+#### Digester
+
+Identifying XXE vulnerability in the `org.apache.commons.digester3.Digester` library
+Rule can be played here [https://semgrep.dev/s/salecharohit:xxe-Digester](https://semgrep.dev/s/salecharohit:xxe-Digester)
+
+#### DocumentBuilderFactory
+
+Identifying XXE vulnerability in the `javax.xml.parsers.DocumentBuilderFactory` library
+Rule can be played here [https://semgrep.dev/s/salecharohit:xxe-dbf](https://semgrep.dev/s/salecharohit:xxe-dbf)
+
+#### SAXBuilder
+
+Identifying XXE vulnerability in the `org.jdom2.input.SAXBuilder` library
+Rule can be played here [https://semgrep.dev/s/salecharohit:xxe-saxbuilder](https://semgrep.dev/s/salecharohit:xxe-saxbuilder)
+
+#### SAXParserFactory
+
+Identifying XXE vulnerability in the `javax.xml.parsers.SAXParserFactory` library
+Rule can be played here [https://semgrep.dev/s/salecharohit:xxe-SAXParserFactory](https://semgrep.dev/s/salecharohit:xxe-SAXParserFactory)
+
+#### SAXReader
+
+Identifying XXE vulnerability in the `org.dom4j.io.SAXReader` library
+Rule can be played here [https://semgrep.dev/s/salecharohit:xxe-SAXReader](https://semgrep.dev/s/salecharohit:xxe-SAXReader)
+
+#### XMLInputFactory
+
+Identifying XXE vulnerability in the `javax.xml.stream.XMLInputFactory` library
+Rule can be played here [https://semgrep.dev/s/salecharohit:xxe-XMLInputFactory](https://semgrep.dev/s/salecharohit:xxe-XMLInputFactory)
+
+#### XMLReader
+
+Identifying XXE vulnerability in the `org.xml.sax.XMLReader` library
+Rule can be played here [https://semgrep.dev/s/salecharohit:xxe-XMLReader](https://semgrep.dev/s/salecharohit:xxe-XMLReader)
 
 ## References
 
