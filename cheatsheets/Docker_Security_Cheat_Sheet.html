@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,11 +9,12 @@
         <meta name="description" content="Website with the collection of all the cheat sheets of the project.">
       
       
+      
+      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html">
       
-      
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -23,14 +22,18 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -48,7 +51,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,7 +75,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-header-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -77,18 +88,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             OWASP Cheat Sheet Series
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Docker Security
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -99,7 +112,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -140,8 +153,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -149,10 +160,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -182,8 +199,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../index.html" title="Introduction" class="md-nav__link">
+    <a href="../index.html" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -194,8 +212,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../Glossary.html" title="Index Alphabetical" class="md-nav__link">
+    <a href="../Glossary.html" class="md-nav__link">
       Index Alphabetical
     </a>
   </li>
@@ -206,8 +225,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexASVS.html" title="Index ASVS" class="md-nav__link">
+    <a href="../IndexASVS.html" class="md-nav__link">
       Index ASVS
     </a>
   </li>
@@ -218,8 +238,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexProactiveControls.html" title="Index Proactive Controls" class="md-nav__link">
+    <a href="../IndexProactiveControls.html" class="md-nav__link">
       Index Proactive Controls
     </a>
   </li>
@@ -229,24 +250,23 @@
       
       
 
+
   
 
 
+  
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Cheatsheets
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Cheatsheets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -257,8 +277,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="AJAX_Security_Cheat_Sheet.html" title="AJAX Security" class="md-nav__link">
+    <a href="AJAX_Security_Cheat_Sheet.html" class="md-nav__link">
       AJAX Security
     </a>
   </li>
@@ -269,8 +290,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Abuse_Case_Cheat_Sheet.html" title="Abuse Case" class="md-nav__link">
+    <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
       Abuse Case
     </a>
   </li>
@@ -281,8 +303,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Access_Control_Cheat_Sheet.html" title="Access Control" class="md-nav__link">
+    <a href="Access_Control_Cheat_Sheet.html" class="md-nav__link">
       Access Control
     </a>
   </li>
@@ -293,8 +316,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" title="Attack Surface Analysis" class="md-nav__link">
+    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
       Attack Surface Analysis
     </a>
   </li>
@@ -305,8 +329,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authentication_Cheat_Sheet.html" title="Authentication" class="md-nav__link">
+    <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
       Authentication
     </a>
   </li>
@@ -317,8 +342,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" title="Authorization Testing Automation" class="md-nav__link">
+    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
       Authorization Testing Automation
     </a>
   </li>
@@ -329,8 +355,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Bean_Validation_Cheat_Sheet.html" title="Bean Validation" class="md-nav__link">
+    <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
       Bean Validation
     </a>
   </li>
@@ -341,8 +368,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" title="C-Based Toolchain Hardening" class="md-nav__link">
+    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
       C-Based Toolchain Hardening
     </a>
   </li>
@@ -353,8 +381,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" title="Choosing and Using Security Questions" class="md-nav__link">
+    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
       Choosing and Using Security Questions
     </a>
   </li>
@@ -365,8 +394,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Clickjacking_Defense_Cheat_Sheet.html" title="Clickjacking Defense" class="md-nav__link">
+    <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
       Clickjacking Defense
     </a>
   </li>
@@ -377,8 +407,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Content_Security_Policy_Cheat_Sheet.html" title="Content Security Policy" class="md-nav__link">
+    <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
       Content Security Policy
     </a>
   </li>
@@ -389,8 +420,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" title="Credential Stuffing Prevention" class="md-nav__link">
+    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Credential Stuffing Prevention
     </a>
   </li>
@@ -401,8 +433,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" title="Cross-Site Request Forgery Prevention" class="md-nav__link">
+    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross-Site Request Forgery Prevention
     </a>
   </li>
@@ -413,8 +446,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" title="Cross Site Scripting Prevention" class="md-nav__link">
+    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross Site Scripting Prevention
     </a>
   </li>
@@ -425,8 +459,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cryptographic_Storage_Cheat_Sheet.html" title="Cryptographic Storage" class="md-nav__link">
+    <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
       Cryptographic Storage
     </a>
   </li>
@@ -437,8 +472,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" title="DOM based XSS Prevention" class="md-nav__link">
+    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
       DOM based XSS Prevention
     </a>
   </li>
@@ -449,8 +485,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Database_Security_Cheat_Sheet.html" title="Database Security" class="md-nav__link">
+    <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
       Database Security
     </a>
   </li>
@@ -461,8 +498,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Denial_of_Service_Cheat_Sheet.html" title="Denial of Service" class="md-nav__link">
+    <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
       Denial of Service
     </a>
   </li>
@@ -473,8 +511,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Deserialization_Cheat_Sheet.html" title="Deserialization" class="md-nav__link">
+    <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
       Deserialization
     </a>
   </li>
@@ -483,6 +522,7 @@
           
           
           
+
 
   
 
@@ -496,12 +536,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Docker Security
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="Docker_Security_Cheat_Sheet.html" title="Docker Security" class="md-nav__link md-nav__link--active">
+    <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
       Docker Security
     </a>
     
@@ -513,9 +551,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -608,6 +644,13 @@
           <li class="md-nav__item">
   <a href="#rule-10-set-the-logging-level-to-at-least-info" class="md-nav__link">
     RULE #10 - Set the logging level to at least INFO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-11-lint-the-dockerfile-at-build-time" class="md-nav__link">
+    Rule #11 - Lint the Dockerfile at build time
   </a>
   
 </li>
@@ -636,8 +679,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DotNet_Security_Cheat_Sheet.html" title="DotNet Security" class="md-nav__link">
+    <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
       DotNet Security
     </a>
   </li>
@@ -648,8 +692,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Error_Handling_Cheat_Sheet.html" title="Error Handling" class="md-nav__link">
+    <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
       Error Handling
     </a>
   </li>
@@ -660,8 +705,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="File_Upload_Cheat_Sheet.html" title="File Upload" class="md-nav__link">
+    <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
       File Upload
     </a>
   </li>
@@ -672,8 +718,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Forgot_Password_Cheat_Sheet.html" title="Forgot Password" class="md-nav__link">
+    <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
       Forgot Password
     </a>
   </li>
@@ -684,8 +731,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTML5_Security_Cheat_Sheet.html" title="HTML5 Security" class="md-nav__link">
+    <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
+      GraphQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
       HTML5 Security
     </a>
   </li>
@@ -696,8 +757,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" title="HTTP Strict Transport Security" class="md-nav__link">
+    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
       HTTP Strict Transport Security
     </a>
   </li>
@@ -708,8 +770,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_Cheat_Sheet.html" title="Injection Prevention" class="md-nav__link">
+    <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention
     </a>
   </li>
@@ -720,8 +783,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" title="Injection Prevention in Java" class="md-nav__link">
+    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention in Java
     </a>
   </li>
@@ -732,8 +796,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Input_Validation_Cheat_Sheet.html" title="Input Validation" class="md-nav__link">
+    <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
       Input Validation
     </a>
   </li>
@@ -744,8 +809,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" title="Insecure Direct Object Reference Prevention" class="md-nav__link">
+    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Insecure Direct Object Reference Prevention
     </a>
   </li>
@@ -756,8 +822,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JAAS_Cheat_Sheet.html" title="JAAS" class="md-nav__link">
+    <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
       JAAS
     </a>
   </li>
@@ -768,8 +835,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" title="JSON Web Token for Java" class="md-nav__link">
+    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
       JSON Web Token for Java
     </a>
   </li>
@@ -780,8 +848,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Key_Management_Cheat_Sheet.html" title="Key Management" class="md-nav__link">
+    <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
       Key Management
     </a>
   </li>
@@ -792,8 +861,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" title="LDAP Injection Prevention" class="md-nav__link">
+    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       LDAP Injection Prevention
     </a>
   </li>
@@ -804,8 +874,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Logging_Cheat_Sheet.html" title="Logging" class="md-nav__link">
+    <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
       Logging
     </a>
   </li>
@@ -816,8 +887,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Mass_Assignment_Cheat_Sheet.html" title="Mass Assignment" class="md-nav__link">
+    <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
       Mass Assignment
     </a>
   </li>
@@ -828,8 +900,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" title="Microservices based Security Arch Doc" class="md-nav__link">
+    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
       Microservices based Security Arch Doc
     </a>
   </li>
@@ -840,8 +913,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Multifactor_Authentication_Cheat_Sheet.html" title="Multifactor Authentication" class="md-nav__link">
+    <a href="Microservices_security.html" class="md-nav__link">
+      Microservices security.md
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
       Multifactor Authentication
     </a>
   </li>
@@ -852,8 +939,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Nodejs_Security_Cheat_Sheet.html" title="Nodejs Security" class="md-nav__link">
+    <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
       Nodejs Security
     </a>
   </li>
@@ -864,8 +952,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" title="OS Command Injection Defense" class="md-nav__link">
+    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
       OS Command Injection Defense
     </a>
   </li>
@@ -876,8 +965,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="PHP_Configuration_Cheat_Sheet.html" title="PHP Configuration" class="md-nav__link">
+    <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
       PHP Configuration
     </a>
   </li>
@@ -888,8 +978,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Password_Storage_Cheat_Sheet.html" title="Password Storage" class="md-nav__link">
+    <a href="Password_Storage_Cheat_Sheet.html" class="md-nav__link">
       Password Storage
     </a>
   </li>
@@ -900,8 +991,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Pinning_Cheat_Sheet.html" title="Pinning" class="md-nav__link">
+    <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
       Pinning
     </a>
   </li>
@@ -912,8 +1004,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Query_Parameterization_Cheat_Sheet.html" title="Query Parameterization" class="md-nav__link">
+    <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
       Query Parameterization
     </a>
   </li>
@@ -924,8 +1017,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Assessment_Cheat_Sheet.html" title="REST Assessment" class="md-nav__link">
+    <a href="REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
       REST Assessment
     </a>
   </li>
@@ -936,8 +1030,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Security_Cheat_Sheet.html" title="REST Security" class="md-nav__link">
+    <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
       REST Security
     </a>
   </li>
@@ -948,8 +1043,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Ruby_on_Rails_Cheat_Sheet.html" title="Ruby on Rails" class="md-nav__link">
+    <a href="Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
       Ruby on Rails
     </a>
   </li>
@@ -960,8 +1056,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SAML_Security_Cheat_Sheet.html" title="SAML Security" class="md-nav__link">
+    <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
       SAML Security
     </a>
   </li>
@@ -972,8 +1069,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" title="SQL Injection Prevention" class="md-nav__link">
+    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       SQL Injection Prevention
     </a>
   </li>
@@ -984,8 +1082,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" title="Securing Cascading Style Sheets" class="md-nav__link">
+    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
       Securing Cascading Style Sheets
     </a>
   </li>
@@ -996,8 +1095,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" title="Server Side Request Forgery Prevention" class="md-nav__link">
+    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Server Side Request Forgery Prevention
     </a>
   </li>
@@ -1008,8 +1108,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Session_Management_Cheat_Sheet.html" title="Session Management" class="md-nav__link">
+    <a href="Session_Management_Cheat_Sheet.html" class="md-nav__link">
       Session Management
     </a>
   </li>
@@ -1020,8 +1121,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="TLS_Cipher_String_Cheat_Sheet.html" title="TLS Cipher String" class="md-nav__link">
+    <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
       TLS Cipher String
     </a>
   </li>
@@ -1032,8 +1134,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" title="Third Party Javascript Management" class="md-nav__link">
+    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
       Third Party Javascript Management
     </a>
   </li>
@@ -1044,8 +1147,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Threat_Modeling_Cheat_Sheet.html" title="Threat Modeling" class="md-nav__link">
+    <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
       Threat Modeling
     </a>
   </li>
@@ -1056,8 +1160,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transaction_Authorization_Cheat_Sheet.html" title="Transaction Authorization" class="md-nav__link">
+    <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
       Transaction Authorization
     </a>
   </li>
@@ -1068,8 +1173,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transport_Layer_Protection_Cheat_Sheet.html" title="Transport Layer Protection" class="md-nav__link">
+    <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
       Transport Layer Protection
     </a>
   </li>
@@ -1080,8 +1186,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
       Unvalidated Redirects and Forwards
     </a>
   </li>
@@ -1092,8 +1199,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="User_Privacy_Protection_Cheat_Sheet.html" title="User Privacy Protection" class="md-nav__link">
+    <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
       User Privacy Protection
     </a>
   </li>
@@ -1104,8 +1212,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Virtual_Patching_Cheat_Sheet.html" title="Virtual Patching" class="md-nav__link">
+    <a href="Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
       Virtual Patching
     </a>
   </li>
@@ -1116,8 +1225,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" title="Vulnerability Disclosure" class="md-nav__link">
+    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
       Vulnerability Disclosure
     </a>
   </li>
@@ -1128,8 +1238,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" title="Vulnerable Dependency Management" class="md-nav__link">
+    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
       Vulnerable Dependency Management
     </a>
   </li>
@@ -1140,8 +1251,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Web_Service_Security_Cheat_Sheet.html" title="Web Service Security" class="md-nav__link">
+    <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
       Web Service Security
     </a>
   </li>
@@ -1152,8 +1264,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" title="XML External Entity Prevention" class="md-nav__link">
+    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
       XML External Entity Prevention
     </a>
   </li>
@@ -1164,8 +1277,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_Security_Cheat_Sheet.html" title="XML Security" class="md-nav__link">
+    <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
       XML Security
     </a>
   </li>
@@ -1183,7 +1297,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1194,9 +1309,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1289,6 +1402,13 @@
           <li class="md-nav__item">
   <a href="#rule-10-set-the-logging-level-to-at-least-info" class="md-nav__link">
     RULE #10 - Set the logging level to at least INFO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-11-lint-the-dockerfile-at-build-time" class="md-nav__link">
+    Rule #11 - Lint the Dockerfile at build time
   </a>
   
 </li>
@@ -1318,9 +1438,6 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="docker-security-cheat-sheet">Docker Security Cheat Sheet<a class="headerlink" href="#docker-security-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Docker is the most popular containerization technology. Upon proper use, it can increase the level of security (in comparison to running applications directly on the host). On the other hand, some misconfigurations can lead to downgrade the level of security or even introduce new vulnerabilities.</p>
@@ -1338,7 +1455,6 @@ If you really, <strong>really</strong> have to do this, you should secure it. Ch
 <span class="p p-Indicator">-</span> <span class="s">&quot;/var/run/docker.sock:/var/run/docker.sock&quot;</span>
 </code></pre></div>
 
-
 <h3 id="rule-2-set-a-user">RULE #2 - Set a user<a class="headerlink" href="#rule-2-set-a-user" title="Permanent link">&para;</a></h3>
 <p>Configuring the container to use an unprivileged user is the best way to prevent privilege escalation attacks. This can be accomplished in three different ways as follows:</p>
 <ol>
@@ -1346,7 +1462,6 @@ If you really, <strong>really</strong> have to do this, you should secure it. Ch
 </ol>
 <div class="codehilite"><pre><span></span><code>docker run -u <span class="m">4000</span> alpine
 </code></pre></div>
-
 
 <ol>
 <li>During build time. Simple add user in Dockerfile and use it. For example:</li>
@@ -1356,7 +1471,6 @@ If you really, <strong>really</strong> have to do this, you should secure it. Ch
 &lt;HERE DO WHAT YOU HAVE TO DO AS A ROOT USER LIKE INSTALLING PACKAGES ETC.&gt;
 <span class="k">USER</span><span class="s"> myuser</span>
 </code></pre></div>
-
 
 <ol>
 <li>Enable user namespace support (<code>--userns-remap=default</code>) in <a href="https://docs.docker.com/engine/security/userns-remap/#enable-userns-remap-on-the-daemon">Docker daemon</a></li>
@@ -1378,7 +1492,6 @@ If you really, <strong>really</strong> have to do this, you should secure it. Ch
           <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
 
-
 <p>As a Kubernetes cluster administrator, you can configure it using <a href="https://kubernetes.io/docs/concepts/policy/pod-security-policy/">Pod Security Policies</a>.</p>
 <h3 id="rule-3-limit-capabilities-grant-only-specific-capabilities-needed-by-a-container">RULE #3 - Limit capabilities (Grant only specific capabilities, needed by a container)<a class="headerlink" href="#rule-3-limit-capabilities-grant-only-specific-capabilities-needed-by-a-container" title="Permanent link">&para;</a></h3>
 <p><a href="http://man7.org/linux/man-pages/man7/capabilities.7.html">Linux kernel capabilities</a> are a set of privileges that can be used by privileged. Docker, by default, runs with only a  subset of capabilities.
@@ -1387,7 +1500,6 @@ Remember not to run containers with the <code>--privileged</code> flag - this wi
 <p>The most secure setup is to drop all capabilities <code>--cap-drop all</code> and then add only required ones. For example:</p>
 <div class="codehilite"><pre><span></span><code>docker run --cap-drop all --cap-add CHOWN alpine
 </code></pre></div>
-
 
 <p><strong>And remember: Do not run containers with the <em>--privileged</em> flag!!!</strong></p>
 <p>In kubernetes this can be configured in <a href="https://kubernetes.io/docs/tasks/configure-pod-container/security-context/">Security Context</a> using <code>capabilities</code> field e.g.:</p>
@@ -1410,7 +1522,6 @@ Remember not to run containers with the <code>--privileged</code> flag - this wi
           <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
 
-
 <p>As a Kubernetes cluster administrator, you can configure it using <a href="https://kubernetes.io/docs/concepts/policy/pod-security-policy/">Pod Security Policies</a>.</p>
 <h3 id="rule-4-add-no-new-privileges-flag">RULE #4 - Add –no-new-privileges flag<a class="headerlink" href="#rule-4-add-no-new-privileges-flag" title="Permanent link">&para;</a></h3>
 <p>Always run your docker images with <code>--security-opt=no-new-privileges</code> in order to prevent escalate privileges using <code>setuid</code> or <code>setgid</code> binaries.</p>
@@ -1429,7 +1540,6 @@ Remember not to run containers with the <code>--privileged</code> flag - this wi
           <span class="l l-Scalar l-Scalar-Plain">allowPrivilegeEscalation</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
           <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
-
 
 <p>As a Kubernetes cluster administrator, you can refer to Kubernetes documentation to configure it using <a href="https://kubernetes.io/docs/concepts/policy/pod-security-policy/">Pod Security Policies</a>.</p>
 <h3 id="rule-5-disable-inter-container-communication-iccfalse">RULE #5 - Disable inter-container communication (--icc=false)<a class="headerlink" href="#rule-5-disable-inter-container-communication-iccfalse" title="Permanent link">&para;</a></h3>
@@ -1452,11 +1562,9 @@ See more in <a href="https://docs.docker.com/v17.09/engine/userguide/networking/
 <div class="codehilite"><pre><span></span><code>docker run --read-only alpine sh -c <span class="s1">&#39;echo &quot;whatever&quot; &gt; /tmp&#39;</span>
 </code></pre></div>
 
-
 <p>If an application inside a container has to save something temporarily, combine <code>--read-only</code> flag with <code>--tmpfs</code> like this:</p>
 <div class="codehilite"><pre><span></span><code>docker run --read-only --tmpfs /tmp alpine sh -c <span class="s1">&#39;echo &quot;whatever&quot; &gt; /tmp/file&#39;</span>
 </code></pre></div>
-
 
 <p>Equivalent in the docker-compose file will be:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3&quot;</span>
@@ -1465,7 +1573,6 @@ See more in <a href="https://docs.docker.com/v17.09/engine/userguide/networking/
     <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">alpine</span>
     <span class="nt">read_only</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-
 
 <p>Equivalent in kubernetes in <a href="https://kubernetes.io/docs/tasks/configure-pod-container/security-context/">Security Context</a> will be:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -1483,17 +1590,14 @@ See more in <a href="https://docs.docker.com/v17.09/engine/userguide/networking/
           <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
 
-
 <p>In addition, if the volume is mounted only for reading <strong>mount them as a read-only</strong>
 It can be done by appending <code>:ro</code> to the <code>-v</code> like this:</p>
 <div class="codehilite"><pre><span></span><code>docker run -v volume-name:/path/in/container:ro alpine
 </code></pre></div>
 
-
 <p>Or by using <code>--mount</code> option:</p>
 <div class="codehilite"><pre><span></span><code>docker run --mount <span class="nv">source</span><span class="o">=</span>volume-name,destination<span class="o">=</span>/path/in/container,readonly alpine
 </code></pre></div>
-
 
 <h3 id="rule-9-use-static-analysis-tools">RULE #9 - Use static analysis tools<a class="headerlink" href="#rule-9-use-static-analysis-tools" title="Permanent link">&para;</a></h3>
 <p>To detect containers with known vulnerabilities - scan images using static analysis tools.</p>
@@ -1529,7 +1633,16 @@ It can be done by appending <code>:ro</code> to the <code>-v</code> like this:</
 <div class="codehilite"><pre><span></span><code>docker-compose --log-level info up
 </code></pre></div>
 
-
+<h3 id="rule-11-lint-the-dockerfile-at-build-time">Rule #11 - Lint the Dockerfile at build time<a class="headerlink" href="#rule-11-lint-the-dockerfile-at-build-time" title="Permanent link">&para;</a></h3>
+<p>Many issues can be prevented by following some best practices when writing the Dockerfile. Adding a security linter as a step in the the build pipeline can go a long way in avoiding further headaches. Some issues that are worth checking are:</p>
+<ul>
+<li>Ensure a <code>USER</code> directive is specified</li>
+<li>Ensure the base image version is pinned</li>
+<li>Ensure the OS packages versions are pinned</li>
+<li>Avoid the use of <code>ADD</code> in favor of <code>COPY</code></li>
+<li>Avoid the use of <code>apt/apk upgrade</code></li>
+<li>Avoid curl bashing in <code>RUN</code> directives</li>
+</ul>
 <p>References:</p>
 <ul>
 <li><a href="https://dev-sec.io/baselines/docker/">Docker Baselines on DevSec</a></li>
@@ -1537,6 +1650,7 @@ It can be done by appending <code>:ro</code> to the <code>-v</code> like this:</
 <li><a href="https://docs.docker.com/compose/reference/overview/">Overview of docker-compose CLI</a></li>
 <li><a href="https://docs.docker.com/config/containers/logging/configure/">Configuring Logging Drivers</a></li>
 <li><a href="https://docs.docker.com/config/containers/logging/">View logs for a container or service</a></li>
+<li><a href="https://cloudberry.engineering/article/dockerfile-security-best-practices/">Dockerfile Security Best Practices</a></li>
 </ul>
 <h2 id="related-projects">Related Projects<a class="headerlink" href="#related-projects" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/OWASP/Docker-Security">OWASP Docker Top 10</a></p>
@@ -1560,7 +1674,7 @@ It can be done by appending <code>:ro</code> to the <code>-v</code> like this:</
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="Deserialization_Cheat_Sheet.html" title="Deserialization" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="Deserialization_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1575,7 +1689,7 @@ It can be done by appending <code>:ro</code> to the <code>-v</code> like this:</
           </a>
         
         
-          <a href="DotNet_Security_Cheat_Sheet.html" title="DotNet Security" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="DotNet_Security_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1612,15 +1726,15 @@ It can be done by appending <code>:ro</code> to the <code>-v</code> like this:</
       
     </div>
     
-      <script src="../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

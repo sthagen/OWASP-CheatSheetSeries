@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,11 +9,12 @@
         <meta name="description" content="Website with the collection of all the cheat sheets of the project.">
       
       
+      
+      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">
       
-      
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -23,14 +22,18 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -48,7 +51,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,7 +75,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-header-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -77,18 +88,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             OWASP Cheat Sheet Series
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Cross-Site Request Forgery Prevention
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -99,7 +112,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -140,8 +153,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -149,10 +160,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -182,8 +199,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../index.html" title="Introduction" class="md-nav__link">
+    <a href="../index.html" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -194,8 +212,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../Glossary.html" title="Index Alphabetical" class="md-nav__link">
+    <a href="../Glossary.html" class="md-nav__link">
       Index Alphabetical
     </a>
   </li>
@@ -206,8 +225,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexASVS.html" title="Index ASVS" class="md-nav__link">
+    <a href="../IndexASVS.html" class="md-nav__link">
       Index ASVS
     </a>
   </li>
@@ -218,8 +238,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexProactiveControls.html" title="Index Proactive Controls" class="md-nav__link">
+    <a href="../IndexProactiveControls.html" class="md-nav__link">
       Index Proactive Controls
     </a>
   </li>
@@ -229,24 +250,23 @@
       
       
 
+
   
 
 
+  
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Cheatsheets
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Cheatsheets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -257,8 +277,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="AJAX_Security_Cheat_Sheet.html" title="AJAX Security" class="md-nav__link">
+    <a href="AJAX_Security_Cheat_Sheet.html" class="md-nav__link">
       AJAX Security
     </a>
   </li>
@@ -269,8 +290,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Abuse_Case_Cheat_Sheet.html" title="Abuse Case" class="md-nav__link">
+    <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
       Abuse Case
     </a>
   </li>
@@ -281,8 +303,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Access_Control_Cheat_Sheet.html" title="Access Control" class="md-nav__link">
+    <a href="Access_Control_Cheat_Sheet.html" class="md-nav__link">
       Access Control
     </a>
   </li>
@@ -293,8 +316,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" title="Attack Surface Analysis" class="md-nav__link">
+    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
       Attack Surface Analysis
     </a>
   </li>
@@ -305,8 +329,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authentication_Cheat_Sheet.html" title="Authentication" class="md-nav__link">
+    <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
       Authentication
     </a>
   </li>
@@ -317,8 +342,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" title="Authorization Testing Automation" class="md-nav__link">
+    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
       Authorization Testing Automation
     </a>
   </li>
@@ -329,8 +355,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Bean_Validation_Cheat_Sheet.html" title="Bean Validation" class="md-nav__link">
+    <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
       Bean Validation
     </a>
   </li>
@@ -341,8 +368,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" title="C-Based Toolchain Hardening" class="md-nav__link">
+    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
       C-Based Toolchain Hardening
     </a>
   </li>
@@ -353,8 +381,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" title="Choosing and Using Security Questions" class="md-nav__link">
+    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
       Choosing and Using Security Questions
     </a>
   </li>
@@ -365,8 +394,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Clickjacking_Defense_Cheat_Sheet.html" title="Clickjacking Defense" class="md-nav__link">
+    <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
       Clickjacking Defense
     </a>
   </li>
@@ -377,8 +407,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Content_Security_Policy_Cheat_Sheet.html" title="Content Security Policy" class="md-nav__link">
+    <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
       Content Security Policy
     </a>
   </li>
@@ -389,8 +420,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" title="Credential Stuffing Prevention" class="md-nav__link">
+    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Credential Stuffing Prevention
     </a>
   </li>
@@ -399,6 +431,7 @@
           
           
           
+
 
   
 
@@ -412,12 +445,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Cross-Site Request Forgery Prevention
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" title="Cross-Site Request Forgery Prevention" class="md-nav__link md-nav__link--active">
+    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
       Cross-Site Request Forgery Prevention
     </a>
     
@@ -429,9 +460,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -692,8 +721,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" title="Cross Site Scripting Prevention" class="md-nav__link">
+    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross Site Scripting Prevention
     </a>
   </li>
@@ -704,8 +734,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cryptographic_Storage_Cheat_Sheet.html" title="Cryptographic Storage" class="md-nav__link">
+    <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
       Cryptographic Storage
     </a>
   </li>
@@ -716,8 +747,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" title="DOM based XSS Prevention" class="md-nav__link">
+    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
       DOM based XSS Prevention
     </a>
   </li>
@@ -728,8 +760,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Database_Security_Cheat_Sheet.html" title="Database Security" class="md-nav__link">
+    <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
       Database Security
     </a>
   </li>
@@ -740,8 +773,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Denial_of_Service_Cheat_Sheet.html" title="Denial of Service" class="md-nav__link">
+    <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
       Denial of Service
     </a>
   </li>
@@ -752,8 +786,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Deserialization_Cheat_Sheet.html" title="Deserialization" class="md-nav__link">
+    <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
       Deserialization
     </a>
   </li>
@@ -764,8 +799,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Docker_Security_Cheat_Sheet.html" title="Docker Security" class="md-nav__link">
+    <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
       Docker Security
     </a>
   </li>
@@ -776,8 +812,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DotNet_Security_Cheat_Sheet.html" title="DotNet Security" class="md-nav__link">
+    <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
       DotNet Security
     </a>
   </li>
@@ -788,8 +825,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Error_Handling_Cheat_Sheet.html" title="Error Handling" class="md-nav__link">
+    <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
       Error Handling
     </a>
   </li>
@@ -800,8 +838,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="File_Upload_Cheat_Sheet.html" title="File Upload" class="md-nav__link">
+    <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
       File Upload
     </a>
   </li>
@@ -812,8 +851,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Forgot_Password_Cheat_Sheet.html" title="Forgot Password" class="md-nav__link">
+    <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
       Forgot Password
     </a>
   </li>
@@ -824,8 +864,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTML5_Security_Cheat_Sheet.html" title="HTML5 Security" class="md-nav__link">
+    <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
+      GraphQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
       HTML5 Security
     </a>
   </li>
@@ -836,8 +890,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" title="HTTP Strict Transport Security" class="md-nav__link">
+    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
       HTTP Strict Transport Security
     </a>
   </li>
@@ -848,8 +903,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_Cheat_Sheet.html" title="Injection Prevention" class="md-nav__link">
+    <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention
     </a>
   </li>
@@ -860,8 +916,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" title="Injection Prevention in Java" class="md-nav__link">
+    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention in Java
     </a>
   </li>
@@ -872,8 +929,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Input_Validation_Cheat_Sheet.html" title="Input Validation" class="md-nav__link">
+    <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
       Input Validation
     </a>
   </li>
@@ -884,8 +942,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" title="Insecure Direct Object Reference Prevention" class="md-nav__link">
+    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Insecure Direct Object Reference Prevention
     </a>
   </li>
@@ -896,8 +955,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JAAS_Cheat_Sheet.html" title="JAAS" class="md-nav__link">
+    <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
       JAAS
     </a>
   </li>
@@ -908,8 +968,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" title="JSON Web Token for Java" class="md-nav__link">
+    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
       JSON Web Token for Java
     </a>
   </li>
@@ -920,8 +981,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Key_Management_Cheat_Sheet.html" title="Key Management" class="md-nav__link">
+    <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
       Key Management
     </a>
   </li>
@@ -932,8 +994,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" title="LDAP Injection Prevention" class="md-nav__link">
+    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       LDAP Injection Prevention
     </a>
   </li>
@@ -944,8 +1007,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Logging_Cheat_Sheet.html" title="Logging" class="md-nav__link">
+    <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
       Logging
     </a>
   </li>
@@ -956,8 +1020,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Mass_Assignment_Cheat_Sheet.html" title="Mass Assignment" class="md-nav__link">
+    <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
       Mass Assignment
     </a>
   </li>
@@ -968,8 +1033,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" title="Microservices based Security Arch Doc" class="md-nav__link">
+    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
       Microservices based Security Arch Doc
     </a>
   </li>
@@ -980,8 +1046,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Multifactor_Authentication_Cheat_Sheet.html" title="Multifactor Authentication" class="md-nav__link">
+    <a href="Microservices_security.html" class="md-nav__link">
+      Microservices security.md
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
       Multifactor Authentication
     </a>
   </li>
@@ -992,8 +1072,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Nodejs_Security_Cheat_Sheet.html" title="Nodejs Security" class="md-nav__link">
+    <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
       Nodejs Security
     </a>
   </li>
@@ -1004,8 +1085,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" title="OS Command Injection Defense" class="md-nav__link">
+    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
       OS Command Injection Defense
     </a>
   </li>
@@ -1016,8 +1098,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="PHP_Configuration_Cheat_Sheet.html" title="PHP Configuration" class="md-nav__link">
+    <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
       PHP Configuration
     </a>
   </li>
@@ -1028,8 +1111,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Password_Storage_Cheat_Sheet.html" title="Password Storage" class="md-nav__link">
+    <a href="Password_Storage_Cheat_Sheet.html" class="md-nav__link">
       Password Storage
     </a>
   </li>
@@ -1040,8 +1124,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Pinning_Cheat_Sheet.html" title="Pinning" class="md-nav__link">
+    <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
       Pinning
     </a>
   </li>
@@ -1052,8 +1137,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Query_Parameterization_Cheat_Sheet.html" title="Query Parameterization" class="md-nav__link">
+    <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
       Query Parameterization
     </a>
   </li>
@@ -1064,8 +1150,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Assessment_Cheat_Sheet.html" title="REST Assessment" class="md-nav__link">
+    <a href="REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
       REST Assessment
     </a>
   </li>
@@ -1076,8 +1163,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Security_Cheat_Sheet.html" title="REST Security" class="md-nav__link">
+    <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
       REST Security
     </a>
   </li>
@@ -1088,8 +1176,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Ruby_on_Rails_Cheat_Sheet.html" title="Ruby on Rails" class="md-nav__link">
+    <a href="Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
       Ruby on Rails
     </a>
   </li>
@@ -1100,8 +1189,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SAML_Security_Cheat_Sheet.html" title="SAML Security" class="md-nav__link">
+    <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
       SAML Security
     </a>
   </li>
@@ -1112,8 +1202,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" title="SQL Injection Prevention" class="md-nav__link">
+    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       SQL Injection Prevention
     </a>
   </li>
@@ -1124,8 +1215,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" title="Securing Cascading Style Sheets" class="md-nav__link">
+    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
       Securing Cascading Style Sheets
     </a>
   </li>
@@ -1136,8 +1228,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" title="Server Side Request Forgery Prevention" class="md-nav__link">
+    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Server Side Request Forgery Prevention
     </a>
   </li>
@@ -1148,8 +1241,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Session_Management_Cheat_Sheet.html" title="Session Management" class="md-nav__link">
+    <a href="Session_Management_Cheat_Sheet.html" class="md-nav__link">
       Session Management
     </a>
   </li>
@@ -1160,8 +1254,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="TLS_Cipher_String_Cheat_Sheet.html" title="TLS Cipher String" class="md-nav__link">
+    <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
       TLS Cipher String
     </a>
   </li>
@@ -1172,8 +1267,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" title="Third Party Javascript Management" class="md-nav__link">
+    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
       Third Party Javascript Management
     </a>
   </li>
@@ -1184,8 +1280,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Threat_Modeling_Cheat_Sheet.html" title="Threat Modeling" class="md-nav__link">
+    <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
       Threat Modeling
     </a>
   </li>
@@ -1196,8 +1293,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transaction_Authorization_Cheat_Sheet.html" title="Transaction Authorization" class="md-nav__link">
+    <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
       Transaction Authorization
     </a>
   </li>
@@ -1208,8 +1306,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transport_Layer_Protection_Cheat_Sheet.html" title="Transport Layer Protection" class="md-nav__link">
+    <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
       Transport Layer Protection
     </a>
   </li>
@@ -1220,8 +1319,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
       Unvalidated Redirects and Forwards
     </a>
   </li>
@@ -1232,8 +1332,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="User_Privacy_Protection_Cheat_Sheet.html" title="User Privacy Protection" class="md-nav__link">
+    <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
       User Privacy Protection
     </a>
   </li>
@@ -1244,8 +1345,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Virtual_Patching_Cheat_Sheet.html" title="Virtual Patching" class="md-nav__link">
+    <a href="Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
       Virtual Patching
     </a>
   </li>
@@ -1256,8 +1358,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" title="Vulnerability Disclosure" class="md-nav__link">
+    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
       Vulnerability Disclosure
     </a>
   </li>
@@ -1268,8 +1371,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" title="Vulnerable Dependency Management" class="md-nav__link">
+    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
       Vulnerable Dependency Management
     </a>
   </li>
@@ -1280,8 +1384,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Web_Service_Security_Cheat_Sheet.html" title="Web Service Security" class="md-nav__link">
+    <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
       Web Service Security
     </a>
   </li>
@@ -1292,8 +1397,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" title="XML External Entity Prevention" class="md-nav__link">
+    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
       XML External Entity Prevention
     </a>
   </li>
@@ -1304,8 +1410,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_Security_Cheat_Sheet.html" title="XML Security" class="md-nav__link">
+    <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
       XML Security
     </a>
   </li>
@@ -1323,7 +1430,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1334,9 +1442,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1598,9 +1704,6 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="cross-site-request-forgery-prevention-cheat-sheet">Cross-Site Request Forgery Prevention Cheat Sheet<a class="headerlink" href="#cross-site-request-forgery-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p><a href="https://owasp.org/www-community/attacks/csrf">Cross-Site Request Forgery (CSRF)</a> is a type of attack that occurs when a malicious web site, email, blog, instant message, or program causes a user's web browser to perform an unwanted action on a trusted site when the user is authenticated. A CSRF attack works because browser requests automatically include all cookies including session cookies. Therefore, if the user is authenticated to the site, the site cannot distinguish between legitimate requests and forged requests.</p>
@@ -1636,6 +1739,7 @@
 <ul>
 <li>For Java: OWASP <a href="https://owasp.org/www-project-csrfguard/">CSRF Guard</a> or <a href="https://docs.spring.io/spring-security/site/docs/3.2.0.CI-SNAPSHOT/reference/html/csrf.html">Spring Security</a></li>
 <li>For PHP and Apache: <a href="https://owasp.org/www-project-csrfprotector/">CSRFProtector Project</a></li>
+<li>For AngularJS: <a href="https://docs.angularjs.org/api/ng/service/$http#cross-site-request-forgery-xsrf-protection">Cross-Site Request Forgery (XSRF) Protection</a></li>
 </ul>
 <h3 id="synchronizer-token-pattern">Synchronizer Token Pattern<a class="headerlink" href="#synchronizer-token-pattern" title="Permanent link">&para;</a></h3>
 <p>CSRF tokens should be generated on the server-side. They can be generated once per user session or for each request. Per-request tokens are more secure than per-session tokens as the time range for an attacker to exploit the stolen tokens is minimal. However, this may result in usability concerns. For example, the "Back" button browser capability is often hindered as the previous page may contain a token that is no longer valid. Interaction with this previous page will result in a CSRF false positive security event at the server. In per-session token implementation after initial generation of token, the value is stored in the session and is used for each subsequent request until the session expires.</p>
@@ -1656,7 +1760,6 @@
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <p>Inserting the CSRF token in the custom HTTP request header via JavaScript is considered more secure than adding the token in the hidden field form parameter because it <a href="#use-of-custom-request-headers">uses custom request headers</a>.</p>
 <h3 id="encryption-based-token-pattern">Encryption based Token Pattern<a class="headerlink" href="#encryption-based-token-pattern" title="Permanent link">&para;</a></h3>
 <p>The Encrypted Token Pattern leverages an encryption, rather than comparison method of Token-validation. It is most suitable for applications that do not want to maintain any state at server side.</p>
@@ -1671,13 +1774,17 @@
 </ol>
 <p>Below are the steps for the proper implementation of the HMAC based CSRF protection:</p>
 <ol>
-<li>Generate the token\
-Using key K, generate <code>HMAC(session ID + timestamp</code>) and append the same timestamp value to it which results in your CSRF token.</li>
-<li>Include the token (<em>i.e.</em> <code>HMAC+timestamp</code>)\
-Include token in a hidden field for forms and in the request-header field/request body parameter for AJAX requests.</li>
-<li>Validating the token\
-When the request is received at the server, re-generate the token with same key K (parameters are the session ID from the request and timestamp in the received token). If the HMAC in the received token and the one generated in this step match, verify if timestamp received is less than defined token expiry time. If both of them are success, then request is treated as legitimate and can be allowed. If not, block the request and log the attack for incident response purposes.</li>
+<li>Generate the token</li>
 </ol>
+<p>Using key K, generate <code>HMAC(session ID + timestamp</code>) and append the same timestamp value to it which results in your CSRF token.</p>
+<ol>
+<li>Include the token (<em>i.e.</em> <code>HMAC+timestamp</code>)</li>
+</ol>
+<p>Include token in a hidden field for forms and in the request-header field/request body parameter for AJAX requests.</p>
+<ol>
+<li>Validating the token</li>
+</ol>
+<p>When the request is received at the server, re-generate the token with same key K (parameters are the session ID from the request and timestamp in the received token). If the HMAC in the received token and the one generated in this step match, verify if timestamp received is less than defined token expiry time. If both of them are success, then request is treated as legitimate and can be allowed. If not, block the request and log the attack for incident response purposes.</p>
 <p>The <a href="Key_Management_Cheat_Sheet.html#key-management-lifecycle-best-practices">Key Management Cheat Sheet</a> contains best practices about managing the HMAC key.</p>
 <h2 id="defense-in-depth-techniques">Defense In Depth Techniques<a class="headerlink" href="#defense-in-depth-techniques" title="Permanent link">&para;</a></h2>
 <h3 id="samesite-cookie-attribute">SameSite Cookie Attribute<a class="headerlink" href="#samesite-cookie-attribute" title="Permanent link">&para;</a></h3>
@@ -1689,7 +1796,6 @@ When the request is received at the server, re-generate the token with same key 
 <div class="codehilite"><pre><span></span><code>Set-Cookie: JSESSIONID=xxxxx; SameSite=Strict
 Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
 </code></pre></div>
-
 
 <p>All desktop browsers and almost all mobile browsers now support the <code>SameSite</code> attribute. To keep track of the browsers implementing it and the usage of the attribute, refer to the following <a href="https://caniuse.com/#feat=same-site-cookie-attribute">service</a>. Note that Chrome has <a href="https://blog.chromium.org/2019/10/developers-get-ready-for-new.html">announced</a> that they will mark cookies as <code>SameSite=Lax</code> by default from Chrome 80 (due in February 2020), and Firefox and Edge are both planning to follow suit. Additionally, the <code>Secure</code> flag will be required for cookies that are marked as <code>SameSite=None</code>.</p>
 <p>It is important to note that this attribute should be implemented as an additional layer <em>defense in depth</em> concept. This attribute protects the user through the browsers supporting it, and it contains as well 2 ways to bypass it as mentioned in the following <a href="https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-02#section-5.3.7.1">section</a>. This attribute should not replace having a CSRF Token. Instead, it should co-exist with that token in order to protect the user in a more robust way.</p>
@@ -1712,7 +1818,7 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
 <p>If you are behind a proxy, there are a number of options to consider.</p>
 <ul>
 <li>
-<p><strong>Configure your application to simply know its target origin:</strong> It's your application, so you can find its target origin and set that value in some server configuration entry. This would be the most secure approach as its defined server side, so it is a trusted value. However, this might be problematic to maintain if your application is deployed in many places, e.g., dev, test, QA, production, and possibly multiple production instances. Setting the correct value for each of these situations might be difficult, but if you can do it via some central configuration and providing your instances to grab value from it, that's great! (<strong>Note:</strong> Make sure the centralized configuration store is maintained securely because major part of your CSRF defense depends on it.)</p>
+<p><strong>Configure your application to simply know its target origin:</strong> It's your application, so you can find its target origin and set that value in some server configuration entry. This would be the most secure approach as it's defined server side, so it is a trusted value. However, this might be problematic to maintain if your application is deployed in many places, e.g., dev, test, QA, production, and possibly multiple production instances. Setting the correct value for each of these situations might be difficult, but if you can do it via some central configuration and providing your instances to grab value from it, that's great! (<strong>Note:</strong> Make sure the centralized configuration store is maintained securely because major part of your CSRF defense depends on it.)</p>
 </li>
 <li>
 <p><strong>Use the Host header value:</strong> If you prefer that the application find its own target so it doesn't have to be configured for each deployed instance, we recommend using the Host family of headers. The Host header's purpose is to contain the target origin of the request. But, if your app server is sitting behind a proxy, the Host header value is most likely changed by the proxy to the target origin of the URL behind the proxy, which is different than the original URL. This modified Host header origin won't match the source origin in the original Origin or Referer headers.</p>
@@ -1729,7 +1835,7 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
 <li>Origin header is included for all cross origin requests but for same origin requests, in most browsers it is only included in POST/DELETE/PUT <strong>Note:</strong> Although it is not ideal, many developers use GET requests to do state changing operations.</li>
 <li>Referer header is no exception. There are multiple use cases where referrer header is omitted as well (<a href="https://stackoverflow.com/questions/6880659/in-what-cases-will-http-referer-be-empty">1</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">2</a>, <a href="https://en.wikipedia.org/wiki/HTTP_referer#Referer_hiding">3</a>, <a href="https://seclab.stanford.edu/websec/csrf/csrf.pdf">4</a> and <a href="https://www.google.com/search?q=referrer+header+sent+null+value+site:stackoverflow.com">5</a>). Load balancers, proxies and embedded network devices are also well known to strip the referrer header due to privacy reasons in logging them.</li>
 </ul>
-<p>Usually, a minor percentage of traffic does fall under above categories (<a href="http://homakov.blogspot.com/2012/04/playing-with-referer-origin-disquscom.html">1-2%</a>) and no enterprise would want to lose this traffic. One of the popular technique used across Internet to make this technique more usable is to accept the request if the Origin/referrer matches your configured list of domains "OR" a null value (Examples <a href="http://homakov.blogspot.com/2012/04/playing-with-referer-origin-disquscom.html">here</a>. null value is to cover the edge cases mentioned above where these headers are not sent). Please note that, attackers can exploit this but people prefer to use this technique as a defense in depth measure because of minor effort involved in deploying it</p>
+<p>Usually, a minor percentage of traffic does fall under above categories (<a href="http://homakov.blogspot.com/2012/04/playing-with-referer-origin-disquscom.html">1-2%</a>) and no enterprise would want to lose this traffic. One of the popular technique used across the Internet to make this technique more usable is to accept the request if the Origin/referrer matches your configured list of domains "OR" a null value (Examples <a href="http://homakov.blogspot.com/2012/04/playing-with-referer-origin-disquscom.html">here</a>. The null value is to cover the edge cases mentioned above where these headers are not sent). Please note that, attackers can exploit this but people prefer to use this technique as a defense in depth measure because of the minor effort involved in deploying it.</p>
 <h3 id="double-submit-cookie">Double Submit Cookie<a class="headerlink" href="#double-submit-cookie" title="Permanent link">&para;</a></h3>
 <p>If maintaining the state for CSRF token at server side is problematic, an alternative defense is to use the double submit cookie technique. This technique is easy to implement and is stateless. In this technique, we send a random value in both a cookie and as a request parameter, with the server verifying if the cookie value and request value match. When a user visits (even before authenticating to prevent login CSRF), the site should generate a (cryptographically strong) pseudorandom value and set it as a cookie on the user's machine separate from the session identifier. The site then requires that every transaction request include this pseudorandom value as a hidden form value (or other request parameter/header). If both of them match at server side, the server accepts it as legitimate request and if they don't, it would reject the request.</p>
 <p>Because subdomains can write cookies to the parent domains and because cookies can be set for the domain over plain HTTP connections this technique works as long as you are sure that your subdomains are fully secured and only accept HTTPS connections.</p>
@@ -1740,14 +1846,14 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
 <ul>
 <li>Cannot be (over)written from another subdomain.</li>
 <li>Must have the path of <code>/</code>.</li>
-<li>Must be marked as Secure (i.e, cannot be send over unencrypted HTTP).</li>
+<li>Must be marked as Secure (i.e, cannot be sent over unencrypted HTTP).</li>
 </ul>
 <p>As of July 2020 cookie prefixes <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">are supported by all major browsers except Internet Explorer</a>.</p>
 <p>See the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Directives">Mozilla Developer Network</a> and <a href="https://tools.ietf.org/html/draft-west-cookie-prefixes-05">IETF Draft</a> for further information about cookie prefixes.</p>
 <h3 id="use-of-custom-request-headers">Use of Custom Request Headers<a class="headerlink" href="#use-of-custom-request-headers" title="Permanent link">&para;</a></h3>
 <p>Adding CSRF tokens, a double submit cookie and value, an encrypted token, or other defense that involves changing the UI can frequently be complex or otherwise problematic. An alternate defense that is particularly well suited for AJAX or API endpoints is the use of a <strong>custom request header</strong>. This defense relies on the <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same-origin policy (SOP)</a> restriction that only JavaScript can be used to add a custom header, and only within its origin. By default, browsers do not allow JavaScript to make cross origin requests with custom headers.</p>
 <p>If this is the case for your system, you can simply verify the presence of this header and value on all your server side AJAX endpoints in order to protect against CSRF attacks. This approach has the double advantage of usually requiring no UI changes and not introducing any server side state, which is particularly attractive to REST services. You can always add your own <strong>custom header</strong> and value if that is preferred.</p>
-<p>This technique obviously works for AJAX calls and you have to still need protect <code>&lt;form&gt;</code> tags with approaches described in this document such as tokens. Also, CORS configuration should also be robust to make this solution work effectively (as custom headers for requests coming from other domains trigger a pre-flight CORS check).</p>
+<p>This technique obviously works for AJAX calls, but you still need to protect <code>&lt;form&gt;</code> tags with approaches described in this document such as tokens. Also, CORS configuration should also be robust to make this solution work effectively (as custom headers for requests coming from other domains trigger a pre-flight CORS check).</p>
 <h3 id="user-interaction-based-csrf-defense">User Interaction Based CSRF Defense<a class="headerlink" href="#user-interaction-based-csrf-defense" title="Permanent link">&para;</a></h3>
 <p>While all the techniques referenced here do not require any user interaction, sometimes it's easier or more appropriate to involve the user in the transaction to prevent unauthorized operations (forged via CSRF or otherwise). The following are some examples of techniques that can act as strong CSRF defense when implemented correctly.</p>
 <ul>
@@ -1779,7 +1885,6 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;csrf-token&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;{{ csrf_token() }}&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <p>The exact syntax of populating the content attribute would depend on your web application's backend programming language.</p>
 <h3 id="overriding-defaults-to-set-custom-header">Overriding Defaults to Set Custom Header<a class="headerlink" href="#overriding-defaults-to-set-custom-header" title="Permanent link">&para;</a></h3>
 <p>Several JavaScript libraries allow for overriding default settings to have a header added automatically to all AJAX requests.</p>
@@ -1796,14 +1901,13 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
     <span class="nx">XMLHttpRequest</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">open</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
         <span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">o</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
         <span class="kd">var</span> <span class="nx">err</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">csrfSafeMethod</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">csrfSafeMethod</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mf">0</span><span class="p">]))</span> <span class="p">{</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;anti-csrf-token&#39;</span><span class="p">,</span> <span class="nx">csrf_token</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
     <span class="p">};</span>
  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <h4 id="angularjs">AngularJS<a class="headerlink" href="#angularjs" title="Permanent link">&para;</a></h4>
 <p>AngularJS allows for setting default headers for HTTP operations. Further documentation can be found at AngularJS's documentation for <a href="https://docs.angularjs.org/api/ng/provider/$httpProvider#defaults">$httpProvider</a>.</p>
@@ -1829,7 +1933,6 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <p>This code snippet has been tested with AngularJS version 1.7.7.</p>
 <h4 id="axios">Axios<a class="headerlink" href="#axios" title="Permanent link">&para;</a></h4>
 <p><a href="https://github.com/axios/axios">Axios</a> allows us to set default headers for the POST, PUT, DELETE and PATCH actions.</p>
@@ -1846,7 +1949,6 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
     <span class="nx">axios</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">trace</span><span class="p">[</span><span class="s1">&#39;anti-csrf-token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">csrf_token</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>This code snippet has been tested with Axios version 0.18.0.</p>
 <h4 id="jquery">JQuery<a class="headerlink" href="#jquery" title="Permanent link">&para;</a></h4>
@@ -1869,7 +1971,6 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
     <span class="p">});</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>This code snippet has been tested with jQuery version 3.3.1.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
@@ -1901,7 +2002,7 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" title="Credential Stuffing Prevention" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1916,7 +2017,7 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
           </a>
         
         
-          <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" title="Cross Site Scripting Prevention" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1953,15 +2054,15 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
       
     </div>
     
-      <script src="../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

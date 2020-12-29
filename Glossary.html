@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,11 +9,12 @@
         <meta name="description" content="Website with the collection of all the cheat sheets of the project.">
       
       
+      
+      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/Glossary.html">
       
-      
       <link rel="shortcut icon" href="assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -23,14 +22,18 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.3b61ea93.min.css">
       
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -48,7 +51,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,7 +75,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-header-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -77,18 +88,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             OWASP Cheat Sheet Series
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Index Alphabetical
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -99,7 +112,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -140,8 +153,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -149,10 +160,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -182,8 +199,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="index.html" title="Introduction" class="md-nav__link">
+    <a href="index.html" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -192,6 +210,7 @@
       
       
       
+
 
   
 
@@ -205,12 +224,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Index Alphabetical
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="Glossary.html" title="Index Alphabetical" class="md-nav__link md-nav__link--active">
+    <a href="Glossary.html" class="md-nav__link md-nav__link--active">
       Index Alphabetical
     </a>
     
@@ -222,9 +239,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -267,6 +282,13 @@
         <li class="md-nav__item">
   <a href="#f" class="md-nav__link">
     F
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    G
   </a>
   
 </li>
@@ -402,8 +424,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="IndexASVS.html" title="Index ASVS" class="md-nav__link">
+    <a href="IndexASVS.html" class="md-nav__link">
       Index ASVS
     </a>
   </li>
@@ -414,8 +437,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="IndexProactiveControls.html" title="Index Proactive Controls" class="md-nav__link">
+    <a href="IndexProactiveControls.html" class="md-nav__link">
       Index Proactive Controls
     </a>
   </li>
@@ -426,21 +450,20 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     
     <label class="md-nav__link" for="nav-5">
       Cheatsheets
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Cheatsheets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -451,8 +474,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/AJAX_Security_Cheat_Sheet.html" title="AJAX Security" class="md-nav__link">
+    <a href="cheatsheets/AJAX_Security_Cheat_Sheet.html" class="md-nav__link">
       AJAX Security
     </a>
   </li>
@@ -463,8 +487,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Abuse_Case_Cheat_Sheet.html" title="Abuse Case" class="md-nav__link">
+    <a href="cheatsheets/Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
       Abuse Case
     </a>
   </li>
@@ -475,8 +500,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Access_Control_Cheat_Sheet.html" title="Access Control" class="md-nav__link">
+    <a href="cheatsheets/Access_Control_Cheat_Sheet.html" class="md-nav__link">
       Access Control
     </a>
   </li>
@@ -487,8 +513,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html" title="Attack Surface Analysis" class="md-nav__link">
+    <a href="cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
       Attack Surface Analysis
     </a>
   </li>
@@ -499,8 +526,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Authentication_Cheat_Sheet.html" title="Authentication" class="md-nav__link">
+    <a href="cheatsheets/Authentication_Cheat_Sheet.html" class="md-nav__link">
       Authentication
     </a>
   </li>
@@ -511,8 +539,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html" title="Authorization Testing Automation" class="md-nav__link">
+    <a href="cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
       Authorization Testing Automation
     </a>
   </li>
@@ -523,8 +552,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Bean_Validation_Cheat_Sheet.html" title="Bean Validation" class="md-nav__link">
+    <a href="cheatsheets/Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
       Bean Validation
     </a>
   </li>
@@ -535,8 +565,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html" title="C-Based Toolchain Hardening" class="md-nav__link">
+    <a href="cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
       C-Based Toolchain Hardening
     </a>
   </li>
@@ -547,8 +578,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html" title="Choosing and Using Security Questions" class="md-nav__link">
+    <a href="cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
       Choosing and Using Security Questions
     </a>
   </li>
@@ -559,8 +591,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Clickjacking_Defense_Cheat_Sheet.html" title="Clickjacking Defense" class="md-nav__link">
+    <a href="cheatsheets/Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
       Clickjacking Defense
     </a>
   </li>
@@ -571,8 +604,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Content_Security_Policy_Cheat_Sheet.html" title="Content Security Policy" class="md-nav__link">
+    <a href="cheatsheets/Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
       Content Security Policy
     </a>
   </li>
@@ -583,8 +617,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html" title="Credential Stuffing Prevention" class="md-nav__link">
+    <a href="cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Credential Stuffing Prevention
     </a>
   </li>
@@ -595,8 +630,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" title="Cross-Site Request Forgery Prevention" class="md-nav__link">
+    <a href="cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross-Site Request Forgery Prevention
     </a>
   </li>
@@ -607,8 +643,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html" title="Cross Site Scripting Prevention" class="md-nav__link">
+    <a href="cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross Site Scripting Prevention
     </a>
   </li>
@@ -619,8 +656,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Cryptographic_Storage_Cheat_Sheet.html" title="Cryptographic Storage" class="md-nav__link">
+    <a href="cheatsheets/Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
       Cryptographic Storage
     </a>
   </li>
@@ -631,8 +669,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html" title="DOM based XSS Prevention" class="md-nav__link">
+    <a href="cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
       DOM based XSS Prevention
     </a>
   </li>
@@ -643,8 +682,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Database_Security_Cheat_Sheet.html" title="Database Security" class="md-nav__link">
+    <a href="cheatsheets/Database_Security_Cheat_Sheet.html" class="md-nav__link">
       Database Security
     </a>
   </li>
@@ -655,8 +695,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Denial_of_Service_Cheat_Sheet.html" title="Denial of Service" class="md-nav__link">
+    <a href="cheatsheets/Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
       Denial of Service
     </a>
   </li>
@@ -667,8 +708,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Deserialization_Cheat_Sheet.html" title="Deserialization" class="md-nav__link">
+    <a href="cheatsheets/Deserialization_Cheat_Sheet.html" class="md-nav__link">
       Deserialization
     </a>
   </li>
@@ -679,8 +721,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Docker_Security_Cheat_Sheet.html" title="Docker Security" class="md-nav__link">
+    <a href="cheatsheets/Docker_Security_Cheat_Sheet.html" class="md-nav__link">
       Docker Security
     </a>
   </li>
@@ -691,8 +734,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/DotNet_Security_Cheat_Sheet.html" title="DotNet Security" class="md-nav__link">
+    <a href="cheatsheets/DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
       DotNet Security
     </a>
   </li>
@@ -703,8 +747,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Error_Handling_Cheat_Sheet.html" title="Error Handling" class="md-nav__link">
+    <a href="cheatsheets/Error_Handling_Cheat_Sheet.html" class="md-nav__link">
       Error Handling
     </a>
   </li>
@@ -715,8 +760,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/File_Upload_Cheat_Sheet.html" title="File Upload" class="md-nav__link">
+    <a href="cheatsheets/File_Upload_Cheat_Sheet.html" class="md-nav__link">
       File Upload
     </a>
   </li>
@@ -727,8 +773,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Forgot_Password_Cheat_Sheet.html" title="Forgot Password" class="md-nav__link">
+    <a href="cheatsheets/Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
       Forgot Password
     </a>
   </li>
@@ -739,8 +786,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/HTML5_Security_Cheat_Sheet.html" title="HTML5 Security" class="md-nav__link">
+    <a href="cheatsheets/GraphQL_Cheat_Sheet.html" class="md-nav__link">
+      GraphQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="cheatsheets/HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
       HTML5 Security
     </a>
   </li>
@@ -751,8 +812,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html" title="HTTP Strict Transport Security" class="md-nav__link">
+    <a href="cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
       HTTP Strict Transport Security
     </a>
   </li>
@@ -763,8 +825,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Injection_Prevention_Cheat_Sheet.html" title="Injection Prevention" class="md-nav__link">
+    <a href="cheatsheets/Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention
     </a>
   </li>
@@ -775,8 +838,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html" title="Injection Prevention in Java" class="md-nav__link">
+    <a href="cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention in Java
     </a>
   </li>
@@ -787,8 +851,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Input_Validation_Cheat_Sheet.html" title="Input Validation" class="md-nav__link">
+    <a href="cheatsheets/Input_Validation_Cheat_Sheet.html" class="md-nav__link">
       Input Validation
     </a>
   </li>
@@ -799,8 +864,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" title="Insecure Direct Object Reference Prevention" class="md-nav__link">
+    <a href="cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Insecure Direct Object Reference Prevention
     </a>
   </li>
@@ -811,8 +877,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/JAAS_Cheat_Sheet.html" title="JAAS" class="md-nav__link">
+    <a href="cheatsheets/JAAS_Cheat_Sheet.html" class="md-nav__link">
       JAAS
     </a>
   </li>
@@ -823,8 +890,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html" title="JSON Web Token for Java" class="md-nav__link">
+    <a href="cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
       JSON Web Token for Java
     </a>
   </li>
@@ -835,8 +903,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Key_Management_Cheat_Sheet.html" title="Key Management" class="md-nav__link">
+    <a href="cheatsheets/Key_Management_Cheat_Sheet.html" class="md-nav__link">
       Key Management
     </a>
   </li>
@@ -847,8 +916,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html" title="LDAP Injection Prevention" class="md-nav__link">
+    <a href="cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       LDAP Injection Prevention
     </a>
   </li>
@@ -859,8 +929,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Logging_Cheat_Sheet.html" title="Logging" class="md-nav__link">
+    <a href="cheatsheets/Logging_Cheat_Sheet.html" class="md-nav__link">
       Logging
     </a>
   </li>
@@ -871,8 +942,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Mass_Assignment_Cheat_Sheet.html" title="Mass Assignment" class="md-nav__link">
+    <a href="cheatsheets/Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
       Mass Assignment
     </a>
   </li>
@@ -883,8 +955,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" title="Microservices based Security Arch Doc" class="md-nav__link">
+    <a href="cheatsheets/Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
       Microservices based Security Arch Doc
     </a>
   </li>
@@ -895,8 +968,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Multifactor_Authentication_Cheat_Sheet.html" title="Multifactor Authentication" class="md-nav__link">
+    <a href="cheatsheets/Microservices_security.html" class="md-nav__link">
+      Microservices security.md
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="cheatsheets/Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
       Multifactor Authentication
     </a>
   </li>
@@ -907,8 +994,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Nodejs_Security_Cheat_Sheet.html" title="Nodejs Security" class="md-nav__link">
+    <a href="cheatsheets/Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
       Nodejs Security
     </a>
   </li>
@@ -919,8 +1007,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html" title="OS Command Injection Defense" class="md-nav__link">
+    <a href="cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
       OS Command Injection Defense
     </a>
   </li>
@@ -931,8 +1020,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/PHP_Configuration_Cheat_Sheet.html" title="PHP Configuration" class="md-nav__link">
+    <a href="cheatsheets/PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
       PHP Configuration
     </a>
   </li>
@@ -943,8 +1033,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Password_Storage_Cheat_Sheet.html" title="Password Storage" class="md-nav__link">
+    <a href="cheatsheets/Password_Storage_Cheat_Sheet.html" class="md-nav__link">
       Password Storage
     </a>
   </li>
@@ -955,8 +1046,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Pinning_Cheat_Sheet.html" title="Pinning" class="md-nav__link">
+    <a href="cheatsheets/Pinning_Cheat_Sheet.html" class="md-nav__link">
       Pinning
     </a>
   </li>
@@ -967,8 +1059,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Query_Parameterization_Cheat_Sheet.html" title="Query Parameterization" class="md-nav__link">
+    <a href="cheatsheets/Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
       Query Parameterization
     </a>
   </li>
@@ -979,8 +1072,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/REST_Assessment_Cheat_Sheet.html" title="REST Assessment" class="md-nav__link">
+    <a href="cheatsheets/REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
       REST Assessment
     </a>
   </li>
@@ -991,8 +1085,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/REST_Security_Cheat_Sheet.html" title="REST Security" class="md-nav__link">
+    <a href="cheatsheets/REST_Security_Cheat_Sheet.html" class="md-nav__link">
       REST Security
     </a>
   </li>
@@ -1003,8 +1098,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Ruby_on_Rails_Cheat_Sheet.html" title="Ruby on Rails" class="md-nav__link">
+    <a href="cheatsheets/Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
       Ruby on Rails
     </a>
   </li>
@@ -1015,8 +1111,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/SAML_Security_Cheat_Sheet.html" title="SAML Security" class="md-nav__link">
+    <a href="cheatsheets/SAML_Security_Cheat_Sheet.html" class="md-nav__link">
       SAML Security
     </a>
   </li>
@@ -1027,8 +1124,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html" title="SQL Injection Prevention" class="md-nav__link">
+    <a href="cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       SQL Injection Prevention
     </a>
   </li>
@@ -1039,8 +1137,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Securing_Cascading_Style_Sheets_Cheat_Sheet.html" title="Securing Cascading Style Sheets" class="md-nav__link">
+    <a href="cheatsheets/Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
       Securing Cascading Style Sheets
     </a>
   </li>
@@ -1051,8 +1150,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" title="Server Side Request Forgery Prevention" class="md-nav__link">
+    <a href="cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Server Side Request Forgery Prevention
     </a>
   </li>
@@ -1063,8 +1163,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Session_Management_Cheat_Sheet.html" title="Session Management" class="md-nav__link">
+    <a href="cheatsheets/Session_Management_Cheat_Sheet.html" class="md-nav__link">
       Session Management
     </a>
   </li>
@@ -1075,8 +1176,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/TLS_Cipher_String_Cheat_Sheet.html" title="TLS Cipher String" class="md-nav__link">
+    <a href="cheatsheets/TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
       TLS Cipher String
     </a>
   </li>
@@ -1087,8 +1189,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html" title="Third Party Javascript Management" class="md-nav__link">
+    <a href="cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
       Third Party Javascript Management
     </a>
   </li>
@@ -1099,8 +1202,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Threat_Modeling_Cheat_Sheet.html" title="Threat Modeling" class="md-nav__link">
+    <a href="cheatsheets/Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
       Threat Modeling
     </a>
   </li>
@@ -1111,8 +1215,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Transaction_Authorization_Cheat_Sheet.html" title="Transaction Authorization" class="md-nav__link">
+    <a href="cheatsheets/Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
       Transaction Authorization
     </a>
   </li>
@@ -1123,8 +1228,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html" title="Transport Layer Protection" class="md-nav__link">
+    <a href="cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
       Transport Layer Protection
     </a>
   </li>
@@ -1135,8 +1241,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+    <a href="cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
       Unvalidated Redirects and Forwards
     </a>
   </li>
@@ -1147,8 +1254,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/User_Privacy_Protection_Cheat_Sheet.html" title="User Privacy Protection" class="md-nav__link">
+    <a href="cheatsheets/User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
       User Privacy Protection
     </a>
   </li>
@@ -1159,8 +1267,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Virtual_Patching_Cheat_Sheet.html" title="Virtual Patching" class="md-nav__link">
+    <a href="cheatsheets/Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
       Virtual Patching
     </a>
   </li>
@@ -1171,8 +1280,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html" title="Vulnerability Disclosure" class="md-nav__link">
+    <a href="cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
       Vulnerability Disclosure
     </a>
   </li>
@@ -1183,8 +1293,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html" title="Vulnerable Dependency Management" class="md-nav__link">
+    <a href="cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
       Vulnerable Dependency Management
     </a>
   </li>
@@ -1195,8 +1306,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/Web_Service_Security_Cheat_Sheet.html" title="Web Service Security" class="md-nav__link">
+    <a href="cheatsheets/Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
       Web Service Security
     </a>
   </li>
@@ -1207,8 +1319,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html" title="XML External Entity Prevention" class="md-nav__link">
+    <a href="cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
       XML External Entity Prevention
     </a>
   </li>
@@ -1219,8 +1332,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="cheatsheets/XML_Security_Cheat_Sheet.html" title="XML Security" class="md-nav__link">
+    <a href="cheatsheets/XML_Security_Cheat_Sheet.html" class="md-nav__link">
       XML Security
     </a>
   </li>
@@ -1238,7 +1352,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1249,9 +1364,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1294,6 +1407,13 @@
         <li class="md-nav__item">
   <a href="#f" class="md-nav__link">
     F
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    G
   </a>
   
 </li>
@@ -1430,70 +1550,70 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="index-alphabetical">Index Alphabetical<a class="headerlink" href="#index-alphabetical" title="Permanent link">&para;</a></h1>
-<p><strong>65</strong> cheat sheets available.</p>
+<p><strong>67</strong> cheat sheets available.</p>
 <p><em>Icons beside the cheat sheet name indicate in which language(s) code snippet(s) are provided.</em></p>
-<p><a href="Glossary.html#a">A</a> <a href="Glossary.html#b">B</a> <a href="Glossary.html#c">C</a> <a href="Glossary.html#d">D</a> <a href="Glossary.html#e">E</a> <a href="Glossary.html#f">F</a> <a href="Glossary.html#h">H</a> <a href="Glossary.html#i">I</a> <a href="Glossary.html#j">J</a> <a href="Glossary.html#k">K</a> <a href="Glossary.html#l">L</a> <a href="Glossary.html#m">M</a> <a href="Glossary.html#n">N</a> <a href="Glossary.html#o">O</a> <a href="Glossary.html#p">P</a> <a href="Glossary.html#q">Q</a> <a href="Glossary.html#r">R</a> <a href="Glossary.html#s">S</a> <a href="Glossary.html#t">T</a> <a href="Glossary.html#u">U</a> <a href="Glossary.html#v">V</a> <a href="Glossary.html#w">W</a> <a href="Glossary.html#x">X</a> </p>
+<p><a href="Glossary.html#a">A</a> <a href="Glossary.html#b">B</a> <a href="Glossary.html#c">C</a> <a href="Glossary.html#d">D</a> <a href="Glossary.html#e">E</a> <a href="Glossary.html#f">F</a> <a href="Glossary.html#g">G</a> <a href="Glossary.html#h">H</a> <a href="Glossary.html#i">I</a> <a href="Glossary.html#j">J</a> <a href="Glossary.html#k">K</a> <a href="Glossary.html#l">L</a> <a href="Glossary.html#m">M</a> <a href="Glossary.html#n">N</a> <a href="Glossary.html#o">O</a> <a href="Glossary.html#p">P</a> <a href="Glossary.html#q">Q</a> <a href="Glossary.html#r">R</a> <a href="Glossary.html#s">S</a> <a href="Glossary.html#t">T</a> <a href="Glossary.html#u">U</a> <a href="Glossary.html#v">V</a> <a href="Glossary.html#w">W</a> <a href="Glossary.html#x">X</a> </p>
 <h2 id="a">A<a class="headerlink" href="#a" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html">Authorization Testing Automation Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> </p>
-<p><a href="cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html">Attack Surface Analysis Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/Authentication_Cheat_Sheet.html">Authentication Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/AJAX_Security_Cheat_Sheet.html">AJAX Security Cheat Sheet</a>. <img alt="Json" src="assets/Index_Json.png" /> </p>
-<p><a href="cheatsheets/Abuse_Case_Cheat_Sheet.html">Abuse Case Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html">Attack Surface Analysis Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/Access_Control_Cheat_Sheet.html">Access Control Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Abuse_Case_Cheat_Sheet.html">Abuse Case Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html">Authorization Testing Automation Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> </p>
 <h2 id="b">B<a class="headerlink" href="#b" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/Bean_Validation_Cheat_Sheet.html">Bean Validation Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> </p>
 <h2 id="c">C<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">Cross Site Scripting Prevention Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Ruby" src="assets/Index_Ruby.png" /> </p>
-<p><a href="cheatsheets/Content_Security_Policy_Cheat_Sheet.html">Content Security Policy Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Bash" src="assets/Index_Bash.png" /> </p>
-<p><a href="cheatsheets/Clickjacking_Defense_Cheat_Sheet.html">Clickjacking Defense Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> </p>
-<p><a href="cheatsheets/Cryptographic_Storage_Cheat_Sheet.html">Cryptographic Storage Cheat Sheet</a>.</p>
-<p><a href="cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">Cross-Site Request Forgery Prevention Cheat Sheet</a>. <img alt="Html" src="assets/Index_Html.png" /> </p>
 <p><a href="cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html">Credential Stuffing Prevention Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Content_Security_Policy_Cheat_Sheet.html">Content Security Policy Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Bash" src="assets/Index_Bash.png" /> </p>
 <p><a href="cheatsheets/C-Based_Toolchain_Hardening_Cheat_Sheet.html">C-Based Toolchain Hardening Cheat Sheet</a>. <img alt="C" src="assets/Index_C.png" /> <img alt="Bash" src="assets/Index_Bash.png" /> </p>
+<p><a href="cheatsheets/Cryptographic_Storage_Cheat_Sheet.html">Cryptographic Storage Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Clickjacking_Defense_Cheat_Sheet.html">Clickjacking Defense Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> </p>
 <p><a href="cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html">Choosing and Using Security Questions Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">Cross-Site Request Forgery Prevention Cheat Sheet</a>. <img alt="Html" src="assets/Index_Html.png" /> </p>
+<p><a href="cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">Cross Site Scripting Prevention Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Ruby" src="assets/Index_Ruby.png" /> </p>
 <h2 id="d">D<a class="headerlink" href="#d" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html">DOM based XSS Prevention Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> </p>
 <p><a href="cheatsheets/Deserialization_Cheat_Sheet.html">Deserialization Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Python" src="assets/Index_Python.png" /> </p>
 <p><a href="cheatsheets/Denial_of_Service_Cheat_Sheet.html">Denial of Service Cheat Sheet</a>.</p>
-<p><a href="cheatsheets/Database_Security_Cheat_Sheet.html">Database Security Cheat Sheet</a>.</p>
-<p><a href="cheatsheets/DotNet_Security_Cheat_Sheet.html">DotNet Security Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> <img alt="Sql" src="assets/Index_Sql.png" /> </p>
 <p><a href="cheatsheets/Docker_Security_Cheat_Sheet.html">Docker Security Cheat Sheet</a>. <img alt="Bash" src="assets/Index_Bash.png" /> </p>
+<p><a href="cheatsheets/Database_Security_Cheat_Sheet.html">Database Security Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html">DOM based XSS Prevention Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> </p>
+<p><a href="cheatsheets/DotNet_Security_Cheat_Sheet.html">DotNet Security Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> <img alt="Sql" src="assets/Index_Sql.png" /> </p>
 <h2 id="e">E<a class="headerlink" href="#e" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/Error_Handling_Cheat_Sheet.html">Error Handling Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> </p>
 <h2 id="f">F<a class="headerlink" href="#f" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/File_Upload_Cheat_Sheet.html">File Upload Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/Forgot_Password_Cheat_Sheet.html">Forgot Password Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/File_Upload_Cheat_Sheet.html">File Upload Cheat Sheet</a>.</p>
+<h2 id="g">G<a class="headerlink" href="#g" title="Permanent link">&para;</a></h2>
+<p><a href="cheatsheets/GraphQL_Cheat_Sheet.html">GraphQL Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Java" src="assets/Index_Java.png" /> </p>
 <h2 id="h">H<a class="headerlink" href="#h" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/HTML5_Security_Cheat_Sheet.html">HTML5 Security Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Java" src="assets/Index_Java.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Json" src="assets/Index_Json.png" /> <img alt="Shell" src="assets/Index_Shell.png" /> </p>
 <p><a href="cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">HTTP Strict Transport Security Cheat Sheet</a>.</p>
 <h2 id="i">I<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/Injection_Prevention_Cheat_Sheet.html">Injection Prevention Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> </p>
-<p><a href="cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html">Injection Prevention in Java Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> </p>
 <p><a href="cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">Insecure Direct Object Reference Prevention Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> </p>
 <p><a href="cheatsheets/Input_Validation_Cheat_Sheet.html">Input Validation Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> </p>
+<p><a href="cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html">Injection Prevention in Java Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> </p>
 <h2 id="j">J<a class="headerlink" href="#j" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/JAAS_Cheat_Sheet.html">JAAS Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> </p>
 <p><a href="cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html">JSON Web Token for Java Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Java" src="assets/Index_Java.png" /> <img alt="Json" src="assets/Index_Json.png" /> <img alt="Sql" src="assets/Index_Sql.png" /> </p>
+<p><a href="cheatsheets/JAAS_Cheat_Sheet.html">JAAS Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> </p>
 <h2 id="k">K<a class="headerlink" href="#k" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/Key_Management_Cheat_Sheet.html">Key Management Cheat Sheet</a>.</p>
 <h2 id="l">L<a class="headerlink" href="#l" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html">LDAP Injection Prevention Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/Logging_Cheat_Sheet.html">Logging Cheat Sheet</a>.</p>
 <h2 id="m">M<a class="headerlink" href="#m" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/Microservices_based_Security_Arch_Doc_Cheat_Sheet.html">Microservices based Security Arch Doc Cheat Sheet</a>.</p>
-<p><a href="cheatsheets/Mass_Assignment_Cheat_Sheet.html">Mass Assignment Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Java" src="assets/Index_Java.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Php" src="assets/Index_Php.png" /> </p>
 <p><a href="cheatsheets/Multifactor_Authentication_Cheat_Sheet.html">Multifactor Authentication Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Mass_Assignment_Cheat_Sheet.html">Mass Assignment Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Java" src="assets/Index_Java.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Php" src="assets/Index_Php.png" /> </p>
+<p><a href="cheatsheets/Microservices_security.html">Microservices security</a>.</p>
+<p><a href="cheatsheets/Microservices_based_Security_Arch_Doc_Cheat_Sheet.html">Microservices based Security Arch Doc Cheat Sheet</a>.</p>
 <h2 id="n">N<a class="headerlink" href="#n" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/Nodejs_Security_Cheat_Sheet.html">Nodejs Security Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> <img alt="Bash" src="assets/Index_Bash.png" /> </p>
 <h2 id="o">O<a class="headerlink" href="#o" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html">OS Command Injection Defense Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Shell" src="assets/Index_Shell.png" /> </p>
 <h2 id="p">P<a class="headerlink" href="#p" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/Password_Storage_Cheat_Sheet.html">Password Storage Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/Pinning_Cheat_Sheet.html">Pinning Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Password_Storage_Cheat_Sheet.html">Password Storage Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/PHP_Configuration_Cheat_Sheet.html">PHP Configuration Cheat Sheet</a>.</p>
 <h2 id="q">Q<a class="headerlink" href="#q" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/Query_Parameterization_Cheat_Sheet.html">Query Parameterization Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Ruby" src="assets/Index_Ruby.png" /> <img alt="Php" src="assets/Index_Php.png" /> <img alt="Sql" src="assets/Index_Sql.png" /> <img alt="Coldfusion" src="assets/Index_Coldfusion.png" /> <img alt="Perl" src="assets/Index_Perl.png" /> </p>
@@ -1503,28 +1623,28 @@
 <p><a href="cheatsheets/REST_Security_Cheat_Sheet.html">REST Security Cheat Sheet</a>.</p>
 <h2 id="s">S<a class="headerlink" href="#s" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/Securing_Cascading_Style_Sheets_Cheat_Sheet.html">Securing Cascading Style Sheets Cheat Sheet</a>.</p>
-<p><a href="cheatsheets/Session_Management_Cheat_Sheet.html">Session Management Cheat Sheet</a>.</p>
-<p><a href="cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">SQL Injection Prevention Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Php" src="assets/Index_Php.png" /> <img alt="Sql" src="assets/Index_Sql.png" /> <img alt="Vbnet" src="assets/Index_Vbnet.png" /> </p>
 <p><a href="cheatsheets/SAML_Security_Cheat_Sheet.html">SAML Security Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html">Server Side Request Forgery Prevention Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Python" src="assets/Index_Python.png" /> <img alt="Ruby" src="assets/Index_Ruby.png" /> <img alt="Bash" src="assets/Index_Bash.png" /> </p>
+<p><a href="cheatsheets/Session_Management_Cheat_Sheet.html">Session Management Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">SQL Injection Prevention Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Php" src="assets/Index_Php.png" /> <img alt="Sql" src="assets/Index_Sql.png" /> <img alt="Vbnet" src="assets/Index_Vbnet.png" /> </p>
 <h2 id="t">T<a class="headerlink" href="#t" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html">Third Party Javascript Management Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> </p>
 <p><a href="cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html">Transport Layer Protection Cheat Sheet</a>. <img alt="Bash" src="assets/Index_Bash.png" /> </p>
 <p><a href="cheatsheets/Threat_Modeling_Cheat_Sheet.html">Threat Modeling Cheat Sheet</a>.</p>
-<p><a href="cheatsheets/TLS_Cipher_String_Cheat_Sheet.html">TLS Cipher String Cheat Sheet</a>.</p>
 <p><a href="cheatsheets/Transaction_Authorization_Cheat_Sheet.html">Transaction Authorization Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html">Third Party Javascript Management Cheat Sheet</a>. <img alt="Javascript" src="assets/Index_Javascript.png" /> <img alt="Html" src="assets/Index_Html.png" /> </p>
+<p><a href="cheatsheets/TLS_Cipher_String_Cheat_Sheet.html">TLS Cipher String Cheat Sheet</a>.</p>
 <h2 id="u">U<a class="headerlink" href="#u" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html">Unvalidated Redirects and Forwards Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Ruby" src="assets/Index_Ruby.png" /> <img alt="Php" src="assets/Index_Php.png" /> </p>
 <p><a href="cheatsheets/User_Privacy_Protection_Cheat_Sheet.html">User Privacy Protection Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html">Unvalidated Redirects and Forwards Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Ruby" src="assets/Index_Ruby.png" /> <img alt="Php" src="assets/Index_Php.png" /> </p>
 <h2 id="v">V<a class="headerlink" href="#v" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html">Vulnerable Dependency Management Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> </p>
 <p><a href="cheatsheets/Virtual_Patching_Cheat_Sheet.html">Virtual Patching Cheat Sheet</a>. <img alt="Html" src="assets/Index_Html.png" /> </p>
 <p><a href="cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html">Vulnerability Disclosure Cheat Sheet</a>.</p>
+<p><a href="cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html">Vulnerable Dependency Management Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> </p>
 <h2 id="w">W<a class="headerlink" href="#w" title="Permanent link">&para;</a></h2>
 <p><a href="cheatsheets/Web_Service_Security_Cheat_Sheet.html">Web Service Security Cheat Sheet</a>.</p>
 <h2 id="x">X<a class="headerlink" href="#x" title="Permanent link">&para;</a></h2>
-<p><a href="cheatsheets/XML_Security_Cheat_Sheet.html">XML Security Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> <img alt="Bash" src="assets/Index_Bash.png" /> </p>
 <p><a href="cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">XML External Entity Prevention Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Csharp" src="assets/Index_Csharp.png" /> <img alt="Cpp" src="assets/Index_Cpp.png" /> <img alt="Php" src="assets/Index_Php.png" /> </p>
+<p><a href="cheatsheets/XML_Security_Cheat_Sheet.html">XML Security Cheat Sheet</a>. <img alt="Java" src="assets/Index_Java.png" /> <img alt="Xml" src="assets/Index_Xml.png" /> <img alt="Bash" src="assets/Index_Bash.png" /> </p>
                 
                   
                 
@@ -1545,7 +1665,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="index.html" title="Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="index.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1560,7 +1680,7 @@
           </a>
         
         
-          <a href="IndexASVS.html" title="Index ASVS" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="IndexASVS.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1597,15 +1717,15 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: ".",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

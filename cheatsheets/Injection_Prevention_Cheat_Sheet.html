@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,11 +9,12 @@
         <meta name="description" content="Website with the collection of all the cheat sheets of the project.">
       
       
+      
+      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html">
       
-      
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -23,14 +22,18 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -48,7 +51,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,7 +75,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-header-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -77,18 +88,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             OWASP Cheat Sheet Series
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Injection Prevention
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -99,7 +112,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -140,8 +153,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -149,10 +160,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -182,8 +199,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../index.html" title="Introduction" class="md-nav__link">
+    <a href="../index.html" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -194,8 +212,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../Glossary.html" title="Index Alphabetical" class="md-nav__link">
+    <a href="../Glossary.html" class="md-nav__link">
       Index Alphabetical
     </a>
   </li>
@@ -206,8 +225,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexASVS.html" title="Index ASVS" class="md-nav__link">
+    <a href="../IndexASVS.html" class="md-nav__link">
       Index ASVS
     </a>
   </li>
@@ -218,8 +238,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexProactiveControls.html" title="Index Proactive Controls" class="md-nav__link">
+    <a href="../IndexProactiveControls.html" class="md-nav__link">
       Index Proactive Controls
     </a>
   </li>
@@ -229,24 +250,23 @@
       
       
 
+
   
 
 
+  
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Cheatsheets
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Cheatsheets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -257,8 +277,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="AJAX_Security_Cheat_Sheet.html" title="AJAX Security" class="md-nav__link">
+    <a href="AJAX_Security_Cheat_Sheet.html" class="md-nav__link">
       AJAX Security
     </a>
   </li>
@@ -269,8 +290,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Abuse_Case_Cheat_Sheet.html" title="Abuse Case" class="md-nav__link">
+    <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
       Abuse Case
     </a>
   </li>
@@ -281,8 +303,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Access_Control_Cheat_Sheet.html" title="Access Control" class="md-nav__link">
+    <a href="Access_Control_Cheat_Sheet.html" class="md-nav__link">
       Access Control
     </a>
   </li>
@@ -293,8 +316,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" title="Attack Surface Analysis" class="md-nav__link">
+    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
       Attack Surface Analysis
     </a>
   </li>
@@ -305,8 +329,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authentication_Cheat_Sheet.html" title="Authentication" class="md-nav__link">
+    <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
       Authentication
     </a>
   </li>
@@ -317,8 +342,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" title="Authorization Testing Automation" class="md-nav__link">
+    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
       Authorization Testing Automation
     </a>
   </li>
@@ -329,8 +355,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Bean_Validation_Cheat_Sheet.html" title="Bean Validation" class="md-nav__link">
+    <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
       Bean Validation
     </a>
   </li>
@@ -341,8 +368,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" title="C-Based Toolchain Hardening" class="md-nav__link">
+    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
       C-Based Toolchain Hardening
     </a>
   </li>
@@ -353,8 +381,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" title="Choosing and Using Security Questions" class="md-nav__link">
+    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
       Choosing and Using Security Questions
     </a>
   </li>
@@ -365,8 +394,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Clickjacking_Defense_Cheat_Sheet.html" title="Clickjacking Defense" class="md-nav__link">
+    <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
       Clickjacking Defense
     </a>
   </li>
@@ -377,8 +407,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Content_Security_Policy_Cheat_Sheet.html" title="Content Security Policy" class="md-nav__link">
+    <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
       Content Security Policy
     </a>
   </li>
@@ -389,8 +420,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" title="Credential Stuffing Prevention" class="md-nav__link">
+    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Credential Stuffing Prevention
     </a>
   </li>
@@ -401,8 +433,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" title="Cross-Site Request Forgery Prevention" class="md-nav__link">
+    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross-Site Request Forgery Prevention
     </a>
   </li>
@@ -413,8 +446,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" title="Cross Site Scripting Prevention" class="md-nav__link">
+    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross Site Scripting Prevention
     </a>
   </li>
@@ -425,8 +459,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cryptographic_Storage_Cheat_Sheet.html" title="Cryptographic Storage" class="md-nav__link">
+    <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
       Cryptographic Storage
     </a>
   </li>
@@ -437,8 +472,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" title="DOM based XSS Prevention" class="md-nav__link">
+    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
       DOM based XSS Prevention
     </a>
   </li>
@@ -449,8 +485,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Database_Security_Cheat_Sheet.html" title="Database Security" class="md-nav__link">
+    <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
       Database Security
     </a>
   </li>
@@ -461,8 +498,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Denial_of_Service_Cheat_Sheet.html" title="Denial of Service" class="md-nav__link">
+    <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
       Denial of Service
     </a>
   </li>
@@ -473,8 +511,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Deserialization_Cheat_Sheet.html" title="Deserialization" class="md-nav__link">
+    <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
       Deserialization
     </a>
   </li>
@@ -485,8 +524,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Docker_Security_Cheat_Sheet.html" title="Docker Security" class="md-nav__link">
+    <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
       Docker Security
     </a>
   </li>
@@ -497,8 +537,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DotNet_Security_Cheat_Sheet.html" title="DotNet Security" class="md-nav__link">
+    <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
       DotNet Security
     </a>
   </li>
@@ -509,8 +550,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Error_Handling_Cheat_Sheet.html" title="Error Handling" class="md-nav__link">
+    <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
       Error Handling
     </a>
   </li>
@@ -521,8 +563,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="File_Upload_Cheat_Sheet.html" title="File Upload" class="md-nav__link">
+    <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
       File Upload
     </a>
   </li>
@@ -533,8 +576,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Forgot_Password_Cheat_Sheet.html" title="Forgot Password" class="md-nav__link">
+    <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
       Forgot Password
     </a>
   </li>
@@ -545,8 +589,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTML5_Security_Cheat_Sheet.html" title="HTML5 Security" class="md-nav__link">
+    <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
+      GraphQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
       HTML5 Security
     </a>
   </li>
@@ -557,8 +615,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" title="HTTP Strict Transport Security" class="md-nav__link">
+    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
       HTTP Strict Transport Security
     </a>
   </li>
@@ -567,6 +626,7 @@
           
           
           
+
 
   
 
@@ -580,12 +640,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Injection Prevention
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="Injection_Prevention_Cheat_Sheet.html" title="Injection Prevention" class="md-nav__link md-nav__link--active">
+    <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
       Injection Prevention
     </a>
     
@@ -597,9 +655,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1021,8 +1077,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" title="Injection Prevention in Java" class="md-nav__link">
+    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention in Java
     </a>
   </li>
@@ -1033,8 +1090,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Input_Validation_Cheat_Sheet.html" title="Input Validation" class="md-nav__link">
+    <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
       Input Validation
     </a>
   </li>
@@ -1045,8 +1103,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" title="Insecure Direct Object Reference Prevention" class="md-nav__link">
+    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Insecure Direct Object Reference Prevention
     </a>
   </li>
@@ -1057,8 +1116,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JAAS_Cheat_Sheet.html" title="JAAS" class="md-nav__link">
+    <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
       JAAS
     </a>
   </li>
@@ -1069,8 +1129,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" title="JSON Web Token for Java" class="md-nav__link">
+    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
       JSON Web Token for Java
     </a>
   </li>
@@ -1081,8 +1142,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Key_Management_Cheat_Sheet.html" title="Key Management" class="md-nav__link">
+    <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
       Key Management
     </a>
   </li>
@@ -1093,8 +1155,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" title="LDAP Injection Prevention" class="md-nav__link">
+    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       LDAP Injection Prevention
     </a>
   </li>
@@ -1105,8 +1168,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Logging_Cheat_Sheet.html" title="Logging" class="md-nav__link">
+    <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
       Logging
     </a>
   </li>
@@ -1117,8 +1181,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Mass_Assignment_Cheat_Sheet.html" title="Mass Assignment" class="md-nav__link">
+    <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
       Mass Assignment
     </a>
   </li>
@@ -1129,8 +1194,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" title="Microservices based Security Arch Doc" class="md-nav__link">
+    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
       Microservices based Security Arch Doc
     </a>
   </li>
@@ -1141,8 +1207,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Multifactor_Authentication_Cheat_Sheet.html" title="Multifactor Authentication" class="md-nav__link">
+    <a href="Microservices_security.html" class="md-nav__link">
+      Microservices security.md
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
       Multifactor Authentication
     </a>
   </li>
@@ -1153,8 +1233,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Nodejs_Security_Cheat_Sheet.html" title="Nodejs Security" class="md-nav__link">
+    <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
       Nodejs Security
     </a>
   </li>
@@ -1165,8 +1246,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" title="OS Command Injection Defense" class="md-nav__link">
+    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
       OS Command Injection Defense
     </a>
   </li>
@@ -1177,8 +1259,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="PHP_Configuration_Cheat_Sheet.html" title="PHP Configuration" class="md-nav__link">
+    <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
       PHP Configuration
     </a>
   </li>
@@ -1189,8 +1272,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Password_Storage_Cheat_Sheet.html" title="Password Storage" class="md-nav__link">
+    <a href="Password_Storage_Cheat_Sheet.html" class="md-nav__link">
       Password Storage
     </a>
   </li>
@@ -1201,8 +1285,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Pinning_Cheat_Sheet.html" title="Pinning" class="md-nav__link">
+    <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
       Pinning
     </a>
   </li>
@@ -1213,8 +1298,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Query_Parameterization_Cheat_Sheet.html" title="Query Parameterization" class="md-nav__link">
+    <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
       Query Parameterization
     </a>
   </li>
@@ -1225,8 +1311,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Assessment_Cheat_Sheet.html" title="REST Assessment" class="md-nav__link">
+    <a href="REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
       REST Assessment
     </a>
   </li>
@@ -1237,8 +1324,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Security_Cheat_Sheet.html" title="REST Security" class="md-nav__link">
+    <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
       REST Security
     </a>
   </li>
@@ -1249,8 +1337,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Ruby_on_Rails_Cheat_Sheet.html" title="Ruby on Rails" class="md-nav__link">
+    <a href="Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
       Ruby on Rails
     </a>
   </li>
@@ -1261,8 +1350,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SAML_Security_Cheat_Sheet.html" title="SAML Security" class="md-nav__link">
+    <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
       SAML Security
     </a>
   </li>
@@ -1273,8 +1363,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" title="SQL Injection Prevention" class="md-nav__link">
+    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       SQL Injection Prevention
     </a>
   </li>
@@ -1285,8 +1376,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" title="Securing Cascading Style Sheets" class="md-nav__link">
+    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
       Securing Cascading Style Sheets
     </a>
   </li>
@@ -1297,8 +1389,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" title="Server Side Request Forgery Prevention" class="md-nav__link">
+    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Server Side Request Forgery Prevention
     </a>
   </li>
@@ -1309,8 +1402,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Session_Management_Cheat_Sheet.html" title="Session Management" class="md-nav__link">
+    <a href="Session_Management_Cheat_Sheet.html" class="md-nav__link">
       Session Management
     </a>
   </li>
@@ -1321,8 +1415,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="TLS_Cipher_String_Cheat_Sheet.html" title="TLS Cipher String" class="md-nav__link">
+    <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
       TLS Cipher String
     </a>
   </li>
@@ -1333,8 +1428,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" title="Third Party Javascript Management" class="md-nav__link">
+    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
       Third Party Javascript Management
     </a>
   </li>
@@ -1345,8 +1441,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Threat_Modeling_Cheat_Sheet.html" title="Threat Modeling" class="md-nav__link">
+    <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
       Threat Modeling
     </a>
   </li>
@@ -1357,8 +1454,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transaction_Authorization_Cheat_Sheet.html" title="Transaction Authorization" class="md-nav__link">
+    <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
       Transaction Authorization
     </a>
   </li>
@@ -1369,8 +1467,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transport_Layer_Protection_Cheat_Sheet.html" title="Transport Layer Protection" class="md-nav__link">
+    <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
       Transport Layer Protection
     </a>
   </li>
@@ -1381,8 +1480,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
       Unvalidated Redirects and Forwards
     </a>
   </li>
@@ -1393,8 +1493,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="User_Privacy_Protection_Cheat_Sheet.html" title="User Privacy Protection" class="md-nav__link">
+    <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
       User Privacy Protection
     </a>
   </li>
@@ -1405,8 +1506,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Virtual_Patching_Cheat_Sheet.html" title="Virtual Patching" class="md-nav__link">
+    <a href="Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
       Virtual Patching
     </a>
   </li>
@@ -1417,8 +1519,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" title="Vulnerability Disclosure" class="md-nav__link">
+    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
       Vulnerability Disclosure
     </a>
   </li>
@@ -1429,8 +1532,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" title="Vulnerable Dependency Management" class="md-nav__link">
+    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
       Vulnerable Dependency Management
     </a>
   </li>
@@ -1441,8 +1545,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Web_Service_Security_Cheat_Sheet.html" title="Web Service Security" class="md-nav__link">
+    <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
       Web Service Security
     </a>
   </li>
@@ -1453,8 +1558,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" title="XML External Entity Prevention" class="md-nav__link">
+    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
       XML External Entity Prevention
     </a>
   </li>
@@ -1465,8 +1571,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_Security_Cheat_Sheet.html" title="XML Security" class="md-nav__link">
+    <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
       XML Security
     </a>
   </li>
@@ -1484,7 +1591,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1495,9 +1603,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1920,9 +2026,6 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="injection-prevention-cheat-sheet">Injection Prevention Cheat Sheet<a class="headerlink" href="#injection-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>This article is focused on providing clear, simple, actionable guidance for preventing the entire category of Injection flaws in your applications. Injection attacks, especially <a href="https://owasp.org/www-community/attacks/SQL_Injection">SQL Injection</a>, are unfortunately very common.</p>
@@ -1966,7 +2069,6 @@
 <div class="codehilite"><pre><span></span><code>http://www.example.com/product.php?id=10 AND IF(version() like &#39;5%&#39;, sleep(10), &#39;false&#39;))--
 </code></pre></div>
 
-
 <p>In this example the tester if checking whether the MySql version is 5.x or not, making the server to delay the answer by 10 seconds. The tester can increase the delay time and monitor the responses. The tester also doesn't need to wait for the response. Sometimes he can set a very high value (e.g. 100) and cancel the request after some seconds.</p>
 <h6 id="out-of-band-exploitation-technique">Out of band Exploitation technique<a class="headerlink" href="#out-of-band-exploitation-technique" title="Permanent link">&para;</a></h6>
 <p>This technique is very useful when the tester find a Blind SQL Injection situation, in which nothing is known on the outcome of an operation. The technique consists of the use of DBMS functions to perform an out of band connection and deliver the results of the injected query as part of the request to the tester's server. Like the error based techniques, each DBMS has its own functions. Check for specific DBMS section.</p>
@@ -1995,7 +2097,6 @@
 <span class="n">ResultSet</span> <span class="n">results</span> <span class="o">=</span> <span class="n">pstmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
 </code></pre></div>
 
-
 <p>We have shown examples in Java, but practically all other languages, including Cold Fusion, and Classic ASP, support parameterized query interfaces.</p>
 <h6 id="safe-java-stored-procedure-example">Safe Java Stored Procedure Example<a class="headerlink" href="#safe-java-stored-procedure-example" title="Permanent link">&para;</a></h6>
 <p>The following code example uses a <code>CallableStatement</code>, Java's implementation of the stored procedure interface, to execute the same database query. The <code>sp_getAccountBalance</code> stored procedure would have to be predefined in the database and implement the same functionality as the query defined above.</p>
@@ -2010,7 +2111,6 @@
  <span class="c1">// Logging and error handling...</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <h4 id="ldap-injection">LDAP Injection<a class="headerlink" href="#ldap-injection" title="Permanent link">&para;</a></h4>
 <p>LDAP Injection is an attack used to exploit web based applications that construct LDAP statements based on user input. When an application fails to properly sanitize user input, it's possible to modify LDAP statements through techniques similar to <a href="https://owasp.org/www-community/attacks/SQL_Injection">SQL Injection</a>. LDAP injection attacks could result in the granting of permissions to unauthorized queries, and content modification inside the LDAP tree. For more information on LDAP Injection attacks, visit <a href="https://owasp.org/www-community/attacks/LDAP_Injection">LDAP injection</a>.</p>
@@ -2031,11 +2131,9 @@
 <div class="codehilite"><pre><span></span><code>cn=Richard Feynman, ou=Physics Department, dc=Caltech, dc=edu
 </code></pre></div>
 
-
 <p>or</p>
 <div class="codehilite"><pre><span></span><code>uid=inewton, ou=Mathematics Department, dc=Cambridge, dc=com
 </code></pre></div>
-
 
 <p>There are certain characters that are considered special characters in a DN. The exhaustive list is the following: <code>\ # + &lt; &gt; , ; " =</code> and leading or trailing spaces</p>
 <p>Each DN points to exactly 1 entry, which can be thought of sort of like a row in a RDBMS. For each entry, there will be 1 or more attributes which are analogous to RDBMS columns. If you are interested in searching through LDAP for users will certain attributes, you may do so with search filters. In a search filter, you can use standard boolean logic to get a list of users matching an arbitrary constraint. Search filters are written in Polish notation AKA prefix notation.</p>
@@ -2043,7 +2141,6 @@
 <div class="codehilite"><pre><span></span><code>(&amp;(ou=Physics)(| (manager=cn=Freeman Dyson,ou=Physics,dc=Caltech,dc=edu)
 (manager=cn=Albert Einstein,ou=Physics,dc=Princeton,dc=edu) ))
 </code></pre></div>
-
 
 <p>When building LDAP queries in application code, you MUST escape any untrusted data that is added to any LDAP query. There are two forms of LDAP escaping. Encoding for LDAP Search and Encoding for LDAP DN (distinguished name). The proper escaping depends on whether you are sanitizing input for a search filter, or you are using a DN as a username-like credential for accessing some resource.</p>
 <h5 id="example-code-java_1">Example code - Java<a class="headerlink" href="#example-code-java_1" title="Permanent link">&para;</a></h5>
@@ -2066,7 +2163,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>Note, that the backslash character is a Java String literal and a regular expression escape character.</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="n">String</span> <span class="nf">escapeSearchFilter</span> <span class="p">(</span><span class="n">String</span> <span class="n">filter</span><span class="p">)</span> <span class="p">{</span>
  <span class="c1">//From RFC 2254</span>
@@ -2080,7 +2176,6 @@
  <span class="k">return</span> <span class="n">escapedStr</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <h4 id="xpath-injection">XPath Injection<a class="headerlink" href="#xpath-injection" title="Permanent link">&para;</a></h4>
 <p>TODO</p>
@@ -2117,7 +2212,6 @@
 <div class="codehilite"><pre><span></span><code><span class="n">ProcessBuilder</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProcessBuilder</span><span class="p">(</span><span class="s">&quot;C:\DoStuff.exe -arg1 -arg2&quot;</span><span class="p">);</span>
 </code></pre></div>
 
-
 <p>In this example, the command together with the arguments are passed as a one string, making easy to manipulate that expression and inject malicious strings.</p>
 <h5 id="correct-usage">Correct Usage<a class="headerlink" href="#correct-usage" title="Permanent link">&para;</a></h5>
 <p>Here is an example that starts a process with a modified working directory. The command and each of the arguments are passed separately. This make it easy to validated each term and reduces the risk to insert malicious strings.</p>
@@ -2126,7 +2220,6 @@
 <span class="n">pb</span><span class="p">.</span><span class="na">directory</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="s">&quot;TrustedDir&quot;</span><span class="p">));</span>
 <span class="n">Process</span> <span class="n">p</span> <span class="o">=</span> <span class="n">pb</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
 </code></pre></div>
-
 
 <h3 id="network-protocols">Network Protocols<a class="headerlink" href="#network-protocols" title="Permanent link">&para;</a></h3>
 <p>Web applications often communicate with network daemons (like SMTP, IMAP, FTP) where user input becomes part of the communication stream. Here it is possible to inject command sequences to abuse an established session.</p>
@@ -2162,7 +2255,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" title="HTTP Strict Transport Security" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2177,7 +2270,7 @@
           </a>
         
         
-          <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" title="Injection Prevention in Java" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -2214,15 +2307,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

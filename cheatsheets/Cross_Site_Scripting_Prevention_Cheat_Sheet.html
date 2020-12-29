@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,11 +9,12 @@
         <meta name="description" content="Website with the collection of all the cheat sheets of the project.">
       
       
+      
+      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">
       
-      
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -23,14 +22,18 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -48,7 +51,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,7 +75,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-header-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -77,18 +88,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             OWASP Cheat Sheet Series
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Cross Site Scripting Prevention
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -99,7 +112,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -140,8 +153,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -149,10 +160,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://cheatsheetseries.owasp.org/" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series">
       
@@ -182,8 +199,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../index.html" title="Introduction" class="md-nav__link">
+    <a href="../index.html" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -194,8 +212,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../Glossary.html" title="Index Alphabetical" class="md-nav__link">
+    <a href="../Glossary.html" class="md-nav__link">
       Index Alphabetical
     </a>
   </li>
@@ -206,8 +225,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexASVS.html" title="Index ASVS" class="md-nav__link">
+    <a href="../IndexASVS.html" class="md-nav__link">
       Index ASVS
     </a>
   </li>
@@ -218,8 +238,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../IndexProactiveControls.html" title="Index Proactive Controls" class="md-nav__link">
+    <a href="../IndexProactiveControls.html" class="md-nav__link">
       Index Proactive Controls
     </a>
   </li>
@@ -229,24 +250,23 @@
       
       
 
+
   
 
 
+  
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Cheatsheets
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Cheatsheets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -257,8 +277,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="AJAX_Security_Cheat_Sheet.html" title="AJAX Security" class="md-nav__link">
+    <a href="AJAX_Security_Cheat_Sheet.html" class="md-nav__link">
       AJAX Security
     </a>
   </li>
@@ -269,8 +290,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Abuse_Case_Cheat_Sheet.html" title="Abuse Case" class="md-nav__link">
+    <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
       Abuse Case
     </a>
   </li>
@@ -281,8 +303,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Access_Control_Cheat_Sheet.html" title="Access Control" class="md-nav__link">
+    <a href="Access_Control_Cheat_Sheet.html" class="md-nav__link">
       Access Control
     </a>
   </li>
@@ -293,8 +316,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" title="Attack Surface Analysis" class="md-nav__link">
+    <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
       Attack Surface Analysis
     </a>
   </li>
@@ -305,8 +329,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authentication_Cheat_Sheet.html" title="Authentication" class="md-nav__link">
+    <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
       Authentication
     </a>
   </li>
@@ -317,8 +342,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" title="Authorization Testing Automation" class="md-nav__link">
+    <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
       Authorization Testing Automation
     </a>
   </li>
@@ -329,8 +355,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Bean_Validation_Cheat_Sheet.html" title="Bean Validation" class="md-nav__link">
+    <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
       Bean Validation
     </a>
   </li>
@@ -341,8 +368,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" title="C-Based Toolchain Hardening" class="md-nav__link">
+    <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
       C-Based Toolchain Hardening
     </a>
   </li>
@@ -353,8 +381,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" title="Choosing and Using Security Questions" class="md-nav__link">
+    <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
       Choosing and Using Security Questions
     </a>
   </li>
@@ -365,8 +394,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Clickjacking_Defense_Cheat_Sheet.html" title="Clickjacking Defense" class="md-nav__link">
+    <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
       Clickjacking Defense
     </a>
   </li>
@@ -377,8 +407,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Content_Security_Policy_Cheat_Sheet.html" title="Content Security Policy" class="md-nav__link">
+    <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
       Content Security Policy
     </a>
   </li>
@@ -389,8 +420,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" title="Credential Stuffing Prevention" class="md-nav__link">
+    <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Credential Stuffing Prevention
     </a>
   </li>
@@ -401,8 +433,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" title="Cross-Site Request Forgery Prevention" class="md-nav__link">
+    <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Cross-Site Request Forgery Prevention
     </a>
   </li>
@@ -411,6 +444,7 @@
           
           
           
+
 
   
 
@@ -424,12 +458,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Cross Site Scripting Prevention
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" title="Cross Site Scripting Prevention" class="md-nav__link md-nav__link--active">
+    <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
       Cross Site Scripting Prevention
     </a>
     
@@ -441,9 +473,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -659,8 +689,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Cryptographic_Storage_Cheat_Sheet.html" title="Cryptographic Storage" class="md-nav__link">
+    <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
       Cryptographic Storage
     </a>
   </li>
@@ -671,8 +702,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" title="DOM based XSS Prevention" class="md-nav__link">
+    <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
       DOM based XSS Prevention
     </a>
   </li>
@@ -683,8 +715,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Database_Security_Cheat_Sheet.html" title="Database Security" class="md-nav__link">
+    <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
       Database Security
     </a>
   </li>
@@ -695,8 +728,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Denial_of_Service_Cheat_Sheet.html" title="Denial of Service" class="md-nav__link">
+    <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
       Denial of Service
     </a>
   </li>
@@ -707,8 +741,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Deserialization_Cheat_Sheet.html" title="Deserialization" class="md-nav__link">
+    <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
       Deserialization
     </a>
   </li>
@@ -719,8 +754,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Docker_Security_Cheat_Sheet.html" title="Docker Security" class="md-nav__link">
+    <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
       Docker Security
     </a>
   </li>
@@ -731,8 +767,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="DotNet_Security_Cheat_Sheet.html" title="DotNet Security" class="md-nav__link">
+    <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
       DotNet Security
     </a>
   </li>
@@ -743,8 +780,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Error_Handling_Cheat_Sheet.html" title="Error Handling" class="md-nav__link">
+    <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
       Error Handling
     </a>
   </li>
@@ -755,8 +793,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="File_Upload_Cheat_Sheet.html" title="File Upload" class="md-nav__link">
+    <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
       File Upload
     </a>
   </li>
@@ -767,8 +806,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Forgot_Password_Cheat_Sheet.html" title="Forgot Password" class="md-nav__link">
+    <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
       Forgot Password
     </a>
   </li>
@@ -779,8 +819,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTML5_Security_Cheat_Sheet.html" title="HTML5 Security" class="md-nav__link">
+    <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
+      GraphQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
       HTML5 Security
     </a>
   </li>
@@ -791,8 +845,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" title="HTTP Strict Transport Security" class="md-nav__link">
+    <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
       HTTP Strict Transport Security
     </a>
   </li>
@@ -803,8 +858,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_Cheat_Sheet.html" title="Injection Prevention" class="md-nav__link">
+    <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention
     </a>
   </li>
@@ -815,8 +871,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" title="Injection Prevention in Java" class="md-nav__link">
+    <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
       Injection Prevention in Java
     </a>
   </li>
@@ -827,8 +884,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Input_Validation_Cheat_Sheet.html" title="Input Validation" class="md-nav__link">
+    <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
       Input Validation
     </a>
   </li>
@@ -839,8 +897,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" title="Insecure Direct Object Reference Prevention" class="md-nav__link">
+    <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Insecure Direct Object Reference Prevention
     </a>
   </li>
@@ -851,8 +910,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JAAS_Cheat_Sheet.html" title="JAAS" class="md-nav__link">
+    <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
       JAAS
     </a>
   </li>
@@ -863,8 +923,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" title="JSON Web Token for Java" class="md-nav__link">
+    <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
       JSON Web Token for Java
     </a>
   </li>
@@ -875,8 +936,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Key_Management_Cheat_Sheet.html" title="Key Management" class="md-nav__link">
+    <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
       Key Management
     </a>
   </li>
@@ -887,8 +949,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" title="LDAP Injection Prevention" class="md-nav__link">
+    <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       LDAP Injection Prevention
     </a>
   </li>
@@ -899,8 +962,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Logging_Cheat_Sheet.html" title="Logging" class="md-nav__link">
+    <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
       Logging
     </a>
   </li>
@@ -911,8 +975,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Mass_Assignment_Cheat_Sheet.html" title="Mass Assignment" class="md-nav__link">
+    <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
       Mass Assignment
     </a>
   </li>
@@ -923,8 +988,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" title="Microservices based Security Arch Doc" class="md-nav__link">
+    <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
       Microservices based Security Arch Doc
     </a>
   </li>
@@ -935,8 +1001,22 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Multifactor_Authentication_Cheat_Sheet.html" title="Multifactor Authentication" class="md-nav__link">
+    <a href="Microservices_security.html" class="md-nav__link">
+      Microservices security.md
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
       Multifactor Authentication
     </a>
   </li>
@@ -947,8 +1027,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Nodejs_Security_Cheat_Sheet.html" title="Nodejs Security" class="md-nav__link">
+    <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
       Nodejs Security
     </a>
   </li>
@@ -959,8 +1040,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" title="OS Command Injection Defense" class="md-nav__link">
+    <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
       OS Command Injection Defense
     </a>
   </li>
@@ -971,8 +1053,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="PHP_Configuration_Cheat_Sheet.html" title="PHP Configuration" class="md-nav__link">
+    <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
       PHP Configuration
     </a>
   </li>
@@ -983,8 +1066,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Password_Storage_Cheat_Sheet.html" title="Password Storage" class="md-nav__link">
+    <a href="Password_Storage_Cheat_Sheet.html" class="md-nav__link">
       Password Storage
     </a>
   </li>
@@ -995,8 +1079,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Pinning_Cheat_Sheet.html" title="Pinning" class="md-nav__link">
+    <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
       Pinning
     </a>
   </li>
@@ -1007,8 +1092,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Query_Parameterization_Cheat_Sheet.html" title="Query Parameterization" class="md-nav__link">
+    <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
       Query Parameterization
     </a>
   </li>
@@ -1019,8 +1105,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Assessment_Cheat_Sheet.html" title="REST Assessment" class="md-nav__link">
+    <a href="REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
       REST Assessment
     </a>
   </li>
@@ -1031,8 +1118,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="REST_Security_Cheat_Sheet.html" title="REST Security" class="md-nav__link">
+    <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
       REST Security
     </a>
   </li>
@@ -1043,8 +1131,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Ruby_on_Rails_Cheat_Sheet.html" title="Ruby on Rails" class="md-nav__link">
+    <a href="Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
       Ruby on Rails
     </a>
   </li>
@@ -1055,8 +1144,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SAML_Security_Cheat_Sheet.html" title="SAML Security" class="md-nav__link">
+    <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
       SAML Security
     </a>
   </li>
@@ -1067,8 +1157,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" title="SQL Injection Prevention" class="md-nav__link">
+    <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
       SQL Injection Prevention
     </a>
   </li>
@@ -1079,8 +1170,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" title="Securing Cascading Style Sheets" class="md-nav__link">
+    <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
       Securing Cascading Style Sheets
     </a>
   </li>
@@ -1091,8 +1183,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" title="Server Side Request Forgery Prevention" class="md-nav__link">
+    <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
       Server Side Request Forgery Prevention
     </a>
   </li>
@@ -1103,8 +1196,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Session_Management_Cheat_Sheet.html" title="Session Management" class="md-nav__link">
+    <a href="Session_Management_Cheat_Sheet.html" class="md-nav__link">
       Session Management
     </a>
   </li>
@@ -1115,8 +1209,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="TLS_Cipher_String_Cheat_Sheet.html" title="TLS Cipher String" class="md-nav__link">
+    <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
       TLS Cipher String
     </a>
   </li>
@@ -1127,8 +1222,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" title="Third Party Javascript Management" class="md-nav__link">
+    <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
       Third Party Javascript Management
     </a>
   </li>
@@ -1139,8 +1235,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Threat_Modeling_Cheat_Sheet.html" title="Threat Modeling" class="md-nav__link">
+    <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
       Threat Modeling
     </a>
   </li>
@@ -1151,8 +1248,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transaction_Authorization_Cheat_Sheet.html" title="Transaction Authorization" class="md-nav__link">
+    <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
       Transaction Authorization
     </a>
   </li>
@@ -1163,8 +1261,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Transport_Layer_Protection_Cheat_Sheet.html" title="Transport Layer Protection" class="md-nav__link">
+    <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
       Transport Layer Protection
     </a>
   </li>
@@ -1175,8 +1274,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+    <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
       Unvalidated Redirects and Forwards
     </a>
   </li>
@@ -1187,8 +1287,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="User_Privacy_Protection_Cheat_Sheet.html" title="User Privacy Protection" class="md-nav__link">
+    <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
       User Privacy Protection
     </a>
   </li>
@@ -1199,8 +1300,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Virtual_Patching_Cheat_Sheet.html" title="Virtual Patching" class="md-nav__link">
+    <a href="Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
       Virtual Patching
     </a>
   </li>
@@ -1211,8 +1313,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" title="Vulnerability Disclosure" class="md-nav__link">
+    <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
       Vulnerability Disclosure
     </a>
   </li>
@@ -1223,8 +1326,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" title="Vulnerable Dependency Management" class="md-nav__link">
+    <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
       Vulnerable Dependency Management
     </a>
   </li>
@@ -1235,8 +1339,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="Web_Service_Security_Cheat_Sheet.html" title="Web Service Security" class="md-nav__link">
+    <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
       Web Service Security
     </a>
   </li>
@@ -1247,8 +1352,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" title="XML External Entity Prevention" class="md-nav__link">
+    <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
       XML External Entity Prevention
     </a>
   </li>
@@ -1259,8 +1365,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="XML_Security_Cheat_Sheet.html" title="XML Security" class="md-nav__link">
+    <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
       XML Security
     </a>
   </li>
@@ -1278,7 +1385,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1289,9 +1397,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1508,9 +1614,6 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="cross-site-scripting-prevention-cheat-sheet">Cross Site Scripting Prevention Cheat Sheet<a class="headerlink" href="#cross-site-scripting-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>This article provides a simple positive model for preventing <a href="https://owasp.org/www-community/attacks/xss/">XSS</a> using output encoding properly. While there are a huge number of XSS attack vectors, following a few simple rules can completely defend against this serious attack.</p>
@@ -1540,28 +1643,23 @@ tag anywhere, or an event handler attribute like onmouseover, or inside CSS, or 
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;...</span><span class="nx">NEVER</span> <span class="nx">PUT</span> <span class="nx">UNTRUSTED</span> <span class="nx">DATA</span> <span class="nx">HERE</span><span class="p">...&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <p>Inside an HTML comment:</p>
 <div class="codehilite"><pre><span></span><code><span class="c">&lt;!--...NEVER PUT UNTRUSTED DATA HERE...--&gt;</span>
 </code></pre></div>
-
 
 <p>In an attribute name:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="err">...</span><span class="na">NEVER</span> <span class="na">PUT</span> <span class="na">UNTRUSTED</span> <span class="na">DATA</span> <span class="na">HERE</span><span class="err">...=</span><span class="na">test</span> <span class="p">/&gt;</span>
 </code></pre></div>
 
-
 <p>In a tag name:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">NEVER</span> <span class="na">PUT</span> <span class="na">UNTRUSTED</span> <span class="na">DATA</span> <span class="na">HERE</span><span class="err">...</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/test&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
-
 
 <p>Directly in CSS:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="o">..</span><span class="p">.</span><span class="nc">NEVER</span> <span class="nt">PUT</span> <span class="nt">UNTRUSTED</span> <span class="nt">DATA</span> <span class="nt">HERE</span><span class="o">...</span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>Most importantly, never accept actual JavaScript code from an untrusted source and then run it. For example, a parameter named "callback" that contains a JavaScript code snippet. No amount of encoding/escaping can fix that.</p>
 <h3 id="rule-1-html-encode-before-inserting-untrusted-data-into-html-element-content">RULE #1 - HTML Encode Before Inserting Untrusted Data into HTML Element Content<a class="headerlink" href="#rule-1-html-encode-before-inserting-untrusted-data-into-html-element-content" title="Permanent link">&para;</a></h3>
@@ -1571,26 +1669,20 @@ tag anywhere, or an event handler attribute like onmouseover, or inside CSS, or 
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 ...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
-<p>Encode the following characters with HTML entity encoding to prevent switching into any execution context, such as script, style, or event handlers. Using hex entities is recommended in the spec. In addition to the 5 characters significant in XML (<code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>"</code>, <code>'</code>), the forward slash is included as it helps to end an HTML entity.</p>
+<p>Encode the following characters with HTML entity encoding to prevent switching into any execution context, such as script, style, or event handlers. Using hex entities is recommended in the spec. The 5 characters significant in XML (<code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>"</code>, <code>'</code>):</p>
 <div class="codehilite"><pre><span></span><code> &amp; --&gt; &amp;amp;
  &lt; --&gt; &amp;lt;
  &gt; --&gt; &amp;gt;
  &quot; --&gt; &amp;quot;
  &#39; --&gt; &amp;#x27;
- / --&gt; &amp;#x2F;
 
  &amp;apos; not recommended because its not in the HTML spec (See: section 24.4.1) &amp;apos; is in the XML and XHTML specs.
-
- Forward slash is included as it helps end an HTML entity
 </code></pre></div>
-
 
 <h3 id="rule-2-attribute-encode-before-inserting-untrusted-data-into-html-common-attributes">RULE #2 - Attribute Encode Before Inserting Untrusted Data into HTML Common Attributes<a class="headerlink" href="#rule-2-attribute-encode-before-inserting-untrusted-data-into-html-common-attributes" title="Permanent link">&para;</a></h3>
 <p>Rule #2 is for putting untrusted data into typical attribute values like <code>width</code>, <code>name</code>, <code>value</code>, etc. This should not be used for complex attributes like <code>href</code>, <code>src</code>, <code>style</code>, or any of the event handlers like onmouseover. It is extremely important that event handler attributes should follow Rule #3 for HTML JavaScript Data Values.</p>
@@ -1598,18 +1690,15 @@ tag anywhere, or an event handler attribute like onmouseover, or inside CSS, or 
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">attr</span><span class="o">=</span><span class="s">...ENCODE</span> <span class="na">UNTRUSTED</span> <span class="na">DATA</span> <span class="na">BEFORE</span> <span class="na">PUTTING</span> <span class="na">HERE</span><span class="err">...</span><span class="p">&gt;</span>content
 </code></pre></div>
 
-
 <p>Inside single quoted attribute:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">attr</span><span class="o">=</span><span class="s">&#39;...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...&#39;</span><span class="p">&gt;</span>content
 </code></pre></div>
-
 
 <p>Inside double quoted attribute :</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">attr</span><span class="o">=</span><span class="s">&quot;...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...&quot;</span><span class="p">&gt;</span>content
 </code></pre></div>
 
-
-<p>Except for alphanumeric characters, encode all characters with ASCII values less than 256 with the <code>&amp;#xHH;</code> format (or a named entity if available) to prevent switching out of the attribute.</p>
+<p>Except for alphanumeric characters, encode all characters with ASCII values less than 256 with the "&amp;#xHH;" format (or a named entity if available) to prevent switching out of the attribute.</p>
 <p>The reason this rule is so broad is that developers frequently leave attributes unquoted. Properly quoted attributes can only be escaped with the corresponding quote.</p>
 <p>Unquoted attributes can be broken out of with many characters, including <code>[space]</code> <code>%</code> <code>*</code> <code>+</code> <code>,</code> <code>-</code> <code>/</code> <code>;</code> <code>&lt;</code> <code>=</code> <code>&gt;</code> <code>^</code> and <code>|</code>.</p>
 <h3 id="rule-3-javascript-encode-before-inserting-untrusted-data-into-javascript-data-values">RULE #3 - JavaScript Encode Before Inserting Untrusted Data into JavaScript Data Values<a class="headerlink" href="#rule-3-javascript-encode-before-inserting-untrusted-data-into-javascript-data-values" title="Permanent link">&para;</a></h3>
@@ -1618,27 +1707,23 @@ tag anywhere, or an event handler attribute like onmouseover, or inside CSS, or 
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...&#39;</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <p>One side of a quoted expression:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">x</span><span class="o">=</span><span class="s1">&#39;...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...&#39;</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>Inside quoted event handler:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">onmouseover</span><span class="o">=</span><span class="s">&quot;x=&#39;...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...&#39;&quot;</span><span class="err">&lt;/</span><span class="na">div</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <!-- textlint-disable terminology -->
+<p>Please note there are some JavaScript functions that can never safely use untrusted data as input - <strong>EVEN IF JAVASCRIPT ENCODED!</strong></p>
+<!-- textlint-enable -->
 
-<p>Please note there are some JavaScript functions that can never safely use untrusted data as input - <strong>EVEN IF JAVASCRIPT ENCODED!</strong>
-<!-- textlint-enable --></p>
 <p>For example:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="s1">&#39;...EVEN IF YOU ENCODE UNTRUSTED DATA YOU ARE XSSED HERE...&#39;</span><span class="p">);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>Except for alphanumeric characters, encode all characters less than 256 with the <code>\xHH</code> format to prevent switching out of the data value into the script context or into another attribute. <strong>DO NOT</strong> use any escaping shortcuts like <code>\"</code> because the quote character may be matched by the HTML attribute parser which runs first. These escaping shortcuts are also susceptible to <strong>escape-the-escape attacks</strong> where the attacker sends <code>\"</code> and the vulnerable code turns that into <code>\\"</code> which enables the quote.</p>
 <p>If an event handler is properly quoted, breaking out requires the corresponding quote. However, we have intentionally made this rule quite broad because event handler attributes are often left unquoted. Unquoted attributes can be broken out of with many characters including <code>[space]</code> <code>%</code> <code>*</code> <code>+</code> <code>,</code> <code>-</code> <code>/</code> <code>;</code> <code>&lt;</code> <code>=</code> <code>&gt;</code> <code>^</code> and <code>|</code>.</p>
@@ -1660,7 +1745,6 @@ Connection: Keep-Alive
 that matches the controller named &#39;pay&#39;.&quot;}   &lt;-- this script will pop!!
 </code></pre></div>
 
-
 <p><strong>Good HTTP response:</strong></p>
 <div class="codehilite"><pre><span></span><code>HTTP/1.1 200
 Date: Wed, 06 Feb 2013 10:28:54 GMT
@@ -1669,14 +1753,12 @@ Content-Type: application/json; charset=utf-8 &lt;--good
 .....
 </code></pre></div>
 
-
 <p>A common <strong>anti-pattern</strong> one would see:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="c1">// Do NOT do this without encoding the data with one of the techniques listed below.</span>
 <span class="kd">var</span> <span class="nx">initData</span> <span class="o">=</span> <span class="o">&lt;%=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">to_json</span> <span class="o">%&gt;</span><span class="p">;</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <h5 id="json-serialization">JSON serialization<a class="headerlink" href="#json-serialization" title="Permanent link">&para;</a></h5>
 <p>A safe JSON serializer will allow developers to serialize JSON as string of literal JavaScript which can be embedded in an HTML in the contents of the <code>&lt;script&gt;</code> tag. HTML characters and JavaScript line terminators need be encoded. Consider the <a href="https://github.com/yahoo/serialize-javascript">Yahoo JavaScript Serializer</a> for this task.</p>
@@ -1687,13 +1769,11 @@ Content-Type: application/json; charset=utf-8 &lt;--good
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <div class="codehilite"><pre><span></span><code><span class="c1">// external js file</span>
 <span class="kd">var</span> <span class="nx">dataElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;init_data&#39;</span><span class="p">);</span>
 <span class="c1">// decode and parse the content of the div</span>
 <span class="kd">var</span> <span class="nx">initData</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">dataElement</span><span class="p">.</span><span class="nx">textContent</span><span class="p">);</span>
 </code></pre></div>
-
 
 <p>An alternative to encoding and decoding JSON directly in JavaScript, is to normalize JSON server-side by converting <code>&lt;</code> to <code>\u003c</code> before delivering it to the browser.</p>
 <h3 id="rule-4-css-encode-and-strictly-validate-before-inserting-untrusted-data-into-html-style-property-values">RULE #4 - CSS Encode And Strictly Validate Before Inserting Untrusted Data into HTML Style Property Values<a class="headerlink" href="#rule-4-css-encode-and-strictly-validate-before-inserting-untrusted-data-into-html-style-property-values" title="Permanent link">&para;</a></h3>
@@ -1705,23 +1785,19 @@ Content-Type: application/json; charset=utf-8 &lt;--good
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="nt">selector</span> <span class="p">{</span> <span class="n">property</span> <span class="p">:</span> <span class="s2">&quot;...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...&quot;</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 
-
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;property : ...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...&quot;</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>Please note there are some CSS contexts that can never safely use untrusted data as input - <strong>EVEN IF PROPERLY CSS ENCODED!</strong> You will have to ensure that URLs only start with <code>http</code> not <code>javascript</code> and that properties never start with "expression".</p>
 <p>For example:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span> <span class="n">background-url</span> <span class="p">:</span> <span class="s2">&quot;javascript:alert(1)&quot;</span><span class="p">;</span> <span class="p">}</span>  <span class="o">//</span> <span class="nt">and</span> <span class="nt">all</span> <span class="nt">other</span> <span class="nt">URLs</span>
 <span class="p">{</span> <span class="n">text-size</span><span class="p">:</span> <span class="s2">&quot;expression(alert(&#39;XSS&#39;))&quot;</span><span class="p">;</span> <span class="p">}</span>   <span class="o">//</span> <span class="nt">only</span> <span class="nt">in</span> <span class="nt">IE</span>
 </code></pre></div>
-
 
 <p>Except for alphanumeric characters, encode all characters with ASCII values less than 256 with the \HH encoding format. <strong>DO NOT</strong> use any escaping shortcuts like <code>\"</code> because the quote character may be matched by the HTML attribute parser which runs first. These escaping shortcuts are also susceptible to <strong>escape-the-escape attacks</strong> where the attacker sends <code>\"</code> and the vulnerable code turns that into <code>\\"</code> which enables the quote.</p>
 <p>If attribute is quoted, breaking out requires the corresponding quote. All attributes should be quoted but your encoding should be strong enough to prevent XSS when untrusted data is placed in unquoted contexts.</p>
@@ -1731,7 +1807,6 @@ Content-Type: application/json; charset=utf-8 &lt;--good
 <p>Rule #5 is for when you want to put untrusted data into HTTP GET parameter value.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.somesite.com?test=...ENCODE UNTRUSTED DATA BEFORE PUTTING HERE...&quot;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span> <span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>Except for alphanumeric characters, encode all characters with ASCII values less than 256 with the <code>%HH</code> encoding format. Including untrusted data in <code>data:</code> URLs should not be allowed as there is no good way to disable attacks with encoding/escaping to prevent switching out of the URL.</p>
 <p>All attributes should be quoted. Unquoted attributes can be broken out of with many characters including <code>[space]</code> <code>%</code> <code>*</code> <code>+</code> <code>,</code> <code>-</code> <code>/</code> <code>;</code> <code>&lt;</code> <code>=</code> <code>&gt;</code> <code>^</code> and <code>|</code>. Note that entity encoding is useless in this context.</p>
@@ -1744,7 +1819,6 @@ Content-Type: application/json; charset=utf-8 &lt;--good
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h3 id="rule-6-sanitize-html-markup-with-a-library-designed-for-the-job">RULE #6 - Sanitize HTML Markup with a Library Designed for the Job<a class="headerlink" href="#rule-6-sanitize-html-markup-with-a-library-designed-for-the-job" title="Permanent link">&para;</a></h3>
 <p>If your application handles markup -- untrusted input that is supposed to contain HTML -- it can be very difficult to validate. Encoding is also difficult, since it would break all the tags that are supposed to be in the input. Therefore, you need a library that can parse and clean HTML formatted text. There are several available at OWASP that are simple to use:</p>
 <p><strong><a href="https://github.com/mganss/HtmlSanitizer">HtmlSanitizer</a></strong></p>
@@ -1754,7 +1828,6 @@ Content-Type: application/json; charset=utf-8 &lt;--good
 <span class="kt">var</span> <span class="n">sanitized</span> <span class="p">=</span> <span class="n">sanitizer</span><span class="p">.</span><span class="n">Sanitize</span><span class="p">(</span><span class="n">html</span><span class="p">);</span>
 </code></pre></div>
 
-
 <p><strong><a href="https://owasp.org/www-project-java-html-sanitizer/">OWASP Java HTML Sanitizer</a></strong></p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.owasp.html.Sanitizers</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.html.PolicyFactory</span><span class="p">;</span>
@@ -1762,13 +1835,11 @@ Content-Type: application/json; charset=utf-8 &lt;--good
 <span class="n">String</span> <span class="n">cleanResults</span> <span class="o">=</span> <span class="n">sanitizer</span><span class="p">.</span><span class="na">sanitize</span><span class="p">(</span><span class="s">&quot;&lt;p&gt;Hello, &lt;b&gt;World!&lt;/b&gt;&quot;</span><span class="p">);</span>
 </code></pre></div>
 
-
 <p>For more information on OWASP Java HTML Sanitizer policy construction, see <a href="https://github.com/OWASP/java-html-sanitizer">here</a>.</p>
 <p><strong><a href="http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html">Ruby on Rails SanitizeHelper</a></strong></p>
 <p>The <code>SanitizeHelper</code> module provides a set of methods for scrubbing text of undesired HTML elements.</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;%=</span> <span class="n">sanitize</span> <span class="vi">@comment</span><span class="o">.</span><span class="n">body</span><span class="p">,</span> <span class="ss">tags</span><span class="p">:</span> <span class="sx">%w(strong em a)</span><span class="p">,</span> <span class="ss">attributes</span><span class="p">:</span> <span class="sx">%w(href)</span> <span class="o">%&gt;</span>
 </code></pre></div>
-
 
 <p><strong>Other libraries that provide HTML Sanitization include:</strong></p>
 <ul>
@@ -1788,7 +1859,6 @@ Content-Type: application/json; charset=utf-8 &lt;--good
 <p>For example this CSP:</p>
 <div class="codehilite"><pre><span></span><code>Content-Security-Policy: default-src: &#39;self&#39;; script-src: &#39;self&#39; static.domain.tld
 </code></pre></div>
-
 
 <p>Will instruct web browser to load all resources only from the page's origin and JavaScript source code files additionally from <code>static.domain.tld</code>. For more details on Content Security Policy, including what it does, and how to use it, see this article on <a href="https://content-security-policy.com">Content Security Policy</a>.</p>
 <h3 id="bonus-rule-3-use-an-auto-escaping-template-system">Bonus Rule #3: Use an Auto-Escaping Template System<a class="headerlink" href="#bonus-rule-3-use-an-auto-escaping-template-system" title="Permanent link">&para;</a></h3>
@@ -1974,7 +2044,7 @@ If you <strong>really</strong> have to use them remember that now all the data m
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" title="Cross-Site Request Forgery Prevention" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1989,7 +2059,7 @@ If you <strong>really</strong> have to use them remember that now all the data m
           </a>
         
         
-          <a href="Cryptographic_Storage_Cheat_Sheet.html" title="Cryptographic Storage" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -2026,15 +2096,15 @@ If you <strong>really</strong> have to use them remember that now all the data m
       
     </div>
     
-      <script src="../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
