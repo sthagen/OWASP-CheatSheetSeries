@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Kubernetes_Security_Cheat_Sheet.html">
       
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -2885,29 +2885,29 @@ blacklist sctp
 <li>The easiest method for logging containers is to write to the standard output (stdout) and standard error (stderr) streams.</li>
 </ul>
 <p>Manifest is as follows.</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```YAML</span>
-<span class="c">apiVersion: v1</span>
-<span class="c">kind: Pod</span>
-<span class="c">metadata:</span>
-<span class="c">name: example</span>
-<span class="c">spec:</span>
-<span class="c">containers:</span>
-<span class="err">- name: example</span>
-<span class="c">image: busybox</span>
-<span class="c">args: [/bin/sh, -c, &#39;while true; do echo $(date); sleep 1; done&#39;]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="nt">YAML</span>
+<span class="nt">apiVersion</span><span class="o">:</span> <span class="nt">v1</span>
+<span class="nt">kind</span><span class="o">:</span> <span class="nt">Pod</span>
+<span class="nt">metadata</span><span class="o">:</span>
+<span class="nt">name</span><span class="o">:</span> <span class="nt">example</span>
+<span class="nt">spec</span><span class="o">:</span>
+<span class="nt">containers</span><span class="o">:</span>
+<span class="nt">-</span> <span class="nt">name</span><span class="o">:</span> <span class="nt">example</span>
+<span class="nt">image</span><span class="o">:</span> <span class="nt">busybox</span>
+<span class="nt">args</span><span class="o">:</span> <span class="cp">[</span><span class="p">/</span><span class="nx">bin</span><span class="p">/</span><span class="nx">sh</span><span class="p">,</span> <span class="na">-c</span><span class="p">,</span> <span class="s1">&#39;while true; do echo $(date); sleep 1; done&#39;</span><span class="cp">]</span>
 <span class="err">```</span>
 </code></pre></div>
 
 <p>To apply the manifest, run:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```bash</span>
-<span class="err">kubectl apply -f example.yaml</span>
-<span class="err">```</span>
+<div class="codehilite"><pre><span></span><code>```bash
+kubectl apply -f example.yaml
+```
 </code></pre></div>
 
 <p>To take a look the logs for this container, run:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```bash</span>
-<span class="err">kubectl log &lt;container-name&gt; command.</span>
-<span class="err">```</span>
+<div class="codehilite"><pre><span></span><code>```bash
+kubectl log &lt;container-name&gt; command.
+```
 </code></pre></div>
 
 <ul>
@@ -3067,7 +3067,7 @@ Events:
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            ©Copyright 2020 - CheatSheets Series Team
+            ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
           </div>
         
         Made with
@@ -3082,8 +3082,8 @@ Events:
       
     </div>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html">
       
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -760,6 +760,13 @@
           <li class="md-nav__item">
   <a href="#usually-safe-methods" class="md-nav__link">
     Usually Safe Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detect-dom-xss-using-variant-analysis" class="md-nav__link">
+    Detect DOM XSS using variant analysis
   </a>
   
 </li>
@@ -1711,6 +1718,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#detect-dom-xss-using-variant-analysis" class="md-nav__link">
+    Detect DOM XSS using variant analysis
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2129,6 +2143,15 @@ Click Me<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt
 </code></pre></div>
 
 <p>The <code>innerText</code> feature was originally introduced by Internet Explorer, and was formally specified in the HTML standard in 2016 after being adopted by all major browser vendors.</p>
+<h3 id="detect-dom-xss-using-variant-analysis">Detect DOM XSS using variant analysis<a class="headerlink" href="#detect-dom-xss-using-variant-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Vulnerable code:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;script&gt;</span>
+var x = location.hash.split(&quot;#&quot;)[1];
+document.write(x);
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+<p>Semgrep rule to identify above dom xss <a href="https://semgrep.dev/s/we30">link</a>.</p>
                 
                   
                 
@@ -2186,7 +2209,7 @@ Click Me<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            ©Copyright 2020 - CheatSheets Series Team
+            ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
           </div>
         
         Made with
@@ -2201,8 +2224,8 @@ Click Me<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt
       
     </div>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

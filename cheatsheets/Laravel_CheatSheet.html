@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Laravel_CheatSheet.html">
       
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -1786,7 +1786,7 @@
 <p>Laravel's <a href="https://laravel.com/docs/blade">Blade templating engine</a> has echo statements <code>{{ }}</code> that automatically escape variables using the <code>htmlspecialchars</code> PHP function to protect against XSS attacks.</p>
 <p>Laravel also offers displaying unescaped data using the unescaped syntax <code>{!! !!}</code>. This must not be used on any untrusted data, otherwise your application will be subject to an XSS attack.</p>
 <p>For instance, if you have something like this in any of your Blade templates, it would result in a vulnerability:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">{!! request()-&gt;input(&#39;somedata&#39;) !!}</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="o">!!</span> <span class="n">request</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">input</span><span class="p">(</span><span class="s">&#39;somedata&#39;</span><span class="p">)</span> <span class="o">!!</span><span class="p">}</span>
 </code></pre></div>
 
 <p>This, however, is safe to do:</p>
@@ -1978,7 +1978,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            ©Copyright 2020 - CheatSheets Series Team
+            ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
           </div>
         
         Made with
@@ -1993,8 +1993,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
