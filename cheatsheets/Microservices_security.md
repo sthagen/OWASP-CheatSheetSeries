@@ -4,26 +4,6 @@
 
 The microservice architecture is being increasingly used for designing and implementing application systems in both cloud-based and on-premise infrastructures, high-scale applications and services. There are many security challenges need to be addressed in the application design and implementation phases. The fundamental security requirements that have to be addressed during design phase are authentication and authorization. Therefore, it is vital for applications security architects to understand and properly use existing architecture patterns to implement authentication and authorization in microservices-based systems. The goal of this cheat sheet is to identify such patterns and to do recommendations for applications security architect on possible way to use it.
 
-## Table of contents
-
-- [Edge-level authorization](#Edge-level-authorization)
-- [Service-level authorization](#Service-level-authorization)
-    - [Service-level authorization: existing patterns](#Service-level-authorization:-existing-patterns)
-        - [Decentralized pattern](#Decentralized-pattern)
-        - [Centralized pattern with single policy decision point](#Centralized-pattern-with-single-policy-decision-point)
-        - [Centralized pattern with embedded policy decision point](#Centralized-pattern-with-embedded-policy-decision-point)
-    - [Recommendation on how to implement authorization](#Recommendation-on-how-to-implement-authorization)
-- [External entity identity propagation](#External-entity-identity-propagation)
-    - [Identity propagation: existing patterns](#Identity-propagation:-existing-patterns)
-        - [Send the external entity identity as a clear or self-signed data structures](#Send-the-external-entity-identity-as-a-clear-or-self-signed-data-structures)
-        - [Using a data structures signed by a trusted issuer](#Using-a-data-structures-signed-by-a-trusted-issuer)
-    - [Recommendation on how to implement identity propogation](#Recommendation-on-how-to-implement-identity-propogation)
-- [Service-to-service authentication](#Service-to-service-authentication)
-    - [Service-to-service authentication: existing patterns](#Service-to-service-authentication:-existing-patterns)
-        - [Mutual transport layer security](#Mutual-transport-layer-security)
-        - [Token based](#Token-based)
-- [References](#References)
-
 ## Edge-level authorization
 
 In simple scenario, authorization can happen only at the edge level (API gateway). The API gateway can be leveraged to centralize enforcement of authorization for all downstream microservices, eliminating the need to provide authentication and access control for each of the individual services. In such case, [NIST recommends](https://doi.org/10.6028/NIST.SP.800-204) to implement mitigating controls such as mutual authentication to prevent direct, anonymous connections to the internal services (API gateway bypass). It should be noted that authorization at the edge layer has a [following limitations](https://www.youtube.com/watch?v=UnXjwCWgBKU):

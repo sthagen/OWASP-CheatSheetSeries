@@ -104,9 +104,19 @@ To learn more on usage of TLS in Kubernetes cluster, refer to the documentation 
 
 ### API Authentication
 
-Choose an authentication mechanism for the API servers to use that matches the common access patterns when you install a cluster. For instance, small single user clusters may wish to use a simple certificate or static Bearer token approach. Larger clusters may wish to integrate an existing OIDC or LDAP server that allow users to be subdivided into groups.
+Kubernetes provides a number of in-built mechanisms for API server authentication, however these are likely only suitable for non-production or small clusters.
 
-All API clients must be authenticated, even those that are part of the infrastructure like nodes, proxies, the scheduler, and volume plugins. These clients are typically service accounts or use x509 client certificates, and they are created automatically at cluster startup or are setup as part of the cluster installation.
+- [Static Token File](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#static-token-file) authentication makes use of clear text tokens stored in a CSV file on API server node(s). Modifying credentials in this file requires an API server re-start to be effective.
+- [X509 Client Certs](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#x509-client-certs) are available as well however these are unsuitable for production use, as Kubernetes does [not support certificate revocation](https://github.com/kubernetes/kubernetes/issues/18982) meaning that user credentials cannot be modified or revoked without rotating the root certificate authority key an re-issuing all cluster certificates.
+- [Service Accounts Tokens](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#service-account-tokens) are also available for authentication. Their primary intended use is to allow workloads running in the cluster to authenticate to the API server, however they can also be used for user authentication.
+
+The recommended approach for larger or production clusters, is to use an external authentication method:
+
+- [OpenID Connect](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens) (OIDC) lets you externalize authentication, use short lived tokens, and leverage centralized groups for authorization.
+- Managed Kubernetes distributions such as GKE, EKS and AKS support authentication using credentials from their respective IAM providers.
+- [Kubernetes Impersonation](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#user-impersonation) can be used with both managed cloud clusters and on-prem clusters to externalize authentication without having to have access to the API server configuration parameters.
+
+In addition to choosing the appropriate authentication system, API access should be considered privileged and use Multi-Factor Authentication (MFA) for all user access.
 
 For more information, consult Kubernetes authentication reference document at <https://kubernetes.io/docs/reference/access-authn-authz/authentication>
 
@@ -149,16 +159,17 @@ For more information, refer to Kubelet authentication/authorization documentatio
 
 ### Securing Kubernetes Dashboard
 
-The Kubernetes dashboard is a webapp for monitoring your cluster. It it is not a part of the Kubernetes cluster itself, it has to be installed by the owners of the cluster. Thus, there are a lot of tutorials on how to do this. Unfortunately, most of them create a service account with very high privileges. This caused Tesla and some others to be hacked via such a poorly configured K8s dashboard. (Reference: Tesla cloud resources are hacked to run cryptocurrency-mining malware - <https://arstechnica.com/information-technology/2018/02/tesla-cloud-resources-are-hacked-to-run-cryptocurrency-mining-malware/>)
+The Kubernetes dashboard is a webapp for managing your cluster. It it is not a part of the Kubernetes cluster itself, it has to be installed by the owners of the cluster. Thus, there are a lot of tutorials on how to do this. Unfortunately, most of them create a service account with very high privileges. This caused Tesla and some others to be hacked via such a poorly configured K8s dashboard. (Reference: Tesla cloud resources are hacked to run cryptocurrency-mining malware - <https://arstechnica.com/information-technology/2018/02/tesla-cloud-resources-are-hacked-to-run-cryptocurrency-mining-malware/>)
 
 To prevent attacks via the dashboard, you should follow some tips:
 
-- Do not expose the dashboard to the public. There is no need to access such a powerful tool from outside your LAN
+- Do not expose the dashboard without additional authentication to the public. There is no need to access such a powerful tool from outside your LAN
 - Turn on RBAC, so you can limit the service account the dashboard uses
 - Do not grant the service account of the dashboard high privileges
 - Grant permissions per user, so each user only can see what he is supposed to see
 - If you are using network policies, you can block requests to the dashboard even from internal pods (this will not affect the proxy tunnel via kubectl proxy)
 - Before version 1.8, the dashboard had a service account with full privileges, so check that there is no role binding for cluster-admin left.
+- Deploy the dashboard with an authenticating reverse proxy, with multi-factor authentication enabled.  This can be done with either embeded OIDC `id_tokens` or using Kubernetes Impersonation.  This allows you to use the dashboard with the user's credentials instead of using a privileged `ServiceAccount`.  This method can be used on both on-prem and managed cloud clusters.
 
 ## Kubernetes Security Best Practices: Build Phase
 
@@ -184,11 +195,19 @@ There is work in progress being done in Kubernetes for image authorization plugi
 
 Avoid using images with OS package managers or shells because they could contain unknown vulnerabilities. If you must include OS packages, remove the package manager at a later step. Consider using minimal images such as distroless images, as an example.
 
-#### Distroless images
-
 Restricting what's in your runtime container to precisely what's necessary for your app is a best practice employed by Google and other tech giants that have used containers in production for many years. It improves the signal to noise of scanners (e.g. CVE) and reduces the burden of establishing provenance to just what you need.
 
+#### Distroless images
+
+Distroless images contains less packages compared to other images, and does not includes shell, which reduce the attack surface.
+
 For more information on ditroless images, refer to <https://github.com/GoogleContainerTools/distroless>.
+
+#### Scratch image
+
+An empty image, ideal for statically compiled languages like Go. Because the image is empty - the attack surface it truely minimal - only your code!
+
+For more information, refer to <https://hub.docker.com/_/scratch>
 
 ### Use the latest images/ensure images are up to date
 
@@ -238,7 +257,7 @@ Learn more about namespaces at <https://kubernetes.io/docs/concepts/overview/wor
 Prevent unapproved images from being used with the admission controller ImagePolicyWebhook to reject pods that use unapproved images including:
 
 - Images that haven’t been scanned recently
-- Images that use a base image that’s not whitelisted
+- Images that use a base image that’s not explicitly allowed
 - Images from insecure registries
 Learn more about webhook at <https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook>
 
