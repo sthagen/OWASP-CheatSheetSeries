@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -1750,7 +1750,7 @@
 <p>CSP defends against XSS attacks in the following ways:</p>
 <h4 id="1-restricting-inline-scripts">1. Restricting Inline Scripts<a class="headerlink" href="#1-restricting-inline-scripts" title="Permanent link">&para;</a></h4>
 <p>By preventing the page from executing inline scripts, attacks like injecting</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="err">&quot;</span><span class="nx">XSS</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s1">&#39;defaced&#39;</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p>will not work.</p>
@@ -2121,7 +2121,7 @@ object-src &#39;none&#39;; base-uri &#39;none&#39;;
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
       
     
   </body>
