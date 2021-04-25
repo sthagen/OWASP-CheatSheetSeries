@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -1021,6 +1021,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -1035,6 +1036,7 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -1232,6 +1234,7 @@
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -1465,14 +1468,7 @@
 <li>Force all redirects to first go through a page notifying users that they are going off of your site, with the destination clearly displayed, and have them click a link to confirm.</li>
 </ul>
 <h3 id="validating-urls">Validating URLs<a class="headerlink" href="#validating-urls" title="Permanent link">&para;</a></h3>
-<p>When attempting to validate and sanitise user-input to determine whether the URL is safe, wherever possible you should use a built-in library or function to parse the URLs, such as <code>parse_url()</code> in PHP, rather than rolling your own parser using regex. Additionally, make sure that you take the following into account:</p>
-<ul>
-<li>Input starting with a <code>/</code> to redirect to local pages is <strong>not safe</strong>. <code>//example.org</code> is a valid URL.</li>
-<li>Input starting with the desired domain name is <strong>not safe</strong>. <code>https://example.org.attacker.com</code> is valid.</li>
-<li>Only allow HTTP(S) protocols. All other protocols, including JavaScript URIs such as <code>javascript:alert(1)</code> should be blocked</li>
-<li>Data URIs such as <code>data:text/html,&lt;script&gt;alert(document.domain)&lt;/script&gt;</code> should be blocked</li>
-<li>URIs containing CRLF characters can lead to header injection or response splitting attacks, and should be blocked.</li>
-</ul>
+<p>Validating and sanitising user-input to determine whether the URL is safe is not a trivial task. Detailed instructions how to implement URL validation is described <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html#application-layer">in Server Side Request Forgery Prevention Cheat Sheet</a></p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://cwe.mitre.org/data/definitions/601.html">CWE Entry 601 on Open Redirects</a>.</li>
@@ -1557,7 +1553,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>
