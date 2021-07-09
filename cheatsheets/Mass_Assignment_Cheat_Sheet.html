@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -42,10 +42,16 @@
     
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+
+  
+  
+
+
+
+
     
     
   </head>
@@ -78,7 +84,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -170,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -320,6 +326,18 @@
   
   
     <li class="md-nav__item">
+      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Application Logging Vocabulary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         Attack Surface Analysis
       </a>
@@ -334,6 +352,18 @@
     <li class="md-nav__item">
       <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
         Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
       </a>
     </li>
   
@@ -598,6 +628,18 @@
     <li class="md-nav__item">
       <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
         HTTP Strict Transport Security
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_CheatSheet.html" class="md-nav__link">
+        Infrastructure as Code Security CheatSheet.md
       </a>
     </li>
   
@@ -1037,6 +1079,18 @@
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         Multifactor Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
+        NodeJS Docker
       </a>
     </li>
   
@@ -1651,16 +1705,15 @@
 </ul>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>Suppose there is a form for editing a user's account information:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;userid&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">text</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>  
 </code></pre></div>
-
 <p>Here is the object that the form is binding to:</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="p">{</span>
    <span class="kd">private</span> <span class="n">String</span> <span class="n">userid</span><span class="p">;</span>
    <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="p">;</span>
    <span class="kd">private</span> <span class="n">String</span> <span class="n">email</span><span class="p">;</span>
@@ -1669,27 +1722,23 @@
    <span class="c1">//Getters &amp; Setters</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Here is the controller handling the request:</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;/addUser&quot;</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">RequestMethod</span><span class="p">.</span><span class="na">POST</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;/addUser&quot;</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">RequestMethod</span><span class="p">.</span><span class="na">POST</span><span class="p">)</span>
 <span class="kd">public</span> <span class="n">String</span> <span class="nf">submit</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">userService</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
    <span class="k">return</span> <span class="s">&quot;successPage&quot;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Here is the typical request:</p>
-<div class="codehilite"><pre><span></span><code>POST /addUser
+<div class="highlight"><pre><span></span><code>POST /addUser
 ...
 userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com
 </code></pre></div>
-
 <p>And here is the exploit in which we set the value of the attribute <code>isAdmin</code> of the instance of the class <code>User</code>:</p>
-<div class="codehilite"><pre><span></span><code>POST /addUser
+<div class="highlight"><pre><span></span><code>POST /addUser
 ...
 userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmin=true
 </code></pre></div>
-
 <h3 id="exploitability">Exploitability<a class="headerlink" href="#exploitability" title="Permanent link">&para;</a></h3>
 <p>This functionality becomes exploitable when:</p>
 <ul>
@@ -1707,7 +1756,7 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
 </ul>
 <h2 id="general-solutions">General Solutions<a class="headerlink" href="#general-solutions" title="Permanent link">&para;</a></h2>
 <p>An architectural approach is to create Data Transfer Objects and avoid binding input directly to domain objects. Only the fields that are meant to be editable by the user are included in the DTO.</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserRegistrationFormDTO</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserRegistrationFormDTO</span> <span class="p">{</span>
  <span class="kd">private</span> <span class="n">String</span> <span class="n">userid</span><span class="p">;</span>
  <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="p">;</span>
  <span class="kd">private</span> <span class="n">String</span> <span class="n">email</span><span class="p">;</span>
@@ -1717,11 +1766,10 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
  <span class="c1">//Getters &amp; Setters</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="language-framework-specific-solutions">Language &amp; Framework specific solutions<a class="headerlink" href="#language-framework-specific-solutions" title="Permanent link">&para;</a></h2>
 <h3 id="spring-mvc">Spring MVC<a class="headerlink" href="#spring-mvc" title="Permanent link">&para;</a></h3>
 <h4 id="allow-listing">Allow-listing<a class="headerlink" href="#allow-listing" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="nd">@Controller</span>
+<div class="highlight"><pre><span></span><code><span class="nd">@Controller</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserController</span>
 <span class="p">{</span>
     <span class="nd">@InitBinder</span>
@@ -1732,10 +1780,9 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
 <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Take a look <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/DataBinder.html#setAllowedFields-java.lang.String...-">here</a> for the documentation.</p>
 <h4 id="block-listing">Block-listing<a class="headerlink" href="#block-listing" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="nd">@Controller</span>
+<div class="highlight"><pre><span></span><code><span class="nd">@Controller</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserController</span>
 <span class="p">{</span>
    <span class="nd">@InitBinder</span>
@@ -1746,11 +1793,10 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
 <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Take a look <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/DataBinder.html#setDisallowedFields-java.lang.String...-">here</a> for the documentation.</p>
 <h3 id="nodejs-mongoose">NodeJS + Mongoose<a class="headerlink" href="#nodejs-mongoose" title="Permanent link">&para;</a></h3>
 <h4 id="allow-listing_1">Allow-listing<a class="headerlink" href="#allow-listing_1" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">UserSchema</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">Schema</span><span class="p">({</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">UserSchema</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">Schema</span><span class="p">({</span>
     <span class="nx">userid</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
     <span class="nx">password</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
     <span class="nx">email</span> <span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
@@ -1766,10 +1812,9 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
 <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;underscore&#39;</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">pick</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="nx">User</span><span class="p">.</span><span class="nx">userCreateSafeFields</span><span class="p">));</span>
 </code></pre></div>
-
 <p>Take a look <a href="http://underscorejs.org/#pick">here</a> for the documentation.</p>
 <h4 id="block-listing_1">Block-listing<a class="headerlink" href="#block-listing_1" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">massAssign</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoose-mass-assign&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">massAssign</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoose-mass-assign&#39;</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">UserSchema</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">Schema</span><span class="p">({</span>
     <span class="nx">userid</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
@@ -1793,7 +1838,6 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
 <span class="kd">var</span> <span class="nx">input</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">userid</span><span class="o">:</span> <span class="s1">&#39;bhelx&#39;</span><span class="p">,</span> <span class="nx">isAdmin</span><span class="o">:</span> <span class="s1">&#39;true&#39;</span> <span class="p">};</span>
 <span class="nx">User</span><span class="p">.</span><span class="nx">update</span><span class="p">({</span> <span class="s1">&#39;_id&#39;</span><span class="o">:</span> <span class="nx">someId</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">$set</span><span class="o">:</span> <span class="nx">User</span><span class="p">.</span><span class="nx">massUpdate</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">},</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Take a look <a href="https://www.npmjs.com/package/mongoose-mass-assign">here</a> for the documentation.</p>
 <h3 id="ruby-on-rails">Ruby On Rails<a class="headerlink" href="#ruby-on-rails" title="Permanent link">&para;</a></h3>
 <p>Take a look <a href="https://guides.rubyonrails.org/v3.2.9/security.html#mass-assignment">here</a> for the documentation.</p>
@@ -1803,7 +1847,7 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
 <p>Take a look <a href="https://odetocode.com/Blogs/scott/archive/2012/03/11/complete-guide-to-mass-assignment-in-asp-net-mvc.aspx">here</a> for the documentation.</p>
 <h3 id="php-laravel-eloquent">PHP Laravel + Eloquent<a class="headerlink" href="#php-laravel-eloquent" title="Permanent link">&para;</a></h3>
 <h4 id="allow-listing_2">Allow-listing<a class="headerlink" href="#allow-listing_2" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">namespace</span> <span class="nx">App</span><span class="p">;</span>
 
@@ -1819,10 +1863,9 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
     <span class="k">protected</span> <span class="nv">$fillable </span><span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;userid&#39;</span><span class="p">,</span><span class="s1">&#39;password&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Take a look <a href="https://laravel.com/docs/5.2/eloquent#mass-assignment">here</a> for the documentation.</p>
 <h4 id="block-listing_2">Block-listing<a class="headerlink" href="#block-listing_2" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">namespace</span> <span class="nx">App</span><span class="p">;</span>
 
@@ -1838,7 +1881,6 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
     <span class="k">protected</span> <span class="nv">$guarded </span><span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;isAdmin&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Take a look <a href="https://laravel.com/docs/5.2/eloquent#mass-assignment">here</a> for the documentation.</p>
 <h3 id="grails">Grails<a class="headerlink" href="#grails" title="Permanent link">&para;</a></h3>
 <p>Take a look <a href="http://spring.io/blog/2012/03/28/secure-data-binding-with-grails/">here</a> for the documentation.</p>
@@ -1876,7 +1918,8 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="Logging_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="Logging_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logging" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1891,7 +1934,8 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
         </a>
       
       
-        <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: Microservices based Security Arch Doc" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1930,10 +1974,10 @@ userid=bobbytables&amp;password=hashedpass&amp;email=bobby@tables.com&amp;isAdmi
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

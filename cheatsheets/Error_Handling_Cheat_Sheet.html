@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -42,10 +42,16 @@
     
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+
+  
+  
+
+
+
+
     
     
   </head>
@@ -78,7 +84,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -170,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -320,6 +326,18 @@
   
   
     <li class="md-nav__item">
+      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Application Logging Vocabulary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         Attack Surface Analysis
       </a>
@@ -334,6 +352,18 @@
     <li class="md-nav__item">
       <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
         Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
       </a>
     </li>
   
@@ -598,8 +628,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#java-classic-web-application" class="md-nav__link">
-    Java classic web application
+  <a href="#standard-java-web-application" class="md-nav__link">
+    Standard Java Web Application
   </a>
   
 </li>
@@ -633,6 +663,13 @@
         <li class="md-nav__item">
   <a href="#sources-of-the-prototype" class="md-nav__link">
     Sources of the prototype
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-http-errors" class="md-nav__link">
+    Appendix HTTP Errors
   </a>
   
 </li>
@@ -700,6 +737,18 @@
     <li class="md-nav__item">
       <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
         HTTP Strict Transport Security
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_CheatSheet.html" class="md-nav__link">
+        Infrastructure as Code Security CheatSheet.md
       </a>
     </li>
   
@@ -880,6 +929,18 @@
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         Multifactor Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
+        NodeJS Docker
       </a>
     </li>
   
@@ -1270,8 +1331,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#java-classic-web-application" class="md-nav__link">
-    Java classic web application
+  <a href="#standard-java-web-application" class="md-nav__link">
+    Standard Java Web Application
   </a>
   
 </li>
@@ -1309,6 +1370,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#appendix-http-errors" class="md-nav__link">
+    Appendix HTTP Errors
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1330,7 +1398,7 @@
 <h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
 <p>Issues at the error handling level can reveal a lot of information about the target and can also be used to identify injection points in the target's features.</p>
 <p>Below is an example of the disclosure of a technology stack, here the Struts2 and Tomcat versions, via an exception rendered to the user:</p>
-<div class="codehilite"><pre><span></span><code>HTTP Status 500 - For input string: &quot;null&quot;
+<div class="highlight"><pre><span></span><code>HTTP Status 500 - For input string: &quot;null&quot;
 
 type Exception report
 
@@ -1357,27 +1425,25 @@ java.lang.NumberFormatException: For input string: &quot;null&quot;
 
 note: The full stack trace of the root cause is available in the Apache Tomcat/7.0.56 logs.
 </code></pre></div>
-
 <p>Below is an example of disclosure of a SQL query error, along with the site installation path, that can be used to identify an injection point:</p>
-<div class="codehilite"><pre><span></span><code>Warning: odbc_fetch_array() expects parameter /1 to be resource, boolean given
+<div class="highlight"><pre><span></span><code>Warning: odbc_fetch_array() expects parameter /1 to be resource, boolean given
 in D:\app\index_new.php on line 188
 </code></pre></div>
-
 <p>The <a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/">OWASP Testing Guide</a> provides different techniques to obtain technical information from an application.</p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h2>
-<p>The article shows how to configure a global error handler at the configuration level when possible, otherwise at code level, in different technologies, in order to ensure that if an unexpected error occurs then a generic response is returned by the application but the error is traced on server side for investigation.</p>
+<p>The article shows how to configure a global error handler as part of your application's runtime configuration. In some cases, it may be more efficient to define this error handler as part of your code. The outcome being that when an unexpected error occurs then a generic response is returned by the application but the error details are logged server side for investigation, and not returned to the user.</p>
 <p>The following schema shows the target approach:</p>
 <p><img alt="Overview" src="../assets/Error_Handling_Cheat_Sheet_Overview.png" /></p>
-<p>As most recent application topologies are <em>API based</em>, we assume in this article that the backend exposes only a REST API and does not contain any user interface content.</p>
+<p>As most recent application topologies are <em>API based</em>, we assume in this article that the backend exposes only a REST API and does not contain any user interface content. The application should try and exhaustively cover all possible failure modes and use 5xx errors only to indicate responses to requests that it cannot fulfill, but not provide any content as part of the response that would reveal implementation details.</p>
 <p>For the error logging operation itself, the <a href="Logging_Cheat_Sheet.html">logging cheat sheet</a> should be used. This article focuses on the error handling part.</p>
 <h2 id="proposition">Proposition<a class="headerlink" href="#proposition" title="Permanent link">&para;</a></h2>
-<p>For each technology, a setup will be proposed with configuration and code snippet.</p>
-<h3 id="java-classic-web-application">Java classic web application<a class="headerlink" href="#java-classic-web-application" title="Permanent link">&para;</a></h3>
+<p>For each technology stack, the following configuration options are proposed:</p>
+<h3 id="standard-java-web-application">Standard Java Web Application<a class="headerlink" href="#standard-java-web-application" title="Permanent link">&para;</a></h3>
 <p>For this kind of application, a global error handler can be configured at the <strong>web.xml</strong> deployment descriptor level.</p>
 <p>We propose here a configuration that can be used from Servlet specification <em>version 2.5</em> and above.</p>
 <p>With this configuration, any unexpected error will cause a redirection to the page <strong>error.jsp</strong> in which the error will be traced and a generic response will be returned.</p>
 <p>Configuration of the redirection into the <strong>web.xml</strong> file:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;web-app</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">ns=</span><span class="s">&quot;http://java.sun.com/xml/ns/javaee&quot;</span>
 <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot;</span>
 <span class="na">version=</span><span class="s">&quot;3.0&quot;</span><span class="nt">&gt;</span>
@@ -1389,9 +1455,8 @@ in D:\app\index_new.php on line 188
 ...
 <span class="nt">&lt;/web-app&gt;</span>
 </code></pre></div>
-
 <p>Content of the <strong>error.jsp</strong> file:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;%</span><span class="err">@</span> <span class="n">page</span> <span class="n">language</span><span class="o">=</span><span class="s">&quot;java&quot;</span> <span class="n">isErrorPage</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="n">contentType</span><span class="o">=</span><span class="s">&quot;application/json; charset=UTF-8&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;%</span><span class="err">@</span> <span class="n">page</span> <span class="n">language</span><span class="o">=</span><span class="s">&quot;java&quot;</span> <span class="n">isErrorPage</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="n">contentType</span><span class="o">=</span><span class="s">&quot;application/json; charset=UTF-8&quot;</span>
     <span class="n">pageEncoding</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="o">%&gt;</span>
 <span class="o">&lt;%</span>
 <span class="n">String</span> <span class="n">errorMessage</span> <span class="o">=</span> <span class="n">exception</span><span class="p">.</span><span class="na">getMessage</span><span class="p">();</span>
@@ -1400,15 +1465,16 @@ in D:\app\index_new.php on line 188
 <span class="c1">//We build a generic response with a JSON format because we are in a REST API app context</span>
 <span class="c1">//We also add an HTTP response header to indicate to the client app that the response is an error</span>
 <span class="n">response</span><span class="p">.</span><span class="na">setHeader</span><span class="p">(</span><span class="s">&quot;X-ERROR&quot;</span><span class="p">,</span> <span class="s">&quot;true&quot;</span><span class="p">);</span>
-<span class="n">response</span><span class="p">.</span><span class="na">setStatus</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="c1">//Note that we&#39;re using an internal server error response</span>
+<span class="c1">//In some cases it may be prudent to return 4xx error codes, when we have misbehaving clients</span>
+<span class="n">response</span><span class="p">.</span><span class="na">setStatus</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
 <span class="o">%&gt;</span>
 <span class="p">{</span><span class="s">&quot;message&quot;</span><span class="p">:</span><span class="s">&quot;An error occur, please retry&quot;</span><span class="p">}</span>
 </code></pre></div>
-
 <h3 id="java-springmvcspringboot-web-application">Java SpringMVC/SpringBoot web application<a class="headerlink" href="#java-springmvcspringboot-web-application" title="Permanent link">&para;</a></h3>
-<p>With <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html">SpringMVC</a> or <a href="https://spring.io/projects/spring-boot">SpringBoot</a>, you can define a global error handler by simply implementing the following kind of class in your project.</p>
+<p>With <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html">SpringMVC</a> or <a href="https://spring.io/projects/spring-boot">SpringBoot</a>, you can define a global error handler by implementing the following class in your project.</p>
 <p>We indicate to the handler, via the annotation <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/ExceptionHandler.html">@ExceptionHandler</a>, to act when any exception extending the class <em>java.lang.Exception</em> is thrown by the application.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">net.minidev.json.JSONObject</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">net.minidev.json.JSONObject</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.springframework.http.HttpHeaders</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.springframework.http.HttpStatus</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.springframework.http.MediaType</span><span class="p">;</span>
@@ -1434,13 +1500,14 @@ in D:\app\index_new.php on line 188
         <span class="n">responseHeaders</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;X-ERROR&quot;</span><span class="p">,</span> <span class="s">&quot;true&quot;</span><span class="p">);</span>
         <span class="n">JSONObject</span> <span class="n">responseBody</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="p">();</span>
         <span class="n">responseBody</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;message&quot;</span><span class="p">,</span> <span class="s">&quot;An error occur, please retry&quot;</span><span class="p">);</span>
+        <span class="c1">//Note that we&#39;re using an internal server error response</span>
+        <span class="c1">//In some cases it may be prudent to return 4xx error codes, if we have misbehaving clients</span>
         <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">JSONObject</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ResponseEntity</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">responseBody</span><span class="p">,</span> <span class="n">responseHeaders</span><span class="p">,</span>
-                                                                   <span class="n">HttpStatus</span><span class="p">.</span><span class="na">OK</span><span class="p">);</span>
+                                                                   <span class="n">HttpStatus</span><span class="p">.</span><span class="na">INTERNAL_SERVER_ERROR</span><span class="p">);</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">ResponseEntity</span><span class="p">)</span> <span class="n">response</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>References:</p>
 <ul>
 <li><a href="https://www.baeldung.com/exception-handling-for-rest-with-spring">Exception handling with Spring</a></li>
@@ -1449,7 +1516,7 @@ in D:\app\index_new.php on line 188
 <h3 id="asp-net-core-web-application">ASP NET Core web application<a class="headerlink" href="#asp-net-core-web-application" title="Permanent link">&para;</a></h3>
 <p>With <a href="https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.2">ASP.NET Core</a>, you can define a global error handler by indicating that the exception handler is a dedicated API Controller.</p>
 <p>Content of the API Controller dedicated to the error handling:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Authorization</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Authorization</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Diagnostics</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Mvc</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
@@ -1490,7 +1557,9 @@ in D:\app\index_new.php on line 188
                 <span class="s">&quot;message&quot;</span><span class="p">,</span> <span class="s">&quot;An error occur, please retry&quot;</span>
             <span class="p">}</span> <span class="p">};</span>
             <span class="n">JsonResult</span> <span class="n">response</span> <span class="p">=</span> <span class="k">new</span> <span class="n">JsonResult</span><span class="p">(</span><span class="n">responseBody</span><span class="p">);</span>
-            <span class="n">response</span><span class="p">.</span><span class="n">StatusCode</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">OK</span><span class="p">;</span>
+            <span class="c1">//Note that we&#39;re using an internal server error response</span>
+            <span class="c1">//In some cases it may be prudent to return 4xx error codes, if we have misbehaving clients</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">StatusCode</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">InternalServerError</span><span class="p">;</span>
             <span class="n">Request</span><span class="p">.</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="s">&quot;X-ERROR&quot;</span><span class="p">);</span>
             <span class="n">Request</span><span class="p">.</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;X-ERROR&quot;</span><span class="p">,</span> <span class="s">&quot;true&quot;</span><span class="p">);</span>
             <span class="k">return</span> <span class="n">response</span><span class="p">;</span>
@@ -1498,9 +1567,8 @@ in D:\app\index_new.php on line 188
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Definition in the application <strong>Startup.cs</strong> file of the mapping of the exception handler to the dedicated error handling API controller:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Hosting</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Mvc</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Microsoft.Extensions.Configuration</span><span class="p">;</span>
@@ -1539,7 +1607,6 @@ in D:\app\index_new.php on line 188
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>References:</p>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/error-handling?view=aspnetcore-2.1">Exception handling with ASP.Net Core</a></li>
@@ -1547,7 +1614,7 @@ in D:\app\index_new.php on line 188
 <h3 id="asp-net-web-api-web-application">ASP NET Web API web application<a class="headerlink" href="#asp-net-web-api-web-application" title="Permanent link">&para;</a></h3>
 <p>With <a href="https://www.asp.net/web-api">ASP.NET Web API</a> (from the standard .NET framework and not from the .NET Core framework), you can define and register handlers in order to trace and handle any error that occurs in the application.</p>
 <p>Definition of the handler for the tracing of the error details:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Web.Http.ExceptionHandling</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">MyProject.Security</span>
@@ -1571,9 +1638,8 @@ in D:\app\index_new.php on line 188
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Definition of the handler for the management of the error in order to return a generic response:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">using</span> <span class="nn">Newtonsoft.Json</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">Newtonsoft.Json</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Net</span><span class="p">;</span>
@@ -1618,7 +1684,9 @@ in D:\app\index_new.php on line 188
                 <span class="kt">var</span> <span class="n">responseBody</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;{</span> <span class="p">{</span>
                     <span class="s">&quot;message&quot;</span><span class="p">,</span> <span class="s">&quot;An error occur, please retry&quot;</span>
                 <span class="p">}</span> <span class="p">};</span>
-                <span class="n">HttpResponseMessage</span> <span class="n">response</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpResponseMessage</span><span class="p">(</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">OK</span><span class="p">);</span>
+                <span class="c1">// Note that we&#39;re using an internal server error response</span>
+                <span class="c1">// In some cases it may be prudent to return 4xx error codes, if we have misbehaving clients </span>
+                <span class="n">HttpResponseMessage</span> <span class="n">response</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpResponseMessage</span><span class="p">(</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">InternalServerError</span><span class="p">);</span>
                 <span class="n">response</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;X-ERROR&quot;</span><span class="p">,</span> <span class="s">&quot;true&quot;</span><span class="p">);</span>
                 <span class="n">response</span><span class="p">.</span><span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringContent</span><span class="p">(</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">responseBody</span><span class="p">),</span>
                                                      <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">,</span> <span class="s">&quot;application/json&quot;</span><span class="p">);</span>
@@ -1628,9 +1696,8 @@ in D:\app\index_new.php on line 188
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Registration of the both handlers in the application <strong>WebApiConfig.cs</strong> file:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">using</span> <span class="nn">MyProject.Security</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">MyProject.Security</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Web.Http</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Web.Http.ExceptionHandling</span><span class="p">;</span>
 
@@ -1649,9 +1716,8 @@ in D:\app\index_new.php on line 188
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Setting ccustomErrors section to the <strong>Web.config</strong> file within the <code>csharp &lt;system.web&gt;</code> node as follows.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="n">configuration</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="n">configuration</span><span class="p">&gt;</span>
     <span class="p">...</span>
     <span class="p">&lt;</span><span class="n">system</span><span class="p">.</span><span class="n">web</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="n">customErrors</span> <span class="n">mode</span><span class="p">=</span><span class="s">&quot;RemoteOnly&quot;</span>
@@ -1660,7 +1726,6 @@ in D:\app\index_new.php on line 188
     <span class="p">&lt;/</span><span class="n">system</span><span class="p">.</span><span class="n">web</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="n">configuration</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>References:</p>
 <ul>
 <li>
@@ -1672,6 +1737,8 @@ in D:\app\index_new.php on line 188
 </ul>
 <h2 id="sources-of-the-prototype">Sources of the prototype<a class="headerlink" href="#sources-of-the-prototype" title="Permanent link">&para;</a></h2>
 <p>The source code of all the sandbox projects created to find the right setup to use is stored in this <a href="https://github.com/righettod/poc-error-handling">GitHub repository</a>.</p>
+<h2 id="appendix-http-errors">Appendix HTTP Errors<a class="headerlink" href="#appendix-http-errors" title="Permanent link">&para;</a></h2>
+<p>A reference for HTTP errors can be found here <a href="https://www.ietf.org/rfc/rfc2616.txt">RFC 2616</a>. Using error messages that do not provide implementation details is important to avoid information leakage. In general, consider using 4xx error codes for requests that are due to an error on the part of the HTTP client (e.g. unauthorized access, request body too large) and use 5xx to indicate errors that are triggered on server side, due to an unforseen bug. Ensure that applications are monitored for 5xx errors which are a good indication of the application failing for some sets of inputs.</p>
                 
                   
                 
@@ -1692,7 +1759,8 @@ in D:\app\index_new.php on line 188
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="DotNet_Security_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="DotNet_Security_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DotNet Security" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1707,7 +1775,8 @@ in D:\app\index_new.php on line 188
         </a>
       
       
-        <a href="File_Upload_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="File_Upload_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: File Upload" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1746,10 +1815,10 @@ in D:\app\index_new.php on line 188
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

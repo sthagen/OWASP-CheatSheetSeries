@@ -18,7 +18,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -26,10 +26,10 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -46,10 +46,16 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+
+  
+  
+
+
+
+
     
     
   </head>
@@ -82,7 +88,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -174,7 +180,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -324,6 +330,18 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
     <li class="md-nav__item">
+      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Application Logging Vocabulary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         Attack Surface Analysis
       </a>
@@ -338,6 +356,18 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     <li class="md-nav__item">
       <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
         Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
       </a>
     </li>
   
@@ -707,6 +737,18 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
     <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_CheatSheet.html" class="md-nav__link">
+        Infrastructure as Code Security CheatSheet.md
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         Injection Prevention
       </a>
@@ -877,6 +919,18 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         Multifactor Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
+        NodeJS Docker
       </a>
     </li>
   
@@ -1357,7 +1411,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <blockquote>
 <p>Placeholders (values between {}) are used to mark location where test value must be placed by the integration tests if needed</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code>  <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<div class="highlight"><pre><span></span><code>  <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
   <span class="c">&lt;!--</span>
 <span class="c">      This file materializes the authorization matrix for the different</span>
 <span class="c">      services exposed by the system.</span>
@@ -1429,12 +1483,11 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 
   <span class="nt">&lt;/authorization-matrix&gt;</span>
 </code></pre></div>
-
 <h3 id="integration-tests">Integration tests<a class="headerlink" href="#integration-tests" title="Permanent link">&para;</a></h3>
 <p>Integration tests are implemented using a maximum of factorized code and one test case by <strong>Point Of View (POV)</strong> has been created in order to group the verifications by profile of access level (logical role) and facilitate the rendering/identification of the errors.</p>
 <p>Parsing, object mapping and access to the authorization matrix information has been implemented using XML marshalling/unmarshalling built-in features provided by the technology used to implement the tests (JAXB here) in order to limit the code to the one in charge of performing the tests.</p>
 <p>This is the implementation of the integration tests case class:</p>
-<div class="codehilite"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">org.owasp.pocauthztesting.enumeration.SecurityRole</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">org.owasp.pocauthztesting.enumeration.SecurityRole</span><span class="p">;</span>
   <span class="kn">import</span> <span class="nn">org.owasp.pocauthztesting.service.AuthService</span><span class="p">;</span>
   <span class="kn">import</span> <span class="nn">org.owasp.pocauthztesting.vo.AuthorizationMatrix</span><span class="p">;</span>
   <span class="kn">import</span> <span class="nn">org.apache.http.client.methods.CloseableHttpResponse</span><span class="p">;</span>
@@ -1673,9 +1726,8 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       <span class="p">}</span>
   <span class="p">}</span>
 </code></pre></div>
-
 <p>In case of detecting an authorization issue(s) the output is the following:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">testAccessUsingAnonymousUserPointOfView</span><span class="p">(</span><span class="n">org</span><span class="p">.</span><span class="na">owasp</span><span class="p">.</span><span class="na">pocauthztesting</span><span class="p">.</span><span class="na">AuthorizationMatrixIT</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">testAccessUsingAnonymousUserPointOfView</span><span class="p">(</span><span class="n">org</span><span class="p">.</span><span class="na">owasp</span><span class="p">.</span><span class="na">pocauthztesting</span><span class="p">.</span><span class="na">AuthorizationMatrixIT</span><span class="p">)</span>
 <span class="n">Time</span> <span class="n">elapsed</span><span class="p">:</span> <span class="mf">1.009</span> <span class="n">s</span>  <span class="err">###</span> <span class="n">FAILURE</span>
 <span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">AssertionError</span><span class="p">:</span>
 <span class="n">Access</span> <span class="n">issues</span> <span class="n">detected</span> <span class="n">using</span> <span class="n">the</span> <span class="n">ANONYMOUS</span> <span class="n">USER</span> <span class="n">point</span> <span class="n">of</span> <span class="n">view</span><span class="p">:</span>
@@ -1692,11 +1744,10 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     <span class="n">The</span> <span class="n">service</span> <span class="err">&#39;</span><span class="n">DeleteMessage</span><span class="err">&#39;</span> <span class="n">when</span> <span class="n">called</span> <span class="n">with</span> <span class="n">POV</span> <span class="err">&#39;</span><span class="n">BASIC</span><span class="err">&#39;</span> <span class="k">return</span>
     <span class="n">a</span> <span class="n">response</span> <span class="n">code</span> <span class="mi">200</span> <span class="n">that</span> <span class="n">is</span> <span class="n">not</span> <span class="n">the</span> <span class="n">expected</span> <span class="nf">one</span> <span class="p">(</span><span class="mi">403</span> <span class="n">expected</span><span class="p">).</span>
 </code></pre></div>
-
 <h2 id="rendering-of-the-authorization-matrix-for-an-audit-review">Rendering of the authorization matrix for an audit / review<a class="headerlink" href="#rendering-of-the-authorization-matrix-for-an-audit-review" title="Permanent link">&para;</a></h2>
 <p>Even if the authorization matrix is stored in a human-readable format (XML), it can be interesting to provide an on-the-fly rendering representation of the XML file in order to facilitate the review, audit and discussion about the authorization matrix in order to spot potential inconsistencies.</p>
 <p>The Following XSL stylesheet can be used:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="k">&lt;xsl:stylesheet</span> <span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
   <span class="k">&lt;xsl:template</span> <span class="na">match=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;html&gt;</span>
@@ -1798,7 +1849,6 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   <span class="k">&lt;/xsl:template&gt;</span>
 <span class="k">&lt;/xsl:stylesheet&gt;</span>
 </code></pre></div>
-
 <p>Example of the rendering:</p>
 <p><img alt="RenderingExample" src="../assets/Authorization_Testing_Automation_AutomationRendering.png" /></p>
 <h2 id="sources-of-the-prototype">Sources of the prototype<a class="headerlink" href="#sources-of-the-prototype" title="Permanent link">&para;</a></h2>
@@ -1823,7 +1873,8 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="Authentication_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="Authorization_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Authorization" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1832,13 +1883,14 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
               <span class="md-footer__direction">
                 Previous
               </span>
-              Authentication
+              Authorization
             </div>
           </div>
         </a>
       
       
-        <a href="Bean_Validation_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="Bean_Validation_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: Bean Validation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1877,10 +1929,10 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

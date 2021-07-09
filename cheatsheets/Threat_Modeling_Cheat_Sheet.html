@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -42,10 +42,16 @@
     
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+
+  
+  
+
+
+
+
     
     
   </head>
@@ -78,7 +84,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -170,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -320,6 +326,18 @@
   
   
     <li class="md-nav__item">
+      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Application Logging Vocabulary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         Attack Surface Analysis
       </a>
@@ -334,6 +352,18 @@
     <li class="md-nav__item">
       <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
         Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
       </a>
     </li>
   
@@ -608,6 +638,18 @@
   
   
     <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_CheatSheet.html" class="md-nav__link">
+        Infrastructure as Code Security CheatSheet.md
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         Injection Prevention
       </a>
@@ -778,6 +820,18 @@
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         Multifactor Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
+        NodeJS Docker
       </a>
     </li>
   
@@ -1182,6 +1236,13 @@
           <li class="md-nav__item">
   <a href="#ms-tmt" class="md-nav__link">
     MS TMT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seasponge" class="md-nav__link">
+    SeaSponge
   </a>
   
 </li>
@@ -1733,6 +1794,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#seasponge" class="md-nav__link">
+    SeaSponge
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1982,6 +2050,7 @@
 <p><em>Mitigations</em> are controls that are put in place to reduce either the likelihood or the impact of a threat, while not necessarily completely preventing it. For example, if you store your user's passwords as hashes in a database, two users who have the same password will have the same hash. Thus, if an attacker has access to the hashed passwords and is able to determine the password associated with one hash, he is easily able to find all the other users who share the same password simply by looking for the same hash. However, if you <a href="Password_Storage_Cheat_Sheet.html#salting">add salts to each user's password</a>, the cost of this particular attack is greatly increased, as the attacker must crack each password individual. An increase in cost reduces the likelihood, and thus has <em>mitigated</em> the attack.</p>
 <p>A <em>data flow diagram</em> is a depiction of how information flows through your system. It shows each place that data is input into or output from each process or subsystem. It includes anywhere that data is stored in the system, either temporarily or long-term.</p>
 <p>A <em>trust boundary</em> (in the context of threat modeling) is a location on the data flow diagram where data changes its level of trust. Any place where data is passed between two processes is typically a trust boundary. If your application reads a file from disk, there's a trust boundary between the application and the file because outside processes and users can modify the data in the file. If your application makes a call to a remote process, or a remote process makes calls to your application, that's a trust boundary. If you read data from a database, there's typically a trust boundary because other processes can modify the data in the database. Any place you accept user input in any form is always a trust boundary.</p>
+<p>In addition to the above terminologies, it is important to be familiar with the key threat modeling principles defined in the <a href="https://www.threatmodelingmanifesto.org">Threat Modeling Manifesto</a>project. Those principles are considered throughout the following steps in this cheat sheet.</p>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <h3 id="define-business-objectives">Define Business Objectives<a class="headerlink" href="#define-business-objectives" title="Permanent link">&para;</a></h3>
 <p>Before starting the threat modeling process it is important to identify business objectives of the applications you are assessing, and to identify security and compliance requirements that may be necessary due to business or government regulation. Having these objectives and requirements in mind before the threat assessment begins will help you to evaluate the impact of any threat you find during the risk analysis process.</p>
@@ -2032,7 +2101,7 @@
 <h3 id="define-and-evaluate-your-assets">Define and Evaluate your Assets<a class="headerlink" href="#define-and-evaluate-your-assets" title="Permanent link">&para;</a></h3>
 <p>Assets involved in the information flow should be defined and evaluated according to their value of confidentiality, integrity and availability.</p>
 <h4 id="consider-data-in-transit-and-data-at-rest">Consider Data in transit and Data at rest<a class="headerlink" href="#consider-data-in-transit-and-data-at-rest" title="Permanent link">&para;</a></h4>
-<p>Data protection in transit is the protection of this data while it’s traveling from network to network or being transferred from a local storage device to a cloud storage device – wherever data is moving, effective data protection measures for in-transit data are critical as data is often considered less secure while in motion.</p>
+<p>Data protection in transit is the protection of this data while it’s travelling from network to network or being transferred from a local storage device to a cloud storage device – wherever data is moving, effective data protection measures for in-transit data are critical as data is often considered less secure while in motion.</p>
 <p>While data at rest is sometimes considered to be less vulnerable than data in transit, attackers often find data at rest a more valuable target than data in motion.</p>
 <p>The risk profile for data in transit or data at rest depends on the security measures that are in place to secure data in either state. Protecting sensitive data both in transit and at rest is imperative for modern enterprises as attackers find increasingly innovative ways to compromise systems and steal data.</p>
 <h3 id="create-an-information-flow-diagram">Create an information flow diagram<a class="headerlink" href="#create-an-information-flow-diagram" title="Permanent link">&para;</a></h3>
@@ -2048,6 +2117,8 @@
 <p>The Poirot tool isolates and diagnoses defects through fault modeling and simulation. Along with a carefully selected partitioning strategy, functional and sequential test pattern applications show success with circuits having a high degree of observability.</p>
 <h5 id="ms-tmt">MS TMT<a class="headerlink" href="#ms-tmt" title="Permanent link">&para;</a></h5>
 <p>The Microsoft Threat Modeling Tool (TMT) helps find threats in the design phase of software projects. It is one of the longest lived threat modeling tools, having been introduced as Microsoft SDL in 2008, and is actively supported; <a href="https://aka.ms/threatmodelingtool">version 7.3</a> was released March 2020. It runs only on Windows 10 Anniversary Update or later, and so is difficult to use on macOS or Linux.</p>
+<h5 id="seasponge">SeaSponge<a class="headerlink" href="#seasponge" title="Permanent link">&para;</a></h5>
+<p><a href="https://github.com/mozilla/seasponge">SeaSponge</a> is an accessible web-based threat modeling tool. The tool provides an online <a href="http://mozilla.github.io/seasponge/#/">live Demo</a>.</p>
 <h3 id="define-data-flow-over-your-dfd">Define Data Flow over your DFD<a class="headerlink" href="#define-data-flow-over-your-dfd" title="Permanent link">&para;</a></h3>
 <p>Define Data Flows over the organization Data Flow Diagram.</p>
 <h3 id="define-trust-boundaries">Define Trust Boundaries<a class="headerlink" href="#define-trust-boundaries" title="Permanent link">&para;</a></h3>
@@ -2084,7 +2155,7 @@
 <li>Re-Define attack vectors to consider multi-step attacks.</li>
 </ul>
 <h3 id="mapping-abuse-cases-to-use-cases">Mapping Abuse Cases to Use Cases<a class="headerlink" href="#mapping-abuse-cases-to-use-cases" title="Permanent link">&para;</a></h3>
-<p>TODO</p>
+<p>This is a very important step that can help identifying application logical threats. list of all possible abuse cases should be developed for each application use case. Being familiar with the types of application logical attack is an important during the mapping process. You can refer to OWASP Testing Guide 4.0: Business Logic Testing and OWASP ASVA for more details.</p>
 <h3 id="re-define-attack-vectors">Re-Define attack vectors<a class="headerlink" href="#re-define-attack-vectors" title="Permanent link">&para;</a></h3>
 <p>In most cases after defining the attack vectors, the compromised user role could lead to further attacks into the application. For example, assuming that an internet banking user credentials could be compromised, the user of this cheat sheet has to then redefine the attack vectors that could result from compromising the user’s credentials and so on.</p>
 <h2 id="write-your-threat-traceability-matrix">Write your Threat traceability matrix<a class="headerlink" href="#write-your-threat-traceability-matrix" title="Permanent link">&para;</a></h2>
@@ -2104,18 +2175,14 @@
 <li><strong>D</strong>iscoverability - how easy it is to discover the threat?</li>
 </ul>
 <p><strong>DREAD</strong> formula is:</p>
-<div class="codehilite"><pre><span></span><code>Risk Value = (Damage + Affected users) x (Reproducibility + Exploitability + Discoverability).
-</code></pre></div>
-
+<p>Risk Value = (Damage + Affected users) x (Reproducibility + Exploitability + Discoverability).</p>
 <p>Then the risk level is determined using defined thresholds below.</p>
 <h4 id="pasta">PASTA<a class="headerlink" href="#pasta" title="Permanent link">&para;</a></h4>
 <p><a href="https://versprite.com/tag/pasta-threat-modeling/">PASTA</a>, Attack Simulation &amp; Threat Analysis (PASTA) is a complete methodology to perform application threat modeling. PASTA introduces a risk-centric methodology aimed at applying security countermeasures that are commensurate to the possible impact that could be sustained from defined threat models, vulnerabilities, weaknesses, and attack patterns.</p>
 <p>PASTA introduces a complete risk analysis and evaluation procedures that you can follow to evaluate the risk for each of the identified threat. The main difference in using PASTA Approach is that you should evaluate the impact early on in the analysis phase instead of addressing the impact at the step of evaluating the risk.</p>
 <p>The idea behind addressing the impact earlier in PASTA approach is that the audience that knows impact knows the consequences on a product or use case failures more than participants in the threat analysis phase.</p>
 <p>Application security risk assessments are not enough because they are very binary and leverage a control framework basis for denoting risks. It is recommended to contextually look at threats impacts, probability and effectiveness of countermeasures that may be present.</p>
-<div class="codehilite"><pre><span></span><code>R = (T * V * P * I) / Countermeasures
-</code></pre></div>
-
+<p>R = (T<em>V</em>P*I) / Countermeasures</p>
 <p>For more details <a href="https://owasp.org/www-pdf-archive/AppSecEU2012_PASTA.pdf">about PASTA</a>.</p>
 <h3 id="rank-risks">Rank Risks<a class="headerlink" href="#rank-risks" title="Permanent link">&para;</a></h3>
 <p>Using risk matrix rank risks from most severe to least severe based on Means, Motive &amp; Opportunity. Below is a sample risk matrix table, depending on your risk approach you can define different risk ranking matrix:</p>
@@ -2131,7 +2198,7 @@
 <p>For the assessors: After defining and analyzing the risks, the assessor should be working on the mitigation plan by firstly identifying risk owners which is the personnel that is responsible for mitigating the risk. i.e. one of the information security team or the development team.</p>
 <p>For the designers or the architects: they should assign the risk mitigation to the development team to consider it while building the application.</p>
 <h3 id="agree-on-risk-mitigation-with-risk-owners-and-stakeholders">Agree on risk mitigation with risk owners and stakeholders<a class="headerlink" href="#agree-on-risk-mitigation-with-risk-owners-and-stakeholders" title="Permanent link">&para;</a></h3>
-<p>TODO</p>
+<p>After identifying the risk owners, it is important to review the mitigation controls for each of the identified risks. Some controls might be inapplicable, you should propose other mitigation controls or discuss with the risk owners the possible compensation controls.</p>
 <h3 id="build-your-risk-treatment-strategy">Build your risk treatment strategy<a class="headerlink" href="#build-your-risk-treatment-strategy" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Reduce:</strong> building controls if the form of code upgrades, confirming a specific design for the application or building a specific configuration during the deployment phase to make sure that application risk is reduced.</li>
@@ -2147,10 +2214,13 @@
 <h3 id="reduce-risk-in-risk-log-for-verified-treated-risk">Reduce risk in risk log for verified treated risk<a class="headerlink" href="#reduce-risk-in-risk-log-for-verified-treated-risk" title="Permanent link">&para;</a></h3>
 <p>After applying the mitigation and measuring the new risk value, the user of this cheat sheet should update the risk log to verify that risk has been reduced.</p>
 <h3 id="periodically-retest-risk">Periodically retest risk<a class="headerlink" href="#periodically-retest-risk" title="Permanent link">&para;</a></h3>
-<p>TODO</p>
+<p>Application threat modeling is an ongoing process, in addition to the changes that might be happened to the application that may require re-evaluating the expected threats, it is also important to do periodic retest for the identified risks and the implemented risk treatments.</p>
 <h2 id="appendix">Appendix<a class="headerlink" href="#appendix" title="Permanent link">&para;</a></h2>
-<p>TODO: <em>Sample Design for Implementation View in 4+1 Model</em></p>
-<p>TODO: <em>Sample Design for Implementation View in 4+1 Model</em></p>
+<ul>
+<li>Mikko Kontio, Architectural manifesto: Designing software architectures, Part 5.</li>
+<li>Hui LM, Leung CW, Fan CK and Wong TN, "modeling agent-based systems with UML". Proceedings of the Fifth Asia Pacific Industrial Engineering and Management Systems Conference.</li>
+<li>References for the “4+1” View Model of Software Architecture: Kruchten, Philippe. Architectural Blueprints — The “4+1” View Model of Software Architecture. IEEE Software 12 (6), pp. 42-50.</li>
+</ul>
                 
                   
                 
@@ -2171,7 +2241,8 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Third Party Javascript Management" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2186,7 +2257,8 @@
         </a>
       
       
-        <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: Transaction Authorization" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -2225,10 +2297,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

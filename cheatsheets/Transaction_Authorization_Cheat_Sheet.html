@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Transaction_Authorization_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -42,10 +42,16 @@
     
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+
+  
+  
+
+
+
+
     
     
   </head>
@@ -78,7 +84,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -170,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -320,6 +326,18 @@
   
   
     <li class="md-nav__item">
+      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Application Logging Vocabulary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         Attack Surface Analysis
       </a>
@@ -334,6 +352,18 @@
     <li class="md-nav__item">
       <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
         Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
       </a>
     </li>
   
@@ -608,6 +638,18 @@
   
   
     <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_CheatSheet.html" class="md-nav__link">
+        Infrastructure as Code Security CheatSheet.md
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         Injection Prevention
       </a>
@@ -778,6 +820,18 @@
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         Multifactor Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
+        NodeJS Docker
       </a>
     </li>
   
@@ -1526,7 +1580,7 @@
 <h2 id="1-functional-guidelines">1. Functional Guidelines<a class="headerlink" href="#1-functional-guidelines" title="Permanent link">&para;</a></h2>
 <h3 id="11-transaction-authorization-method-has-to-allow-a-user-to-identify-and-acknowledge-significant-transaction-data">1.1 Transaction authorization method has to allow a user to identify and acknowledge significant transaction data<a class="headerlink" href="#11-transaction-authorization-method-has-to-allow-a-user-to-identify-and-acknowledge-significant-transaction-data" title="Permanent link">&para;</a></h3>
 <p>User's computers cannot be trusted due to malware threats. Hence a method that prevents a user from identifying transaction on an external device cannot be considered as secure. Transaction data should be presented and acknowledged using an external authorization component.</p>
-<p>Such a transaction authorization components should be build using the <em>What You See Is What You Sign</em> principle. When a user authorizes a transaction he needs to know what he is authorizing. Based on this principle, an authorization method must permit a user to identify and acknowledge the data which are significant to a given transaction. For example, in the case of a wire transfer: the target account and amount.</p>
+<p>Such transaction authorization components should be built using the <em>What You See Is What You Sign</em> principle. When a user authorizes a transaction they need to know what they are authorizing. Based on this principle, an authorization method must permit a user to identify and acknowledge the data that is significant to a given transaction. For example, in the case of a wire transfer: the target account and amount.</p>
 <p>The decision about which transaction data can be considered as significant should be chosen based on:</p>
 <ul>
 <li>The real risk,</li>
@@ -1535,7 +1589,7 @@
 </ul>
 <p>For example when an SMS message is used to send significant transaction data, it is possible to send the target account, amount and type of transfer. However, for an unconnected <a href="https://en.wikipedia.org/wiki/Chip_Authentication_Program">CAP reader</a> it is perceived to be inconvenient for a user to enter these data. In such cases, entering only the most significant transaction data (e.g. partial target account number and amount) can be considered sufficient.</p>
 <p>In general, significant transaction data should always be presented as an inherent part of the transaction authorization process. Whereas the user experience should be designed to encourage users to verify the transaction data.</p>
-<p>If a transaction authentication process requires a user to enter transaction data into an external device, the user should be prompted for providing specific value (e.g. a target account number). Entering a value without meaningful prompt could be easily abused by malware using social engineering techniques as described in the example in paragraph 1.4. Also, for more detailed discussion of input overloading problems, see <a href="http://www.cl.cam.ac.uk/~sjm217/papers/fc09optimised.pdf">here</a>.</p>
+<p>If a transaction process requires a user to enter transaction data into an external device, the user should be prompted for providing specific value (e.g. a target account number). Entering a value without meaningful prompt could be easily abused by malware using social engineering techniques as described in the example in paragraph 1.4. Also, for more detailed discussion of input overloading problems, see <a href="http://www.cl.cam.ac.uk/~sjm217/papers/fc09optimised.pdf">here</a>.</p>
 <h3 id="12-change-of-authorization-token-should-be-authorized-using-the-current-authorization-token">1.2 Change of authorization token should be authorized using the current authorization token<a class="headerlink" href="#12-change-of-authorization-token-should-be-authorized-using-the-current-authorization-token" title="Permanent link">&para;</a></h3>
 <p>When a user is allowed to change authorization token by using the application interface, the operation should be authorized by using his current authorization credentials (as is the case with <a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/09-Testing_for_Weak_Password_Change_or_Reset_Functionalities.html">password change procedure</a>). For example: when a user changes a phone number for SMS codes an authorization SMS code should be sent to the current phone number.</p>
 <h3 id="13-change-of-authorization-method-should-be-authorized-using-the-current-authorization-method">1.3 Change of authorization method should be authorized using the current authorization method<a class="headerlink" href="#13-change-of-authorization-method-should-be-authorized-using-the-current-authorization-method" title="Permanent link">&para;</a></h3>
@@ -1555,7 +1609,7 @@
 <li>Or presenting the user a clear message about what they are "signing" (What You See Is What You Sign Principle).</li>
 </ul>
 <h3 id="15-each-transaction-should-be-authorized-using-unique-authorization-credentials">1.5 Each transaction should be authorized using unique authorization credentials<a class="headerlink" href="#15-each-transaction-should-be-authorized-using-unique-authorization-credentials" title="Permanent link">&para;</a></h3>
-<p>Some applications are asking for transaction authorization credentials only once, e.g. static password, code sent through SMS, token response. Afterwards a user is able to authorize any transaction during the whole user's session or at least he has to reuse the same credentials each time he needs to authorize a transaction. Such behavior is not sufficient to prevent malware attacks because malware will sniff such credentials and use them to authorize any transaction without the user's knowledge.</p>
+<p>Some applications are asking for transaction authorization credentials only once, e.g. static password, code sent through SMS, token response. Afterwards a user is able to authorize any transaction during the whole user's session or at least they have to reuse the same credentials each time they need to authorize a transaction. Such behavior is not sufficient to prevent malware attacks because malware will sniff such credentials and use them to authorize any transaction without the user's knowledge.</p>
 <h2 id="2-non-functional-guidelines">2. Non-functional guidelines<a class="headerlink" href="#2-non-functional-guidelines" title="Permanent link">&para;</a></h2>
 <h3 id="21-authorization-should-be-performed-and-enforced-server-side">2.1 Authorization should be performed and enforced server-side<a class="headerlink" href="#21-authorization-should-be-performed-and-enforced-server-side" title="Permanent link">&para;</a></h3>
 <p>As for <a href="https://cwe.mitre.org/data/definitions/602.html">all other security controls</a> transaction authorization should be enforced server-side. By no means it should be possible to influence the authorization result by altering data which flows from a client to a server, e.g. by:</p>
@@ -1663,7 +1717,8 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="Threat_Modeling_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="Threat_Modeling_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Threat Modeling" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1678,7 +1733,8 @@
         </a>
       
       
-        <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: Transport Layer Protection" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1717,10 +1773,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

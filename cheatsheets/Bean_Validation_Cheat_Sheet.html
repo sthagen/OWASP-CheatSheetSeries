@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Bean_Validation_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -42,10 +42,16 @@
     
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+
+  
+  
+
+
+
+
     
     
   </head>
@@ -78,7 +84,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -170,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -320,6 +326,18 @@
   
   
     <li class="md-nav__item">
+      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Application Logging Vocabulary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         Attack Surface Analysis
       </a>
@@ -334,6 +352,18 @@
     <li class="md-nav__item">
       <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
         Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
       </a>
     </li>
   
@@ -758,6 +788,18 @@
   
   
     <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_CheatSheet.html" class="md-nav__link">
+        Infrastructure as Code Security CheatSheet.md
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         Injection Prevention
       </a>
@@ -928,6 +970,18 @@
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         Multifactor Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
+        NodeJS Docker
       </a>
     </li>
   
@@ -1430,21 +1484,19 @@
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <p>The examples in this guide use Hibernate Validator (the reference implementation for Bean Validation 1.1).</p>
 <p>Add Hibernate Validator to your <strong>pom.xml</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
    <span class="nt">&lt;groupId&gt;</span>org.hibernate<span class="nt">&lt;/groupId&gt;</span>
    <span class="nt">&lt;artifactId&gt;</span>hibernate-validator<span class="nt">&lt;/artifactId&gt;</span>
    <span class="nt">&lt;version&gt;</span>5.2.4.Final<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div>
-
 <p>Enable bean validation support in Spring's <strong>context.xml</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;beans:beans</span> <span class="err">...</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;beans:beans</span> <span class="err">...</span>
    <span class="err">...</span>
    <span class="err">&lt;mvc:annotation-driven</span> <span class="nt">/&gt;</span>
    ...
 <span class="nt">&lt;/beans:beans&gt;</span>
 </code></pre></div>
-
 <p>For more info, please see the <a href="https://hibernate.org/validator/documentation/getting-started/">setup guide</a></p>
 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
 <p>In order to get started using Bean Validation, you must add validation constraints (<code>@Pattern</code>, <code>@Digits</code>, <code>@Min</code>, <code>@Max</code>, <code>@Size</code>, <code>@Past</code>, <code>@Future</code>, <code>@CreditCardNumber</code>, <code>@Email</code>, <code>@URL</code>, etc.) to your model and then utilize the <code>@Valid</code> annotation when passing your model around in various application layers.</p>
@@ -1473,7 +1525,7 @@
 <p><strong>Reference</strong>:</p>
 <p><a href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch02.html#section-builtin-constraints">Documentation</a></p>
 <p><strong>Model</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Pattern</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Pattern</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Article</span>  <span class="p">{</span>
  <span class="c1">//Constraint: Alpha Numeric article titles only using a regular expression</span>
@@ -1490,9 +1542,8 @@
 
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>Controller</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.company.app.model.Article</span><span class="p">;</span>
 
 <span class="nd">@Controller</span>
@@ -1517,7 +1568,6 @@
  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="digits">@Digits<a class="headerlink" href="#digits" title="Permanent link">&para;</a></h3>
 <p><strong>Annotation</strong>:</p>
 <p><code>@Digits(integer=,fraction=)</code></p>
@@ -1528,7 +1578,7 @@
 <p><strong>Reference</strong>:</p>
 <p><a href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch02.html#section-builtin-constraints">Documentation</a></p>
 <p><strong>Model</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Digits</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Digits</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Customer</span> <span class="p">{</span>
   <span class="c1">//Constraint: Age can only be 3 digits long or less</span>
@@ -1546,9 +1596,8 @@
     <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>Controller</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.company.app.model.Customer</span><span class="p">;</span>
 
 <span class="nd">@Controller</span>
@@ -1575,7 +1624,6 @@
  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="size">@Size<a class="headerlink" href="#size" title="Permanent link">&para;</a></h3>
 <p><strong>Annotation</strong>:</p>
 <p><code>@Size(min=,</code> <code>max=)</code></p>
@@ -1586,7 +1634,7 @@
 <p><strong>Reference</strong>:</p>
 <p><a href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch02.html#section-builtin-constraints">Documentation</a></p>
 <p><strong>Model</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Size</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Size</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Message</span> <span class="p">{</span>
 
@@ -1605,9 +1653,8 @@
 <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>Controller</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.company.app.model.Message</span><span class="p">;</span>
 
 <span class="nd">@Controller</span>
@@ -1634,7 +1681,6 @@
 <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="past-future">@Past / @Future<a class="headerlink" href="#past-future" title="Permanent link">&para;</a></h3>
 <p><strong>Annotation</strong>:</p>
 <p><code>@Past,</code> <code>@Future</code></p>
@@ -1645,7 +1691,7 @@
 <p><strong>Reference</strong>:</p>
 <p><a href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch02.html#section-builtin-constraints">Documentation</a></p>
 <p><strong>Model</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Past</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Past</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Future</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">DoctorVisit</span> <span class="p">{</span>
@@ -1677,9 +1723,8 @@
 <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>Controller</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.company.app.model.DoctorVisit</span><span class="p">;</span>
 
 <span class="nd">@Controller</span>
@@ -1706,7 +1751,6 @@
    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="combining-constraints">Combining Constraints<a class="headerlink" href="#combining-constraints" title="Permanent link">&para;</a></h3>
 <p>Validation annotations can be combined in any suitable way. For instance, to specify a valid reviewRating value between 1 and 5, specify the validation like this :</p>
 <p><strong>Annotation</strong>:</p>
@@ -1718,7 +1762,7 @@
 <p><strong>Reference:</strong></p>
 <p><a href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch02.html#section-builtin-constraints">Documentation</a></p>
 <p><strong>Model</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Min</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Min</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.hibernate.validator.constraints.Max</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Review</span> <span class="p">{</span>
@@ -1738,9 +1782,8 @@
  <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>Controller</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">javax.validation.Valid</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.company.app.model.ReviewRating</span><span class="p">;</span>
 
 <span class="nd">@Controller</span>
@@ -1767,7 +1810,6 @@
    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="cascading-constraints">Cascading Constraints<a class="headerlink" href="#cascading-constraints" title="Permanent link">&para;</a></h3>
 <p>Validating one bean is a good start, but often, beans are nested or in a complete graph of beans. To validate that graph in one go, apply cascading validation with <a href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch03.html#_cascaded_validation">@Valid</a></p>
 <h3 id="additional-constraints">Additional Constraints<a class="headerlink" href="#additional-constraints" title="Permanent link">&para;</a></h3>
@@ -1788,10 +1830,9 @@
 <p>Creating custom constraints is beyond the scope of this guide. Please see this <a href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch06.html">documentation</a>.</p>
 <h2 id="error-messages">Error Messages<a class="headerlink" href="#error-messages" title="Permanent link">&para;</a></h2>
 <p>It is possible to specify a message ID with the validation annotation, so that error messages are customized :</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@Pattern</span><span class="p">(</span><span class="n">regexp</span> <span class="o">=</span> <span class="s">&quot;[a-zA-Z0-9 ]&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s">&quot;article.title.error&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nd">@Pattern</span><span class="p">(</span><span class="n">regexp</span> <span class="o">=</span> <span class="s">&quot;[a-zA-Z0-9 ]&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s">&quot;article.title.error&quot;</span><span class="p">)</span>
 <span class="kd">private</span> <span class="n">String</span> <span class="n">articleTitle</span><span class="p">;</span>
 </code></pre></div>
-
 <p>Spring MVC will then look up a message with ID <em>article.title.error</em> in a defined MessageSource. More on this <a href="https://www.silverbaytech.com/2013/04/16/custom-messages-in-spring-validation/">documentation</a>.</p>
                 
                   
@@ -1813,7 +1854,8 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Authorization Testing Automation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1828,7 +1870,8 @@
         </a>
       
       
-        <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: C-Based Toolchain Hardening" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1867,10 +1910,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>
