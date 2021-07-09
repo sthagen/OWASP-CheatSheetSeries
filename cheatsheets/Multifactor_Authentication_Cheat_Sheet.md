@@ -17,7 +17,7 @@ Additionally, while the following sections discuss the disadvantage and weakness
 
 ## Advantages
 
-The most common way that user accounts get compromised on applications is through weak, re-used or stolen passwords. Despite any technical security controls implemented on the application, users are liable to choose weak passwords, or to use the same password on different applications. As developers or system administrators, it should be assumed that users' passwords will be compromised as some point, and the system should be designed in order to defend against this.
+The most common way that user accounts get compromised on applications is through weak, re-used or stolen passwords. Despite any technical security controls implemented on the application, users are liable to choose weak passwords, or to use the same password on different applications. As developers or system administrators, it should be assumed that users' passwords will be compromised at some point, and the system should be designed in order to defend against this.
 
 Multi-factor authentication (MFA) is by far the best defense against the majority of password-related attacks, including brute-force, [credential stuffing](Credential_Stuffing_Prevention_Cheat_Sheet.md) and password spraying, with analysis by Microsoft suggesting that it would have stopped [99.9% of account compromises](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Your-Pa-word-doesn-t-matter/ba-p/731984).
 
@@ -225,7 +225,7 @@ Certificates are supported by all major web browsers, and once installed require
 
 - Using digital certificates requires backend PKI system.
 - Installing certificates can be difficult for users, particularly in a highly restricted environment.
-- Enterprise proxy servers which perform SSL decryption will prevent he use of certificates.
+- Enterprise proxy servers which perform SSL decryption will prevent the use of certificates.
 - The certificates are stored on the user's workstation, and as such can be stolen if their system is compromised.
 
 ### Smartcards
@@ -302,6 +302,7 @@ The are a number of common types of biometrics that are used, including:
 - Require manual enrolment of the user's physical attributes.
 - Custom (sometimes expensive) hardware is often required to read biometrics.
 - Modern browsers do not have native support, so custom client-side software is required.
+- Privacy concerns: Sensitive physical information must be stored about users.
 - If compromised, biometric data can be difficult to change.
 
 ## Location

@@ -35,6 +35,8 @@ A *data flow diagram* is a depiction of how information flows through your syste
 
 A *trust boundary* (in the context of threat modeling) is a location on the data flow diagram where data changes its level of trust. Any place where data is passed between two processes is typically a trust boundary. If your application reads a file from disk, there's a trust boundary between the application and the file because outside processes and users can modify the data in the file. If your application makes a call to a remote process, or a remote process makes calls to your application, that's a trust boundary. If you read data from a database, there's typically a trust boundary because other processes can modify the data in the database. Any place you accept user input in any form is always a trust boundary.
 
+In addition to the above terminologies, it is important to be familiar with the key threat modeling principles defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)project. Those principles are considered throughout the following steps in this cheat sheet.
+
 ## Getting Started
 
 ### Define Business Objectives
@@ -125,7 +127,7 @@ Assets involved in the information flow should be defined and evaluated accordin
 
 #### Consider Data in transit and Data at rest
 
-Data protection in transit is the protection of this data while it’s traveling from network to network or being transferred from a local storage device to a cloud storage device – wherever data is moving, effective data protection measures for in-transit data are critical as data is often considered less secure while in motion.
+Data protection in transit is the protection of this data while it’s travelling from network to network or being transferred from a local storage device to a cloud storage device – wherever data is moving, effective data protection measures for in-transit data are critical as data is often considered less secure while in motion.
 
 While data at rest is sometimes considered to be less vulnerable than data in transit, attackers often find data at rest a more valuable target than data in motion.
 
@@ -156,6 +158,10 @@ The Poirot tool isolates and diagnoses defects through fault modeling and simula
 ##### MS TMT
 
 The Microsoft Threat Modeling Tool (TMT) helps find threats in the design phase of software projects. It is one of the longest lived threat modeling tools, having been introduced as Microsoft SDL in 2008, and is actively supported; [version 7.3](https://aka.ms/threatmodelingtool) was released March 2020. It runs only on Windows 10 Anniversary Update or later, and so is difficult to use on macOS or Linux.
+
+##### SeaSponge
+
+[SeaSponge](https://github.com/mozilla/seasponge) is an accessible web-based threat modeling tool. The tool provides an online [live Demo](http://mozilla.github.io/seasponge/#/).
 
 ### Define Data Flow over your DFD
 
@@ -210,7 +216,7 @@ During this phase conduct the following activities:
 
 ### Mapping Abuse Cases to Use Cases
 
-TODO
+This is a very important step that can help identifying application logical threats. list of all possible abuse cases should be developed for each application use case. Being familiar with the types of application logical attack is an important during the mapping process. You can refer to OWASP Testing Guide 4.0: Business Logic Testing and OWASP ASVA for more details.
 
 ### Re-Define attack vectors
 
@@ -242,9 +248,7 @@ Here we will highlight two risk methodology that could be used:
 
 **DREAD** formula is:
 
-```text
 Risk Value = (Damage + Affected users) x (Reproducibility + Exploitability + Discoverability).
-```
 
 Then the risk level is determined using defined thresholds below.
 
@@ -258,9 +262,7 @@ The idea behind addressing the impact earlier in PASTA approach is that the audi
 
 Application security risk assessments are not enough because they are very binary and leverage a control framework basis for denoting risks. It is recommended to contextually look at threats impacts, probability and effectiveness of countermeasures that may be present.
 
-```text
-R = (T * V * P * I) / Countermeasures
-```
+R = (T*V*P*I) / Countermeasures
 
 For more details [about PASTA](https://owasp.org/www-pdf-archive/AppSecEU2012_PASTA.pdf).
 
@@ -285,7 +287,7 @@ For the designers or the architects: they should assign the risk mitigation to t
 
 ### Agree on risk mitigation with risk owners and stakeholders
 
-TODO
+After identifying the risk owners, it is important to review the mitigation controls for each of the identified risks. Some controls might be inapplicable, you should propose other mitigation controls or discuss with the risk owners the possible compensation controls.
 
 ### Build your risk treatment strategy
 
@@ -310,10 +312,10 @@ After applying the mitigation and measuring the new risk value, the user of this
 
 ### Periodically retest risk
 
-TODO
+Application threat modeling is an ongoing process, in addition to the changes that might be happened to the application that may require re-evaluating the expected threats, it is also important to do periodic retest for the identified risks and the implemented risk treatments.
 
 ## Appendix
 
-TODO: *Sample Design for Implementation View in 4+1 Model*
-
-TODO: *Sample Design for Implementation View in 4+1 Model*
+- Mikko Kontio, Architectural manifesto: Designing software architectures, Part 5.
+- Hui LM, Leung CW, Fan CK and Wong TN, "modeling agent-based systems with UML". Proceedings of the Fifth Asia Pacific Industrial Engineering and Management Systems Conference.
+- References for the “4+1” View Model of Software Architecture: Kruchten, Philippe. Architectural Blueprints — The “4+1” View Model of Software Architecture. IEEE Software 12 (6), pp. 42-50.
