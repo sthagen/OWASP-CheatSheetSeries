@@ -386,6 +386,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://cheatsheetseries.owasp.org/cheatsheets/XSSFilterEvasionCheatSheet.html</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://cheatsheetseries.owasp.org/cheatsheets/npm_Security_CheatSheet.html</loc>
          <lastmod>2021-08-16</lastmod>
          <changefreq>daily</changefreq>
