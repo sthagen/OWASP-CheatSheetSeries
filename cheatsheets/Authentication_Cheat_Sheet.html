@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.1">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1c75ef36.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.5143246d.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -500,6 +500,13 @@
           <li class="md-nav__item">
   <a href="#compare-password-hashes-using-safe-functions" class="md-nav__link">
     Compare Password Hashes Using Safe Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-password-feature" class="md-nav__link">
+    Change Password Feature
   </a>
   
 </li>
@@ -1796,6 +1803,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#change-password-feature" class="md-nav__link">
+    Change Password Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#transmit-passwords-only-over-tls-or-other-strong-transport" class="md-nav__link">
     Transmit Passwords Only Over TLS or Other Strong Transport
   </a>
@@ -2057,6 +2071,12 @@
 <li>Explicitly sets the type of both variable, to protect against type confusion attacks such as <a href="https://www.whitehatsec.com/blog/magic-hashes/">Magic Hashes</a> in PHP.</li>
 <li>Returns in constant time, to protect against timing attacks.</li>
 </ul>
+<h3 id="change-password-feature">Change Password Feature<a class="headerlink" href="#change-password-feature" title="Permanent link">&para;</a></h3>
+<p>When developing change password feature, ensure to have:</p>
+<ul>
+<li>User is authenticated with active session.</li>
+<li>Current password verification. This is to ensure that it's the legitimate user who is changing the password. The abuse case is this: a legitimate user is using public computer to login. This user forgets to logout. Then another user is using this public computer. If we don't verify current password, this another user able to change the password.</li>
+</ul>
 <h3 id="transmit-passwords-only-over-tls-or-other-strong-transport">Transmit Passwords Only Over TLS or Other Strong Transport<a class="headerlink" href="#transmit-passwords-only-over-tls-or-other-strong-transport" title="Permanent link">&para;</a></h3>
 <p>See: <a href="Transport_Layer_Protection_Cheat_Sheet.html">Transport Layer Protection Cheat Sheet</a></p>
 <p>The login page and all subsequent authenticated pages must be exclusively accessed over TLS or other strong transport. The initial login page referred to as the "login landing page", must be served over TLS or other strong transport. Failure to utilize TLS or other strong transport for the login landing page allows an attacker to modify the login form action, causing the user's credentials to be posted to an arbitrary location. Failure to utilize TLS or other strong transport for authenticated pages after login enables an attacker to view the unencrypted session ID and compromise the user's authenticated session.</p>
@@ -2312,10 +2332,10 @@ ENDIF
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.e99e714c.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c7d1b464.min.js"></script>
+      <script src="../assets/javascripts/bundle.f89c2efe.min.js"></script>
       
     
   </body>
