@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
     
     
       
@@ -2376,6 +2376,8 @@
 <p>To protect a Java <code>XMLInputFactory</code> from XXE, do this:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// This disables DTDs entirely for that factory</span>
 <span class="n">xmlInputFactory</span><span class="p">.</span><span class="na">setProperty</span><span class="p">(</span><span class="n">XMLInputFactory</span><span class="p">.</span><span class="na">SUPPORT_DTD</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="c1">// This causes XMLStreamException to be thrown if external DTDs are accessed.</span>
+<span class="n">xmlInputFactory</span><span class="p">.</span><span class="na">setProperty</span><span class="p">(</span><span class="n">XMLConstants</span><span class="p">.</span><span class="na">ACCESS_EXTERNAL_DTD</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
 <span class="c1">// disable external entities</span>
 <span class="n">xmlInputFactory</span><span class="p">.</span><span class="na">setProperty</span><span class="p">(</span><span class="s">&quot;javax.xml.stream.isSupportingExternalEntities&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 </code></pre></div>
