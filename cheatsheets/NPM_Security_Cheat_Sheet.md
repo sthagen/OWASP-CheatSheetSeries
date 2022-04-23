@@ -23,7 +23,7 @@ In January 2019, npm shared on their blog that they added a [mechanism that auto
 
 We embraced the birth of package lockfiles with open arms, which introduced: deterministic installations across different environments, and enforced dependency expectations across team collaboration. Life is good! Or so I thought… what would have happened had I slipped a change into the project’s `package.json` file but had forgotten to commit the lockfile along side of it?
 
-Both Yarn, and npm act the same during dependency installation . When they detect an inconsistency between the project’s `package.jso`n and the lockfile, they compensate for such change based on the `package.json` manifest by installing different versions than those that were recorded in the lockfile.
+Both Yarn, and npm act the same during dependency installation . When they detect an inconsistency between the project’s `package.json` and the lockfile, they compensate for such change based on the `package.json` manifest by installing different versions than those that were recorded in the lockfile.
 
 This kind of situation can be hazardous for build and production environments as they could pull in unintended package versions and render the entire benefit of a lockfile futile.
 
@@ -41,7 +41,7 @@ With this capability, bad actors may create or alter packages to perform malicio
 Apply these npm security best practices in order to minimize the malicious module attack surface:
 
 - Always vet and perform due-diligence on third-party modules that you install in order to confirm their health and credibility.
-- Hold-off on upgrading blindly to new versions; allow new package versions some time to circulate before trying them out.
+- Hold-off on upgrading immediately to new versions; allow new package versions some time to circulate before trying them out.
 - Before upgrading, make sure to review changelog and release notes for the upgraded version.
 - When installing packages make sure to add the `--ignore-scripts` suffix to disable the execution of any scripts by third-party packages.
 - Consider adding `ignore-scripts` to your `.npmrc` project file, or to your global npm configuration.

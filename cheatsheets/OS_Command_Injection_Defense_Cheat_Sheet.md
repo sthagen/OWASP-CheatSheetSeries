@@ -183,21 +183,7 @@ Process p = pb.start();
 
 ### .Net
 
-In .Net use [System.Diagnostics.Process.Start](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.process.start?view=netframework-4.7.2) to call underlying OS functions.
-
-``` csharp
-System.Diagnostics.Process process = new System.Diagnostics.Process();
-
-System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-
-startInfo.FileName = "validatedCommand";
-
-startInfo.Arguments = "validatedArg1 validatedArg2 validatedArg3";
-
-process.StartInfo = startInfo;
-
-process.Start();
-```
+See relevant details in the [DotNet Security Cheat Sheet](DotNet_Security_Cheat_Sheet.md#os-injection)
 
 ### PHP
 

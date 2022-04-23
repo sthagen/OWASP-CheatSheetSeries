@@ -29,6 +29,7 @@ cp -r ../cheatsheets $WORK/cheatsheets/cheatsheets
 cp -r ../assets $WORK/cheatsheets/assets
 cp ../Index.md $WORK/cheatsheets/Glossary.md
 cp ../IndexASVS.md $WORK/cheatsheets/IndexASVS.md
+cp ../IndexMASVS.md $WORK/cheatsheets/IndexMASVS.md
 cp ../IndexProactiveControls.md $WORK/cheatsheets/IndexProactiveControls.md
 cp ../IndexTopTen.md $WORK/cheatsheets/IndexTopTen.md
 
@@ -50,6 +51,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         Title: Index ASVS\\
         " $WORK/cheatsheets/IndexASVS.md
     sed -i '' "1i\\
+        Title: Index MASVS\\
+        " $WORK/cheatsheets/IndexMASVS.md
+    sed -i '' "1i\\
         Title: Index Proactive Controls\\
         " $WORK/cheatsheets/IndexProactiveControls.md
     sed -i '' "1i\\
@@ -60,6 +64,7 @@ else
     sed -i 's/Index.md/Glossary.md/g' $WORK/cheatsheets/Glossary.md
     sed -i "1iTitle: Index Alphabetical\n" $WORK/cheatsheets/Glossary.md
     sed -i "1iTitle: Index ASVS\n" $WORK/cheatsheets/IndexASVS.md
+    sed -i "1iTitle: Index MASVS\n" $WORK/cheatsheets/IndexMASVS.md
     sed -i "1iTitle: Index Proactive Controls\n" $WORK/cheatsheets/IndexProactiveControls.md
     sed -i "1iTitle: Index Top 10\n" $WORK/cheatsheets/IndexTopTen.md
 fi
@@ -124,12 +129,18 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         redirect_from: \"/cheatsheets/Nodejs_security_cheat_sheet.html\"\\
         ---\\
         " $WORK/$GENERATED_SITE/cheatsheets/Nodejs_Security_Cheat_Sheet.html
+    sed -i '' "1i\\
+        ---\\
+        redirect_from: \"/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html\"\\
+        ---\\
+        " $WORK/$GENERATED_SITE/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html
 else
     sed -i "1i---\nredirect_from: \"/cheatsheets/Authorization_Testing_Automation.html\"\n---\n" $WORK/$GENERATED_SITE/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html
     sed -i "1i---\nredirect_from: \"/cheatsheets/Injection_Prevention_Cheat_Sheet_in_Java.html\"\n---\n" $WORK/$GENERATED_SITE/cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html
     sed -i "1i---\nredirect_from: \"/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html\"\n---\n" $WORK/$GENERATED_SITE/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html
     sed -i "1i---\nredirect_from: \"/cheatsheets/Ruby_on_Rails_Cheatsheet.html\"\n---\n" $WORK/$GENERATED_SITE/cheatsheets/Ruby_on_Rails_Cheat_Sheet.html
     sed -i "1i---\nredirect_from: \"/cheatsheets/Nodejs_security_cheat_sheet.html\"\n---\n" $WORK/$GENERATED_SITE/cheatsheets/Nodejs_Security_Cheat_Sheet.html
+    sed -i "1i---\nredirect_from: \"/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html\"\n---\n" $WORK/$GENERATED_SITE/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html    
 fi
 
 echo "Step 7/7 Cleanup."

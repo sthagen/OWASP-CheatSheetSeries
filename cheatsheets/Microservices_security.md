@@ -63,7 +63,7 @@ Netfix presented ([link](https://www.youtube.com/watch?v=R6tUNpRpdnY), [link](ht
     - security or engineering team have to build and maintain custom solution;
     - it is necessary to build and maintain client library SDKs for every language used in system architecture;
     - necessity to train every developer on custom authorization service API and integration, and there’s no open source community to source information from.
-4. There is a probability that not all access control policy can be enforced by gateways/proxies and shared authorization library/components, so some specific access control rules still have to be implemented on microservice buisnes code level. In order to do that it is advisiable to have and use by microservice development teams simple questionary/check-list to uncover such security requriments and handle its properly during microservice development.
+4. There is a probability that not all access control policy can be enforced by gateways/proxies and shared authorization library/components, so some specific access control rules still have to be implemented on microservice business code level. In order to do that it is advisiable to have and use by microservice development teams simple questionary/check-list to uncover such security requriments and handle its properly during microservice development.
 5. It is advisable to implement “defense in depth” principle   enforce authorization on:
     - gateways and proxies level at a coarse level of granularity;
     - microservice level using shared authorization library/components to enforce fine-granted decisions;
@@ -160,7 +160,7 @@ High-level recommendations to logging subsystem architecture with its rationales
 9. Logging agent shall publish log messages in structured logs format (e.g., JSON, CSV).
 10. Logging agent shall append log messages with context data, e.g., platform context (hostname, container name), runtime context (class name, filename).
 
-For comprehensive overview of events that should be logged and possible data format, please see the [OWASP Logging Cheat Sheet](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Logging_Cheat_Sheet.md#which-events-to-log) and [Application Logging Vocabulary Cheat Sheet](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.md)
+For comprehensive overview of events that should be logged and possible data format, please see the [OWASP Logging Cheat Sheet](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Logging_Cheat_Sheet.md#which-events-to-log) and [Application Logging Vocabulary Cheat Sheet](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Logging_Vocabulary_Cheat_Sheet.md)
 
 ## References
 
