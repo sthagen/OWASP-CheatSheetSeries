@@ -1,3 +1,7 @@
+---
+redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
+---
+
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -10,47 +14,38 @@
       
       
       
-      
-        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html">
+        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
-        <title>Application Logging Vocabulary - OWASP Cheat Sheet Series</title>
+        <title>Logging Vocabulary - OWASP Cheat Sheet Series</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.120efc48.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
         
       
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-
-  
-  
-
-
-
 
     
     
@@ -65,7 +60,6 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -82,6 +76,7 @@
       
     </div>
     
+    
       
 
 <header class="md-header" data-md-component="header">
@@ -92,7 +87,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Application Logging Vocabulary
+              Logging Vocabulary
             
           </span>
         </div>
@@ -114,22 +109,21 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -149,11 +143,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -194,11 +187,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -261,6 +253,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../IndexMASVS.html" class="md-nav__link">
+        Index MASVS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         Index Proactive Controls
       </a>
@@ -296,18 +303,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Cheatsheets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Cheatsheets
         </label>
@@ -359,6 +366,538 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
+        Attack Surface Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
+        Authorization Testing Automation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
+        Bean Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
+        C-Based Toolchain Hardening
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
+        Choosing and Using Security Questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
+        Clickjacking Defense
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
+        Content Security Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        Credential Stuffing Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        Cross-Site Request Forgery Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        Cross Site Scripting Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
+        Cryptographic Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        DOM based XSS Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
+        Database Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
+        Denial of Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
+        Deserialization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
+        Docker Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
+        DotNet Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
+        Error Handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
+        File Upload
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
+        Forgot Password
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
+        GraphQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
+        HTML5 Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
+        HTTP Headers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
+        HTTP Strict Transport Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
+        Infrastructure as Code Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        Injection Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
+        Injection Prevention in Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
+        Input Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        Insecure Direct Object Reference Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
+        JAAS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
+        JSON Web Token for Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
+        Key Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Kubernetes_Security_Cheat_Sheet.html" class="md-nav__link">
+        Kubernetes Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        LDAP Injection Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Laravel_Cheat_Sheet.html" class="md-nav__link">
+        Laravel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
+        Logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -371,15 +910,16 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Application Logging Vocabulary
+          Logging Vocabulary
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
-        Application Logging Vocabulary
+      <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
+        Logging Vocabulary
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -494,6 +1034,13 @@
           <li class="md-nav__item">
   <a href="#authn_password_changeuserid" class="md-nav__link">
     authn_password_change[:userid]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authn_password_change_failuserid" class="md-nav__link">
+    authn_password_change_fail[:userid]
   </a>
   
 </li>
@@ -934,524 +1481,6 @@
   
   
     <li class="md-nav__item">
-      <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
-        Attack Surface Analysis
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
-        Authentication
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
-        Authorization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
-        Authorization Testing Automation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
-        Bean Validation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
-        C-Based Toolchain Hardening
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
-        Choosing and Using Security Questions
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
-        Clickjacking Defense
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
-        Content Security Policy
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
-        Credential Stuffing Prevention
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
-        Cross-Site Request Forgery Prevention
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
-        Cross Site Scripting Prevention
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
-        Cryptographic Storage
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
-        DOM based XSS Prevention
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
-        Database Security
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
-        Denial of Service
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
-        Deserialization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
-        Docker Security
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
-        DotNet Security
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
-        Error Handling
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
-        File Upload
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
-        Forgot Password
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
-        GraphQL
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
-        HTML5 Security
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
-        HTTP Strict Transport Security
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
-        Infrastructure as Code Security
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
-        Injection Prevention
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
-        Injection Prevention in Java
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
-        Input Validation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
-        Insecure Direct Object Reference Prevention
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
-        JAAS
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
-        JSON Web Token for Java
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
-        Key Management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Kubernetes_Security_Cheat_Sheet.html" class="md-nav__link">
-        Kubernetes Security
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
-        LDAP Injection Prevention
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Laravel_Cheat_Sheet.html" class="md-nav__link">
-        Laravel
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
-        Logging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
         Mass Assignment
       </a>
@@ -1678,6 +1707,20 @@
     <li class="md-nav__item">
       <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         SQL Injection Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Secrets_Management_CheatSheet.html" class="md-nav__link">
+        Secrets Management CheatSheet.md
       </a>
     </li>
   
@@ -1922,6 +1965,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
+        XS Leaks
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1940,6 +1997,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -2054,6 +2112,13 @@
           <li class="md-nav__item">
   <a href="#authn_password_changeuserid" class="md-nav__link">
     authn_password_change[:userid]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authn_password_change_failuserid" class="md-nav__link">
+    authn_password_change_fail[:userid]
   </a>
   
 </li>
@@ -2491,15 +2556,16 @@
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <h1 id="application-logging-vocabulary-cheat-sheet">Application Logging Vocabulary Cheat Sheet<a class="headerlink" href="#application-logging-vocabulary-cheat-sheet" title="Permanent link">&para;</a></h1>
+
+
+<h1 id="application-logging-vocabulary-cheat-sheet">Application Logging Vocabulary Cheat Sheet<a class="headerlink" href="#application-logging-vocabulary-cheat-sheet" title="Permanent link">&para;</a></h1>
 <p>This document proposes a standard vocabulary for logging security events. The intent is to simplify monitoring and alerting such that, assuming developers trap errors and log them using this vocabulary, monitoring and alerting would be improved by simply keying on these terms.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Each year IBM Security commissions the Ponemon Institute to survey companies around the world for information related to security breaches, mitigation, and the associated costs; the result is called the Cost of a Data Breach Report.</p>
 <p>In addition to the millions of dollars lost due to breaches the report finds that the <strong>mean time to identify</strong> a breach continues to hover around <strong>200 days</strong>. Clearly our ability to monitor applications and alert on anomalous behavior would improve our time to identify and mitigate an attack against our applications.</p>
 <p><img alt="IBM Cost of Data Breach Report 2020" src="../assets/cost-of-breach-2020.png" /></p>
 <blockquote>
-<p>IBM Cost of a Data Breach Study 2020, Fig.34, pg.52,  [https://www.ibm.com/security/data-breach]</p>
+<p>IBM Cost of a Data Breach Study 2020, Fig.34, pg.52, [https://www.ibm.com/security/data-breach]</p>
 </blockquote>
 <p>This logging standard would seek to define specific keywords which, when applied consistently across software, would allow groups to simply monitor for these events terms across all applications and respond quickly in the event of attack.</p>
 <h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">&para;</a></h2>
@@ -2544,7 +2610,7 @@
 <li>An API coded incorrectly doing things the author did not intend.</li>
 </ol>
 <h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
-<p><em>NOTE: All dates should be logged in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format </em><em>WITH</em><em> UTC offset to ensure maximum portability</em></p>
+<p><em>NOTE: All dates should be logged in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format <strong>WITH</strong> UTC offset to ensure maximum portability</em></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2021-01-01T01:01:01-0700&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
@@ -2593,7 +2659,7 @@ INFO</p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
-    &quot;event&quot;: &quot;authn_login_success:joebob1,2&quot;,
+    &quot;event&quot;: &quot;authn_login_successafterfail:joebob1,2&quot;,
     &quot;level&quot;: &quot;INFO&quot;,
     &quot;description&quot;: &quot;User joebob1 login successfully&quot;,
     ...
@@ -2682,6 +2748,22 @@ INFO</p>
     &quot;event&quot;: &quot;authn_password_change:joebob1&quot;,
     &quot;level&quot;: &quot;INFO&quot;,
     &quot;description&quot;: &quot;User joebob1 has successfully changed their password&quot;,
+    ...
+}
+</code></pre></div>
+<hr />
+<h3 id="authn_password_change_failuserid">authn_password_change_fail[:userid]<a class="headerlink" href="#authn_password_change_failuserid" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong>
+An attempt to change a password that failed. May also trigger other events such as <code>authn_login_lock</code>.</p>
+<p><strong>Level:</strong>
+INFO</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
+    &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
+    &quot;event&quot;: &quot;authn_password_change:joebob1&quot;,
+    &quot;level&quot;: &quot;INFO&quot;,
+    &quot;description&quot;: &quot;User joebob1 failed to changing their password&quot;,
     ...
 }
 </code></pre></div>
@@ -2908,7 +2990,7 @@ WARN</p>
 <p><strong>Description</strong>
 When a user submits data to a backend handler that was not expected it can indicate probing for input validation errors. If your backend service receives data it does not handle or have an input for this is an indication of likely malicious abuse.</p>
 <p><strong>Level:</strong>
-WARN</p>
+CRITICAL</p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
@@ -2925,7 +3007,7 @@ WARN</p>
 When obvious attack tools are identified either by signature or by user agent they should be logged.</p>
 <p><strong>TODO:</strong> A future version of this standard should link to known attack tools, signatures and user-agent strings. For instance, the tool "Nikto" leaves behind its user agent by default with a string like <strong><em>"Mozilla/5.00 (Nikto/2.1.6) (Evasions:None) (Test:Port Check)"</em></strong></p>
 <p><strong>Level:</strong>
-WARN</p>
+CRITICAL</p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
@@ -2942,7 +3024,7 @@ WARN</p>
 When attempts are made from unauthorized origins they should of course be blocked, but also logged whenever possible. Even if we block an illegal cross-origin request the fact that the request is being made could be an indication of attack.</p>
 <p><em>NOTE: Did you know that the word "referer" is misspelled in the original HTTP specification? The correct spelling should be "referrer" but the original typo persists to this day and is used here intentionally.</em></p>
 <p><strong>Level:</strong>
-WARN</p>
+CRITICAL</p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
@@ -2958,7 +3040,7 @@ WARN</p>
 <p><strong>Description</strong>
 A common attack against authentication and authorization is to directly access an object without credentials or appropriate access authority. Failing to prevent this flaw used to be one of the OWASP Top Ten called <strong>Insecure Direct Object Reference</strong>. Assuming you've correctly prevented this attack, logging the attempt is valuable to identify malicious users.</p>
 <p><strong>Level:</strong>
-WARN</p>
+CRITICAL</p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
@@ -3043,7 +3125,7 @@ WARN</p>
 <hr />
 <h3 id="sensitive_deleteuseridfileobject">sensitive_delete:[userid,file|object]<a class="headerlink" href="#sensitive_deleteuseridfileobject" title="Permanent link">&para;</a></h3>
 <p><strong>Description</strong>
-All data marked as sensitive or placed into a directory/table/repository where sensitive data is stored should have deletions of the data logged and reviewed periodically. The file should not be immediately deleted but marked for deletion and an archive of  file should be maintained according to legal/privacy requirements.</p>
+All data marked as sensitive or placed into a directory/table/repository where sensitive data is stored should have deletions of the data logged and reviewed periodically. The file should not be immediately deleted but marked for deletion and an archive of file should be maintained according to legal/privacy requirements.</p>
 <p><strong>Level:</strong>
 WARN</p>
 <p><strong>Example:</strong></p>
@@ -3062,16 +3144,16 @@ WARN</p>
 <hr />
 <h3 id="sequence_failuserid">sequence_fail:[userid]<a class="headerlink" href="#sequence_failuserid" title="Permanent link">&para;</a></h3>
 <p><strong>Description</strong>
-Tracking changes to objects to which there are access control restrictions can uncover attempt to escalate privilege on those files by unauthorized users.</p>
+When a user reaches a part of the application out of sequence it may indicate intentional abuse of the business logic and should be tracked.</p>
 <p><strong>Level:</strong>
 WARN</p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
-    &quot;event&quot;: &quot;malicious_direct:joebob1, /users/admin/some/important/path,0511,0777&quot;,
+    &quot;event&quot;: &quot;sequence_fail:joebob1&quot;,
     &quot;level&quot;: &quot;WARN&quot;,
-    &quot;description&quot;: &quot;User joebob1 changed permissions on /users/admin/some/important/path&quot;,
+    &quot;description&quot;: &quot;User joebob1 has reached a part of the application out of the normal application flow.&quot;,
     ...
 }
 </code></pre></div>
@@ -3306,13 +3388,6 @@ WARN</p>
 <h2 id="exclusions">Exclusions<a class="headerlink" href="#exclusions" title="Permanent link">&para;</a></h2>
 <p>As important as what you DO log is what you DON'T log. Private or secret information, source code, keys, certs, etc. should never be logged.</p>
 <p>For comprehensive overview of items that should be excluded from logging, please see the <a href="Logging_Cheat_Sheet.html#data-to-exclude">OWASP Logging Cheat Sheet</a>.</p>
-                
-                  
-                
-              
-              
-                
-
 
               
             </article>
@@ -3321,39 +3396,38 @@ WARN</p>
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="Access_Control_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Access Control" rel="prev">
+        <a href="Logging_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logging" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Previous
               </span>
-              Access Control
+              Logging
             </div>
           </div>
         </a>
       
       
         
-        <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: Attack Surface Analysis" rel="next">
+        <a href="Mass_Assignment_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: Mass Assignment" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Attack Surface Analysis
+              Mass Assignment
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -3361,20 +3435,19 @@ WARN</p>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
-          </div>
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -3384,10 +3457,10 @@ WARN</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
       
     
   </body>

@@ -10,11 +10,10 @@
       
       
       
-      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
@@ -22,35 +21,27 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.120efc48.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
         
       
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-
-  
-  
-
-
-
 
     
     
@@ -65,7 +56,6 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -82,6 +72,7 @@
       
     </div>
     
+    
       
 
 <header class="md-header" data-md-component="header">
@@ -92,7 +83,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,22 +105,21 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -149,11 +139,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -194,11 +183,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -261,6 +249,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../IndexMASVS.html" class="md-nav__link">
+        Index MASVS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         Index Proactive Controls
       </a>
@@ -296,18 +299,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Cheatsheets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Cheatsheets
         </label>
@@ -349,20 +352,6 @@
     <li class="md-nav__item">
       <a href="Access_Control_Cheat_Sheet.html" class="md-nav__link">
         Access Control
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
-        Application Logging Vocabulary
       </a>
     </li>
   
@@ -422,6 +411,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -882,6 +872,20 @@
   
   
     <li class="md-nav__item">
+      <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
+        HTTP Headers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
         HTTP Strict Transport Security
       </a>
@@ -1052,6 +1056,20 @@
     <li class="md-nav__item">
       <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
         Logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Logging Vocabulary
       </a>
     </li>
   
@@ -1302,6 +1320,20 @@
   
   
     <li class="md-nav__item">
+      <a href="Secrets_Management_CheatSheet.html" class="md-nav__link">
+        Secrets Management CheatSheet.md
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
         Securing Cascading Style Sheets
       </a>
@@ -1534,6 +1566,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
+        XS Leaks
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1552,6 +1598,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1715,14 +1762,15 @@
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <h1 id="authorization-cheat-sheet">Authorization Cheat Sheet<a class="headerlink" href="#authorization-cheat-sheet" title="Permanent link">&para;</a></h1>
+
+
+<h1 id="authorization-cheat-sheet">Authorization Cheat Sheet<a class="headerlink" href="#authorization-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Authorization may be defined as "[t]he process of verifying that a requested action or service is approved for a specific entity" <a href="https://csrc.nist.gov/glossary/term/authorization">NIST</a>. Authorization is distinct from authentication which is the process of verifying an entity's identity. When designing and developing a software solution, it is important to keep these distinctions in mind. A user who has been authenticated (perhaps by providing a username and password) is often not authorized to access every resource and perform every action that is technically possible through a system. For example, a web app may have both regular users and admins, with the admins being able to perform actions the average user is not privileged to do so, even though have been authenticated. Additionally, authentication is not always required for accessing resources; an unauthenticated user may be authorized to access certain public resources, such as an image or login page, or even an entire web app.</p>
 <p>The objective of this cheat sheet is to assist developers in implementing authorization logic that is robust, appropriate to the app's business context, maintainable, and scalable. The guidance provided in this cheat sheet should be applicable to all phases of the development lifecycle and flexible enough to meet the needs of diverse development environments.</p>
 <p>Flaws related to authorization logic are a notable concern for web apps. Broken Access Control was ranked as the fifth most concerning web security vulnerability in <a href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A5-Broken_Access_Control">OWASP's 2017 Top 10</a> and asserted to have a "High" likelihood of exploit by <a href="https://cwe.mitre.org/data/definitions/285.html">MITRE's CWE program</a>. Furthermore, according to <a href="https://www.veracode.com/sites/default/files/pdf/resources/sossreports/state-of-software-security-volume-10-veracode-report.pdf">Veracode's State of Software Vol. 10</a>, Access Control was among the more common of OWASP's Top 10 to be involved in exploits and security incidents despite being among the least prevalent of those examined.</p>
 <p>The potential impact resulting from exploitation of authorization flaws is highly variable, both in form and severity. Attackers may be able read, create, modify, or delete resources that were meant to be protected (thus jeopardizing their confidentiality, integrity, and/or availability); however, the actual impact of such actions is necessarily linked to the criticality and sensitivity of the compromised resources. Thus, the business cost of a successfully exploited authorization flaw can range from very low to extremely high.</p>
-<p>Both entirely unauthenticated outsiders and authenticated (but not necessarily authorized) users can take advantage of authorization weaknesses.  Although honest mistakes or carelessness on the part of non-malicious entities may enable authorization bypasses, malicious intent is typically required for access control threats to be fully realized.  Horizontal privilege elevation (i.e. being able to access another user's resources) is an especially common weakness that an authenticated user may be able to take advantage of. Faults related to authorization control can allow malicious insiders and outsiders alike to view, modify, or delete sensitive resources of all forms (databases records, static files, PII, etc.) or perform actions, such as creating a new account or initiating a costly order, that they should not be privileged to do. Furthermore, if logging related to access control is not properly set-up, such authorization violations may go undetected or a least remain unattributable to a particular individual or group.</p>
+<p>Both entirely unauthenticated outsiders and authenticated (but not necessarily authorized) users can take advantage of authorization weaknesses.  Although honest mistakes or carelessness on the part of non-malicious entities may enable authorization bypasses, malicious intent is typically required for access control threats to be fully realized.  Horizontal privilege elevation (i.e. being able to access another user's resources) is an especially common weakness that an authenticated user may be able to take advantage of. Faults related to authorization control can allow malicious insiders and outsiders alike to view, modify, or delete sensitive resources of all forms (databases records, static files, personally identifiable information (PII), etc.) or perform actions, such as creating a new account or initiating a costly order, that they should not be privileged to do. Furthermore, if logging related to access control is not properly set-up, such authorization violations may go undetected or a least remain unattributable to a particular individual or group.</p>
 <h2 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h2>
 <h3 id="enforce-least-privileges">Enforce Least Privileges<a class="headerlink" href="#enforce-least-privileges" title="Permanent link">&para;</a></h3>
 <p>As a security concept, Least Privileges refers to the principle of assigning users only the minimum privileges necessary to complete their job. Although perhaps most commonly applied in system administration, this principle has relevance to the software developer as well. Least Privileges must be applied both horizontally and vertically. For example, even though both an accountant and sales representative may occupy the same level in an organization's hierarchy, both require access to different resources to perform their jobs. The accountant should likely not be granted access to a customer database and the sales representative should not be able to access payroll data. Similarly, the head of the sales department is likely to need more privileged access than their subordinates.</p>
@@ -1735,7 +1783,7 @@
 <li>Remember, it is easier to grant users additional permissions rather than to take away some they previously enjoyed. Careful planning and implementation of Least Privileges early in the SDLC can help reduce the risk of needing to revoke permissions that are later deemed overly broad.</li>
 </ul>
 <h3 id="deny-by-default">Deny by Default<a class="headerlink" href="#deny-by-default" title="Permanent link">&para;</a></h3>
-<p>Even when no access control rules are explicitly matched, an the application cannot remain neutral when an entity is requesting access to a particular resource. The application must always make a decision, whether implicitly or explicitly, to either deny or permit the requested access. Logic errors and other mistakes relating to access control may happen, especially when access requirements are complex; consequently, one should not rely entirely on explicitly defined rules for matching all possible requests. For security purposes. an application should be configured to deny access by default.</p>
+<p>Even when no access control rules are explicitly matched, an the application cannot remain neutral when an entity is requesting access to a particular resource. The application must always make a decision, whether implicitly or explicitly, to either deny or permit the requested access. Logic errors and other mistakes relating to access control may happen, especially when access requirements are complex; consequently, one should not rely entirely on explicitly defined rules for matching all possible requests. For security purposes an application should be configured to deny access by default.</p>
 <p>Consider the following points and best practices:</p>
 <ul>
 <li>Adopt a "deny-by-default" mentality both during initial development and whenever new functionality or resources are exposed by the app. One should be able to explicitly justify why a specific permission was granted to a particular user or group rather than assuming access to be the default position.</li>
@@ -1745,7 +1793,7 @@
 <p>Permission should be validated correctly on every request, regardless of whether the request was initiated by an AJAX script, server-side, or any other source. The technology used to perform such checks should allow for global, application-wide configuration rather than needing to be applied individually to every method or class. Remember an attacker only needs to find one way in. Even if just a single access control check is "missed", the confidentiality and/or integrity of a resource can be jeopardized. Validating permissions correctly on just the majority of requests is insufficient. Specific technologies that can help developers in performing such consistent permission checks include the following:</p>
 <ul>
 <li><a href="https://jakarta.ee/specifications/platform/8/apidocs/javax/servlet/Filter.html">Java/Jakarta EE Filters</a> including implementations in <a href="https://docs.spring.io/spring-security/site/docs/5.4.0/reference/html5/#servlet-security-filters">Spring Security</a></li>
-<li><a href="https://docs.djangoproject.com/en/3.1/ref/middleware/">Middleware in the Django Framework</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/middleware/">Middleware in the Django Framework</a></li>
 <li><a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters?view=aspnetcore-3.1#authorization-filters">.NET Core Filters</a></li>
 <li><a href="https://laravel.com/docs/8.x/middleware">Middleware in the Laravel PHP Framework</a></li>
 </ul>
@@ -1776,24 +1824,24 @@
 <li><strong>Ease of Management</strong> Although the initial setup for RBAC is often simpler than ABAC, this short-term benefit quickly vanishes as the scale and complexity of a system grows. In the beginning, a couple of simple roles, such as User and Admin, may suffice for some apps, but this is very unlikely to hold true for any length of time in production applications. As roles become more numerous, both testing and auditing, critical processes for establishing trust in one's codebase and logic, become more difficult (<a href="https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls">OWASP C7</a>). By contrast, ABAC is far more expressive, incorporates attributes and Boolean logic that better reflects real-world concerns, is easier to update when access-control needs change, and encourages the separation of policy management from  enforcement and provisioning of identities (<a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-162.pdf">NIST SP 800-162</a>; see also <a href="http://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html">XACML-V3.0</a> for a standard that highlights these benefits))</li>
 </ul>
 <h3 id="ensure-lookup-ids-are-not-accessible-even-when-guessed-or-cannot-be-tampered-with">Ensure Lookup IDs are Not Accessible Even When Guessed or Cannot Be Tampered With<a class="headerlink" href="#ensure-lookup-ids-are-not-accessible-even-when-guessed-or-cannot-be-tampered-with" title="Permanent link">&para;</a></h3>
-<p>Applications often expose the internal object identifiers (such as an account number or Primary Key in adatabase) that are used to to locate and reference an object. This ID may exposed as a query parameter, path variable, "hidden" form field or elsewhere. For example:</p>
+<p>Applications often expose the internal object identifiers (such as an account number or Primary Key in a database) that are used to to locate and reference an object. This ID may exposed as a query parameter, path variable, "hidden" form field or elsewhere. For example:</p>
 <p><code>https://mybank.com/accountTransactions?acct_id=901</code></p>
 <p>Based on this URL, one could reasonably assume that the application will return a listing of transactions and that the transactions returned will be restricted to a particular account - the account indicated in the <code>acct_id</code> param. But what would happen if the user changed the value of the <code>acct_id</code> param to another value such as <code>523</code>. Will the user be able to view transactions associated with another account even if it does not belong to him? If not, will the failure simply be the result of the account "523" not existing/not being found or will it be due to a failed access control check? Although this example may be an oversimplification, it illustrates a very common security flaw in application development - <a href="https://cwe.mitre.org/data/definitions/639.html">CWE 639: Authorization Bypass Through User-Controlled Key</a>.  When exploited, this weakness can result in authorization bypasses, horizontal privilege escalation and, less commonly, vertical privilege escalation (see <a href="https://cwe.mitre.org/data/definitions/639.html">CWE-639</a>). This type of vulnerability also represent a form of Insecure Direct Object Reference (IDOR). The following paragraphs will describe the weakness and possible mitigations.</p>
 <p>In the example of above, the lookup ID was not only exposed to the user and readily tampered with, but also appears to have been a fairly predictable, perhaps sequential, value.  While one can use various techniques to mask or randomize these IDs and make them hard to guess, such an approach is generally not sufficient by itself. A user should not be able to access a resource they do not have permissions simply because they are able to guess and manipulate that object's identifier in a query param or elsewhere. Rather than relying on some form of security through obscurity, the focus should be on controlling access to the underlying objects and/or the identifiers themselves. Recommended mitigations for this weakness include the following:</p>
 <ul>
-<li>Avoid exposing identifiers to the user when possible. For example it should be possible to retrieve some objects, such as account details,  based solely on currently authenticated user's identity and attributes (e.g. through information contained in a securely implemented JWT or server-side session).</li>
+<li>Avoid exposing identifiers to the user when possible. For example it should be possible to retrieve some objects, such as account details,  based solely on currently authenticated user's identity and attributes (e.g. through information contained in a securely implemented JSON Web Token (JWT) or server-side session).</li>
 <li>Implement user/session specific indirect references using a tool such as <a href="https://owasp.org/www-project-enterprise-security-api/">OWASP ESAPI</a> (see <a href="https://wiki.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References">OWASP 2013 Top 10 - A4 Insecure Direct Object References</a>)/</li>
 <li>Perform access control checks on <em>every</em> request for the <em>specific</em> object or functionality being accessed. Just because a user has access to an object of a particular type does not mean they should have access to every object of that particular type.</li>
 </ul>
 <h3 id="enforce-authorization-checks-on-static-resources">Enforce Authorization Checks on Static Resources<a class="headerlink" href="#enforce-authorization-checks-on-static-resources" title="Permanent link">&para;</a></h3>
-<p>The importance of securing of static resources is often overlooked or at least overshadowed by other security concerns. Although securing databases and similar data stores often justly receive significant attention from security conscious teams, static resources must also be appropriately secured. Although unprotected static resources is certainly a problem for websites and web applications of all forms, in recent years, poorly secured resources in cloud storage offerings (such as Amazon S3 Buckets) have risen to prominence. When securing static resources, consider the following:</p>
+<p>The importance of securing static resources is often overlooked or at least overshadowed by other security concerns. Although securing databases and similar data stores often justly receive significant attention from security conscious teams, static resources must also be appropriately secured. Although unprotected static resources are certainly a problem for websites and web applications of all forms, in recent years, poorly secured resources in cloud storage offerings (such as Amazon S3 Buckets) have risen to prominence. When securing static resources, consider the following:</p>
 <ul>
 <li>Ensure that static resources are incorporated into access control policies. The type of protection required for static resources will necessarily be highly contextual. It may be perfectly acceptable for some static resources to be publicly accessible, while others should only be accessible when a highly restrictive set of user and environmental attributes are present. Understanding the type of data exposed in the specific resources under consideration is thus critical. Consider whether a formal Data Classification scheme should be established and incorporated into the application's access control logic (see <a href="https://resources.infosecinstitute.com/information-and-asset-classification/">here</a> for an overview of data classification).</li>
 <li>Ensure any cloud based services used to store static resources are secured using the configuration options and tools provided by the vendor. Review the cloud provider's documentation (see guidance from <a href="https://aws.amazon.com/premiumsupport/knowledge-center/secure-s3-resources/">AWS</a>, <a href="https://cloud.google.com/storage/docs/best-practices#security">Google Cloud</a> and <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/security-recommendations">Azure</a>) for specific implementations details,)</li>
 <li>When possible, protect static resources using the same access control logic and mechanisms that are used to secure other application resources and functionality.</li>
 </ul>
 <h3 id="verify-that-authorization-checks-are-performed-in-the-right-location">Verify that Authorization Checks are Performed in the Right Location<a class="headerlink" href="#verify-that-authorization-checks-are-performed-in-the-right-location" title="Permanent link">&para;</a></h3>
-<p>Developers must never rely on client-side access control checks. While such checks may be permissible for improving the user experience, they should never be the decisive factor in granting or denying access to a resource; client-side logic is often easy to bypass. Access control checks must be performed server-side, at the gateway, or using serverless function (see <a href="https://raw.githubusercontent.com/OWASP/ASVS/master/4.0/OWASP%20Application%20Security%20Verification%20Standard%204.0-en.pdf">OWASP ASVS 4.0, V1.4.1 and V4.1.1</a>)</p>
+<p>Developers must never rely on client-side access control checks. While such checks may be permissible for improving the user experience, they should never be the decisive factor in granting or denying access to a resource; client-side logic is often easy to bypass. Access control checks must be performed server-side, at the gateway, or using serverless function (see <a href="https://raw.githubusercontent.com/OWASP/ASVS/v4.0.3/4.0/OWASP%20Application%20Security%20Verification%20Standard%204.0.3-en.pdf">OWASP ASVS 4.0.3, V1.4.1 and V4.1.1</a>)</p>
 <h3 id="exit-safely-when-authorization-checks-fail">Exit Safely when Authorization Checks Fail<a class="headerlink" href="#exit-safely-when-authorization-checks-fail" title="Permanent link">&para;</a></h3>
 <p>Failed access control checks are a normal occurrence in a secured application; consequently, developers must plan for such failures and handle them securely. Improper handling of such failures can lead to the application being left in an unpredictable state (<a href="https://cwe.mitre.org/data/definitions/280.html">CWE-280: Improper Handling of Insufficient Permissions or Privileges</a>. Specific recommendations include the following:</p>
 <ul>
@@ -1810,7 +1858,7 @@
 <li>Consider incorporating application logs into a centralized log server or SIEM.</li>
 </ul>
 <h3 id="create-unit-and-integration-test-cases-for-authorization-logic">Create Unit and Integration Test Cases for Authorization Logic<a class="headerlink" href="#create-unit-and-integration-test-cases-for-authorization-logic" title="Permanent link">&para;</a></h3>
-<p>Unit and integration testing are essential for verifying that an application performs as expected and consistently across changes. Flaws in access control logic can be subtle, particularly when requirements are complex; however, even a small logical or configuration error in access control can result in severe consequences. Although not a substitution for a dedicated security test or penetration test (see <a href="https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/05-Authorization_Testing/README.html">OWASP WSTG 4.5</a> for an excellent guide on this topic as it relates to access control), automated unit and integration testing of access control logic can help reduce the number of security flaws that make it into production. These tests are good at catching the "low-hanging fruit" of security issues but not more sophisticated attack vectors (<a href="https://owaspsamm.org/model/verification/security-testing/">OWASP SAMM: Security Testing</a>).</p>
+<p>Unit and integration testing are essential for verifying that an application performs as expected and consistently across changes. Flaws in access control logic can be subtle, particularly when requirements are complex; however, even a small logical or configuration error in access control can result in severe consequences. Although not a substitution for a dedicated security test or penetration test (see <a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/05-Authorization_Testing/README">OWASP WSTG 4.5</a> for an excellent guide on this topic as it relates to access control), automated unit and integration testing of access control logic can help reduce the number of security flaws that make it into production. These tests are good at catching the "low-hanging fruit" of security issues but not more sophisticated attack vectors (<a href="https://owaspsamm.org/model/verification/security-testing/">OWASP SAMM: Security Testing</a>).</p>
 <p>Unit and integration testing should aim to incorporate many of the concepts explored in this document. For example, is access being denied by default? Does the application terminate safely when an access control check fails, even under abnormal conditions? Are ABAC policies being properly enforced? While simple unit and integrations test can never replace manual testing performed by a skilled hacker, they are an important tool for detecting and correcting security issues quickly and with far less resources than manual testing.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <h3 id="abac">ABAC<a class="headerlink" href="#abac" title="Permanent link">&para;</a></h3>
@@ -1834,10 +1882,10 @@
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><a href="https://raw.githubusercontent.com/OWASP/ASVS/master/4.0/OWASP%20Application%20Security%20Verification%20Standard%204.0-en.pdf">OWASP Application Security Verification Standard 4.0 (especially see V4: Access Control Verification Requirements)</a></p>
+<p><a href="https://raw.githubusercontent.com/OWASP/ASVS/v4.0.3/4.0/OWASP%20Application%20Security%20Verification%20Standard%204.0.3-en.pdf">OWASP Application Security Verification Standard 4.0 (especially see V4: Access Control Verification Requirements)</a></p>
 </li>
 <li>
-<p><a href="https://owasp.org/www-project-web-security-testing-guide/v41/">OWASP Web Security Testing Guide - 4.5 Authorization Testing</a></p>
+<p><a href="https://owasp.org/www-project-web-security-testing-guide/v42">OWASP Web Security Testing Guide - 4.5 Authorization Testing</a></p>
 </li>
 </ul>
 <h3 id="least-privilege">Least Privilege<a class="headerlink" href="#least-privilege" title="Permanent link">&para;</a></h3>
@@ -1848,13 +1896,6 @@
 <ul>
 <li><a href="https://csrc.nist.gov/CSRC/media/Publications/conference-paper/1992/10/13/role-based-access-controls/documents/ferraiolo-kuhn-92.pdf">Role-Based Access Controls</a>.</li>
 </ul>
-                
-                  
-                
-              
-              
-                
-
 
               
             </article>
@@ -1863,15 +1904,14 @@
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
         <a href="Authentication_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Authentication" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -1895,7 +1935,7 @@
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -1903,20 +1943,19 @@
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
-          </div>
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -1926,10 +1965,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
       
     
   </body>

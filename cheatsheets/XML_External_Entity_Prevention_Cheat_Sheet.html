@@ -10,11 +10,10 @@
       
       
       
-      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
@@ -22,35 +21,27 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.120efc48.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
         
       
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-
-  
-  
-
-
-
 
     
     
@@ -65,7 +56,6 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -82,6 +72,7 @@
       
     </div>
     
+    
       
 
 <header class="md-header" data-md-component="header">
@@ -92,7 +83,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,22 +105,21 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -149,11 +139,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -194,11 +183,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -261,6 +249,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../IndexMASVS.html" class="md-nav__link">
+        Index MASVS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         Index Proactive Controls
       </a>
@@ -296,18 +299,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Cheatsheets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Cheatsheets
         </label>
@@ -349,20 +352,6 @@
     <li class="md-nav__item">
       <a href="Access_Control_Cheat_Sheet.html" class="md-nav__link">
         Access Control
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Application_Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
-        Application Logging Vocabulary
       </a>
     </li>
   
@@ -711,6 +700,20 @@
   
   
     <li class="md-nav__item">
+      <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
+        HTTP Headers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
         HTTP Strict Transport Security
       </a>
@@ -881,6 +884,20 @@
     <li class="md-nav__item">
       <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
         Logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Logging Vocabulary
       </a>
     </li>
   
@@ -1131,6 +1148,20 @@
   
   
     <li class="md-nav__item">
+      <a href="Secrets_Management_CheatSheet.html" class="md-nav__link">
+        Secrets Management CheatSheet.md
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
         Securing Cascading Style Sheets
       </a>
@@ -1346,6 +1377,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1794,6 +1826,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
+        XS Leaks
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1812,6 +1858,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -2235,8 +2282,9 @@
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <h1 id="xml-external-entity-prevention-cheat-sheet">XML External Entity Prevention Cheat Sheet<a class="headerlink" href="#xml-external-entity-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
+
+
+<h1 id="xml-external-entity-prevention-cheat-sheet">XML External Entity Prevention Cheat Sheet<a class="headerlink" href="#xml-external-entity-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p><em>XML eXternal Entity injection</em> (XXE), which is now part of the <a href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A4-XML_External_Entities_%28XXE%29">OWASP Top 10</a> via the point <strong>A4</strong>, is a type of attack against an application that parses XML input.</p>
 <p>XXE issue is referenced under the ID <a href="https://cwe.mitre.org/data/definitions/611.html">611</a> in the <a href="https://cwe.mitre.org/index.html">Common Weakness Enumeration</a> referential.</p>
@@ -2382,7 +2430,7 @@
 <span class="n">xmlInputFactory</span><span class="p">.</span><span class="na">setProperty</span><span class="p">(</span><span class="s">&quot;javax.xml.stream.isSupportingExternalEntities&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="oracle-dom-parser">Oracle DOM Parser<a class="headerlink" href="#oracle-dom-parser" title="Permanent link">&para;</a></h3>
-<p>Follow <a href="" title="https://docs.oracle.com/en/database/oracle/oracle-database/18/adxdk/security-considerations-oracle-xml-developers-kit.html#GUID-45303542-41DE-4455-93B3-854A826EF8BB">Oracle reomendation</a> e.g.:</p>
+<p>Follow <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/adxdk/security-considerations-oracle-xml-developers-kit.html#GUID-45303542-41DE-4455-93B3-854A826EF8BB">Oracle recommendation</a> e.g.:</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1">// Extend oracle.xml.parser.v2.XMLParser</span>
     <span class="n">DOMParser</span> <span class="n">domParser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DOMParser</span><span class="p">();</span>
 
@@ -2594,19 +2642,19 @@ For made safe from between attack types follow <a href="http://msdn.microsoft.co
 <h3 id="xmldocument">XmlDocument<a class="headerlink" href="#xmldocument" title="Permanent link">&para;</a></h3>
 <p>Prior to .NET Framework version 4.5.2, <code>System.Xml.XmlDocument</code> is <strong>unsafe</strong> by default. The <code>XmlDocument</code> object has an <code>XmlResolver</code> object within it that needs to be set to null in versions prior to 4.5.2. In versions 4.5.2 and up, this <code>XmlResolver</code> is set to null by default.</p>
 <p>The following example shows how it is made safe:</p>
-<div class="highlight"><pre><span></span><code> <span class="k">static</span> <span class="k">void</span> <span class="nf">LoadXML</span><span class="p">()</span>
- <span class="p">{</span>
-   <span class="kt">string</span> <span class="n">xxePayload</span> <span class="p">=</span> <span class="s">&quot;&lt;!DOCTYPE doc [&lt;!ENTITY win SYSTEM &#39;file:///C:/Users/testdata2.txt&#39;&gt;]&gt;&quot;</span>
-                     <span class="p">+</span> <span class="s">&quot;&lt;doc&gt;&amp;win;&lt;/doc&gt;&quot;</span><span class="p">;</span>
-   <span class="kt">string</span> <span class="n">xml</span> <span class="p">=</span> <span class="s">&quot;&lt;?xml version=&#39;1.0&#39; ?&gt;&quot;</span> <span class="p">+</span> <span class="n">xxePayload</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">LoadXML</span><span class="p">()</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="kt">string</span><span class="w"> </span><span class="n">xxePayload</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;&lt;!DOCTYPE doc [&lt;!ENTITY win SYSTEM &#39;file:///C:/Users/testdata2.txt&#39;&gt;]&gt;&quot;</span><span class="w"></span>
+<span class="w">                     </span><span class="p">+</span><span class="w"> </span><span class="s">&quot;&lt;doc&gt;&amp;win;&lt;/doc&gt;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="kt">string</span><span class="w"> </span><span class="n">xml</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;&lt;?xml version=&#39;1.0&#39; ?&gt;&quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">xxePayload</span><span class="p">;</span><span class="w"></span>
 
-   <span class="n">XmlDocument</span> <span class="n">xmlDoc</span> <span class="p">=</span> <span class="k">new</span> <span class="n">XmlDocument</span><span class="p">();</span>
-   <span class="c1">// Setting this to NULL disables DTDs - Its NOT null by default.</span>
-   <span class="n">xmlDoc</span><span class="p">.</span><span class="n">XmlResolver</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
-   <span class="n">xmlDoc</span><span class="p">.</span><span class="n">LoadXml</span><span class="p">(</span><span class="n">xml</span><span class="p">);</span>
-   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">xmlDoc</span><span class="p">.</span><span class="n">InnerText</span><span class="p">);</span>
-   <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
- <span class="p">}</span>
+<span class="w">   </span><span class="n">XmlDocument</span><span class="w"> </span><span class="n">xmlDoc</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">XmlDocument</span><span class="p">();</span><span class="w"></span>
+<span class="w">   </span><span class="c1">// Setting this to NULL disables DTDs - Its NOT null by default.</span>
+<span class="w">   </span><span class="n">xmlDoc</span><span class="p">.</span><span class="n">XmlResolver</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="n">xmlDoc</span><span class="p">.</span><span class="n">LoadXml</span><span class="p">(</span><span class="n">xml</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">xmlDoc</span><span class="p">.</span><span class="n">InnerText</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p><code>XmlDocument</code> can become unsafe if you create your own nonnull <code>XmlResolver</code> with default or unsafe settings. If you need to enable DTD processing, instructions on how to do so safely are described in detail in the <a href="https://msdn.microsoft.com/en-us/magazine/ee335713.aspx">referenced MSDN article</a>.</p>
 <h3 id="xmlnodereader">XmlNodeReader<a class="headerlink" href="#xmlnodereader" title="Permanent link">&para;</a></h3>
@@ -2621,18 +2669,18 @@ For made safe from between attack types follow <a href="http://msdn.microsoft.co
 <h4 id="prior-to-net-40">Prior to .NET 4.0<a class="headerlink" href="#prior-to-net-40" title="Permanent link">&para;</a></h4>
 <p>In .NET Framework versions prior to 4.0, DTD parsing behavior for <code>XmlReader</code> objects like <code>XmlTextReader</code> are controlled by the Boolean <code>ProhibitDtd</code> property found in the <code>System.Xml.XmlReaderSettings</code> and <code>System.Xml.XmlTextReader</code> classes.</p>
 <p>Set these values to true to disable inline DTDs completely.</p>
-<div class="highlight"><pre><span></span><code><span class="n">XmlTextReader</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">XmlTextReader</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">XmlTextReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">XmlTextReader</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span><span class="w"></span>
 <span class="c1">// NEEDED because the default is FALSE!!</span>
-<span class="n">reader</span><span class="p">.</span><span class="n">ProhibitDtd</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>  
+<span class="n">reader</span><span class="p">.</span><span class="n">ProhibitDtd</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w">  </span>
 </code></pre></div>
 <h4 id="net-40-net-452">.NET 4.0 - .NET 4.5.2<a class="headerlink" href="#net-40-net-452" title="Permanent link">&para;</a></h4>
 <p>In .NET Framework version 4.0, DTD parsing behavior has been changed. The <code>ProhibitDtd</code> property has been deprecated in favor of the new <code>DtdProcessing</code> property.</p>
 <p>However, they didn't change the default settings so <code>XmlTextReader</code> is still vulnerable to XXE by default.</p>
 <p>Setting <code>DtdProcessing</code> to <code>Prohibit</code> causes the runtime to throw an exception if a <code>&lt;!DOCTYPE&gt;</code> element is present in the XML.</p>
 <p>To set this value yourself, it looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="n">XmlTextReader</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">XmlTextReader</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">XmlTextReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">XmlTextReader</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span><span class="w"></span>
 <span class="c1">// NEEDED because the default is Parse!!</span>
-<span class="n">reader</span><span class="p">.</span><span class="n">DtdProcessing</span> <span class="p">=</span> <span class="n">DtdProcessing</span><span class="p">.</span><span class="n">Prohibit</span><span class="p">;</span>  
+<span class="n">reader</span><span class="p">.</span><span class="n">DtdProcessing</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">DtdProcessing</span><span class="p">.</span><span class="n">Prohibit</span><span class="p">;</span><span class="w">  </span>
 </code></pre></div>
 <p>Alternatively, you can set the <code>DtdProcessing</code> property to <code>Ignore</code>, which will not throw an exception on encountering a <code>&lt;!DOCTYPE&gt;</code> element but will simply skip over it and not process it. Finally, you can set <code>DtdProcessing</code> to <code>Parse</code> if you do want to allow and process inline DTDs.</p>
 <h4 id="net-452-and-later">.NET 4.5.2 and later<a class="headerlink" href="#net-452-and-later" title="Permanent link">&para;</a></h4>
@@ -2642,10 +2690,10 @@ For made safe from between attack types follow <a href="http://msdn.microsoft.co
 <p>This is due to the fact that it implements <code>IXPathNavigable</code> objects like <code>XmlDocument</code>, which are also unsafe by default in versions prior to 4.5.2.</p>
 <p>You can make <code>XPathNavigator</code> safe by giving it a safe parser like <code>XmlReader</code> (which is safe by default) in the <code>XPathDocument</code>'s constructor.</p>
 <p>Here is an example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">XmlReader</span> <span class="n">reader</span> <span class="p">=</span> <span class="n">XmlReader</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="s">&quot;example.xml&quot;</span><span class="p">);</span>
-<span class="n">XPathDocument</span> <span class="n">doc</span> <span class="p">=</span> <span class="k">new</span> <span class="n">XPathDocument</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span>
-<span class="n">XPathNavigator</span> <span class="n">nav</span> <span class="p">=</span> <span class="n">doc</span><span class="p">.</span><span class="n">CreateNavigator</span><span class="p">();</span>
-<span class="kt">string</span> <span class="n">xml</span> <span class="p">=</span> <span class="n">nav</span><span class="p">.</span><span class="n">InnerXml</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="n">XmlReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">XmlReader</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="s">&quot;example.xml&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">XPathDocument</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">XPathDocument</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span><span class="w"></span>
+<span class="n">XPathNavigator</span><span class="w"> </span><span class="n">nav</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">doc</span><span class="p">.</span><span class="n">CreateNavigator</span><span class="p">();</span><span class="w"></span>
+<span class="kt">string</span><span class="w"> </span><span class="n">xml</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">nav</span><span class="p">.</span><span class="n">InnerXml</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <h3 id="xslcompiledtransform">XslCompiledTransform<a class="headerlink" href="#xslcompiledtransform" title="Permanent link">&para;</a></h3>
 <p><code>System.Xml.Xsl.XslCompiledTransform</code> (an XML transformer) is safe by default as long as the parser it's given is safe.</p>
@@ -2763,13 +2811,6 @@ Rule can be played here <a href="https://semgrep.dev/s/salecharohit:xxe-XMLReade
 <li><a href="https://github.com/ssexxe/XXEBugFind">XXEbugFind Tool</a></li>
 <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection.html">Testing for XML Injection</a></li>
 </ul>
-                
-                  
-                
-              
-              
-                
-
 
               
             </article>
@@ -2778,15 +2819,14 @@ Rule can be played here <a href="https://semgrep.dev/s/salecharohit:xxe-XMLReade
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
         <a href="Web_Service_Security_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web Service Security" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -2810,7 +2850,7 @@ Rule can be played here <a href="https://semgrep.dev/s/salecharohit:xxe-XMLReade
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -2818,20 +2858,19 @@ Rule can be played here <a href="https://semgrep.dev/s/salecharohit:xxe-XMLReade
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
-          </div>
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -2841,10 +2880,10 @@ Rule can be played here <a href="https://semgrep.dev/s/salecharohit:xxe-XMLReade
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
       
     
   </body>
