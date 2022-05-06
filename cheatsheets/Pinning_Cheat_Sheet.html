@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Pinning_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.12">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.27ad92d8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e411adfe.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
@@ -1823,7 +1823,7 @@
 <p>The certificate is easiest to pin. You can fetch the certificate out of band for the website, have the IT folks email your company certificate to you, use <code>openssl s_client</code> to retrieve the certificate etc. At runtime, you retrieve the website or server's certificate in the callback. Within the callback, you compare the retrieved certificate with the certificate embedded within the program. If the comparison fails, then fail the method or function.</p>
 <p><strong>Benefits:</strong></p>
 <ul>
-<li>It might be easier to implement than the other methods, especially in laguages such as Cocoa/CocoaTouch and OpenSSL.</li>
+<li>It might be easier to implement than the other methods, especially in languages such as Cocoa/CocoaTouch and OpenSSL.</li>
 </ul>
 <p><strong>Downsides:</strong></p>
 <ul>
