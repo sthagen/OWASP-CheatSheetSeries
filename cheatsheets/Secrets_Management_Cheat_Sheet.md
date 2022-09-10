@@ -1,15 +1,5 @@
 # Secrets Management Cheat Sheet
 
-1. [Introduction](#1-Introduction)
-2. [General Secrets Management](#2-General-Secrets-Management)
-3. [Continuous Integration (CI) and Continuous Deployment (CD)](#3-Continuous-Integration-(CI)-and-Continuous-Deployment-(CD))
-4. [Cloud Providers](#4-Cloud-Providers)
-5. [Containers and Orchestration](#5-Containers-&-Orchestrators)
-6. [Implementation Guidance](#6-Implementation-Guidance)
-7. [Encryption](#7-Encryption)
-8. [Secret detection](#8-Detection)
-9. [Incident Response](#9-Incident-Response)
-
 ## 1 Introduction
 
 Secrets are being used everywhere nowadays, especially with the popularity of the DevOps movement. Application Programming Interface (API) keys, database credentials, Identity and Access Management (IAM) permissions, Secure Shell (SSH) keys, certificates, etc. Many organizations have them hardcoded within the source code in plaintext, littered throughout configuration files and configuration management tools.
@@ -331,9 +321,9 @@ You can enrich containers with secrets in multiple ways: build time (not recomme
 
 There are three ways to get secrets to an app inside a docker container.
 
-- Environment variables: We can provide secrets directly as part of the docker container configuration. Note: secrets themselves should never be hardcoded using docker ENV or docker ARG commands, as these can easily leak with the container definitions. See the Docker challenges at [WrongSecrets](https://github.com/commjoen/wrongsecrets) as well. Instead, let an orchestrator overwrite the environment variable with the actual secret and ensure that this is not hardcoded.
 - Mounted volumes (file): With this method, we keep our secrets within a particular config/secret file and mount that file to our instance as a mounted volume. Ensure that these mounts are mounted in by the orchestrator and never built-in, as this will leak the secret with the container definition. Instead: make sure that the orchestrator mounts in the volume when required.
 - Fetch from the secret store (in-memory): A sidecar app/container fetches the secrets it needs directly from a secret manager service without dealing with docker config. This solution allows you to use dynamically constructed secrets without worrying about the secrets being viewable from the file system or from checking the docker container's env variables.
+- Environment variables: We can provide secrets directly as part of the docker container configuration. Note: secrets themselves should never be hardcoded using docker ENV or docker ARG commands, as these can easily leak with the container definitions. See the Docker challenges at [WrongSecrets](https://github.com/commjoen/wrongsecrets) as well. Instead, let an orchestrator overwrite the environment variable with the actual secret and ensure that this is not hardcoded. Additionally, environment variables are generally accessible to all processes and may be included in logs or system dumps. Using environment variables is therefore not recommended unless the other methods are not possible.
 
 ### 5.2 Short Lived Side-car Containers
 
