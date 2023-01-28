@@ -8,10 +8,10 @@ After an attacker has acquired stored password hashes, they are always able to b
 
 This cheat sheet provides guidance on the various areas that need to be considered related to storing passwords. In short:
 
-- **Use [Argon2id](#argon2id) with a minimum configuration of 15 MiB of memory, an iteration count of 2, and 1 degree of parallelism.**
-- **If [Argon2id](#argon2id) is not available, use [scrypt](#scrypt) with a minimum CPU/memory cost parameter of (2^16), a minimum block size of 8 (1024 bytes), and a parallelization parameter of 1.**
+- **Use [Argon2id](#argon2id) with a minimum configuration of 19 MiB of memory, an iteration count of 2, and 1 degree of parallelism.**
+- **If [Argon2id](#argon2id) is not available, use [scrypt](#scrypt) with a minimum CPU/memory cost parameter of (2^17), a minimum block size of 8 (1024 bytes), and a parallelization parameter of 1.**
 - **For legacy systems using [bcrypt](#bcrypt), use a work factor of 10 or more and with a password limit of 72 bytes.**
-- **If FIPS-140 compliance is required, use [PBKDF2](#pbkdf2) with a work factor of 310,000 or more and set with an internal hash function of HMAC-SHA-256.**
+- **If FIPS-140 compliance is required, use [PBKDF2](#pbkdf2) with a work factor of 600,000 or more and set with an internal hash function of HMAC-SHA-256.**
 - **Consider using a [pepper](#peppering) to provide additional defense in depth (though alone, it provides no additional secure characteristics).**
 
 ## Background
@@ -66,7 +66,7 @@ One of several peppering strategies is to hash the passwords as usual (using a p
 
 - The pepper is **shared between stored passwords**, rather than being *unique* like a salt.
 - Unlike a password salt, the pepper **should not be stored in the database**.
-- Peppers are secrets and should be stored in "secrets vaults" or HSMs (Hardware Security Modules).
+- Peppers are secrets and should be stored in "secrets vaults" or HSMs (Hardware Security Modules). See the [Secrets Management Cheat Sheet](Secrets_Management_Cheat_Sheet.md) for more information on securely storing secrets.
 - Like any other cryptographic key, a pepper rotation strategy should be considered.
 
 ### Work Factors
@@ -97,10 +97,13 @@ The main three algorithms that should be considered are listed below:
 
 Rather than a simple work factor like other algorithms, Argon2id has three different parameters that can be configured. Argon2id should use one of the following configuration settings as a base minimum which includes the minimum memory size (m), the minimum number of iterations (t) and the degree of parallelism (p).
 
-- m=37 MiB, t=1, p=1
-- m=15 MiB, t=2, p=1
+- m=47104 (46 MiB), t=1, p=1 (Do not use with Argon2i)
+- m=19456 (19 MiB), t=2, p=1 (Do not use with Argon2i)
+- m=12288 (12 MiB), t=3, p=1
+- m=9216 (9 MiB), t=4, p=1
+- m=7168 (7 MiB), t=5, p=1
 
-Both of these configuration settings are equivalent in the defense they provide. The only difference is a trade off between CPU and RAM usage.
+These configuration settings are equivalent in the defense they provide. The only difference is a trade off between CPU and RAM usage.
 
 ### scrypt
 
@@ -108,11 +111,11 @@ Both of these configuration settings are equivalent in the defense they provide.
 
 Like [Argon2id](#argon2id), scrypt has three different parameters that can be configured. scrypt should use one of the following configuration settings as a base minimum which includes the minimum CPU/memory cost parameter (N), the blocksize (r) and the degree of parallelism (p).
 
-- N=2^16 (64 MiB), r=8 (1024 bytes), p=1
-- N=2^15 (32 MiB), r=8 (1024 bytes), p=2
-- N=2^14 (16 MiB), r=8 (1024 bytes), p=4
-- N=2^13 (8 MiB), r=8 (1024 bytes), p=8
-- N=2^12 (4 MiB), r=8 (1024 bytes), p=15
+- N=2^17 (128 MiB), r=8 (1024 bytes), p=1
+- N=2^16 (64 MiB), r=8 (1024 bytes), p=2
+- N=2^15 (32 MiB), r=8 (1024 bytes), p=3
+- N=2^14 (16 MiB), r=8 (1024 bytes), p=5
+- N=2^13 (8 MiB), r=8 (1024 bytes), p=10
 
 These configuration settings are equivalent in the defense they provide. The only difference is a trade off between CPU and RAM usage.
 
@@ -138,13 +141,17 @@ PBKDF2 requires that you select an internal hashing algorithm such as an HMAC or
 
 The work factor for PBKDF2 is implemented through an iteration count, which should set differently based on the internal hashing algorithm used.
 
-- PBKDF2-HMAC-SHA1: 720,000 iterations
-- PBKDF2-HMAC-SHA256: 310,000 iterations
-- PBKDF2-HMAC-SHA512: 120,000 iterations
+- PBKDF2-HMAC-SHA1: 1,300,000 iterations
+- PBKDF2-HMAC-SHA256: 600,000 iterations
+- PBKDF2-HMAC-SHA512: 210,000 iterations
 
-These configuration settings are equivalent in the defense they provide.
+These configuration settings are equivalent in the defense they provide. ([Number as of december 2022, based on testing of RTX 4000 GPUs](https://tobtu.com/minimum-password-settings/))
 
-When PBKDF2 is used with an HMAC, and the password is longer than the hash function's block size (64 bytes for SHA-256), the password will be automatically pre-hashed. For example, the password "This is a password longer than 512 bits which is the block size of SHA-256" is converted to the hash value (in hex) fa91498c139805af73f7ba275cca071e78d78675027000c99a9925e2ec92eedd. A good implementation of PBKDF2 will perform this step before the expensive iterated hashing phase, but some implementations perform the conversion on each iteration. This can make hashing long passwords significantly more expensive than hashing short passwords. If a user can supply very long passwords, there is a potential denial of service vulnerability, such as the one published in [Django](https://www.djangoproject.com/weblog/2013/sep/15/security/) in 2013. Manual [pre-hashing](#pre-hashing-passwords) can reduce this risk but requires adding a [salt](#salting) to the pre-hash step.
+#### PBKDF2 Pre-hashing
+
+When PBKDF2 is used with an HMAC, and the password is longer than the hash function's block size (64 bytes for SHA-256), the password will be automatically pre-hashed. For example, the password "This is a password longer than 512 bits which is the block size of SHA-256" is converted to the hash value (in hex): `fa91498c139805af73f7ba275cca071e78d78675027000c99a9925e2ec92eedd`.
+
+A good implementation of PBKDF2 will perform pre-hashing before the expensive iterated hashing phase, but some implementations perform the conversion on each iteration. This can make hashing long passwords significantly more expensive than hashing short passwords. If a user can supply very long passwords, there is a potential denial of service vulnerability, such as the one published in [Django](https://www.djangoproject.com/weblog/2013/sep/15/security/) in 2013. Manual [pre-hashing](#pre-hashing-passwords) can reduce this risk but requires adding a [salt](#salting) to the pre-hash step.
 
 ## Upgrading Legacy Hashes
 
