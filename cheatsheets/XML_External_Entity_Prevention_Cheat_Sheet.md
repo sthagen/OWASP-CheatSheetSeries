@@ -328,6 +328,8 @@ To protect a `javax.xml.validation.Validator` from XXE, do this:
 
 ``` java
 SchemaFactory factory = SchemaFactory.newInstance("http://www.w3.org/2001/XMLSchema");
+factory.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+factory.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
 Schema schema = factory.newSchema();
 Validator validator = schema.newValidator();
 validator.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
@@ -555,6 +557,14 @@ Table explanation:
 |                             | ≥4.5.2 | ✅ | ✅\* | ✅ | ✅\* | ✅\* | ✅ | ✅ | ✅ |
 
 \* For .NET Framework Versions ≥4.5.2, these libraries won't even process the in-line DTD by default. Even if you change the default to allow processing a DTD, if a DoS attempt is performed an exception will still be thrown as documented above.
+
+### ASP.NET
+
+ASP.NET applications ≥ .NET 4.5.2 must also ensure setting the `<httpRuntime targetFramework="..." />` in their `Web.config` to ≥4.5.2 or risk being vulnerable regardless or the actual .NET version. Omitting this tag will also result in unsafe-by-default behavior.
+
+For the purpose of understanding the above table, the `.NET Framework Version` for an ASP.NET applications is either the .NET version the application was build with or the httpRuntime's `targetFramework` (Web.config), **whichever is lower**.
+
+This configuration tag should not be confused with a simmilar configuration tag: `<compilation targetFramework="..." />` or the assemblies / projects targetFramework, which are **not** sufficient for achieving secure-by-default behaviour as advertised in the above table.
 
 ### LINQ to XML
 
