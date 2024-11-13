@@ -51,7 +51,7 @@ CSRF tokens prevent CSRF because without a CSRF token, an attacker cannot create
 
 #### Transmissing CSRF Tokens in Synchronized Patterns
 
-The CSRF token can be transmitted to the client as part of a response payload, such as a HTML or JSON response, then it can be transmitted back to the server as a hidden field on a form submission or via an AJAX request as a custom header value or part of a JSON payload. a CSRF token should not be transmitted in a cookie for synchronized patterns. A CSRF token must not be leaked in the server logs or in the URL. GET requests can potentially leak CSRF tokens at several locations, such as the browser history, log files, network utilities that log the first line of a HTTP request, and Referer headers if the protected site links to an external site.
+The CSRF token can be transmitted to the client as part of a response payload, such as a HTML or JSON response, then it can be transmitted back to the server as a hidden field on a form submission or via an AJAX request as a custom header value or part of a JSON payload. A CSRF token should not be transmitted in a cookie for synchronized patterns. A CSRF token must not be leaked in the server logs or in the URL. GET requests can potentially leak CSRF tokens at several locations, such as the browser history, log files, network utilities that log the first line of a HTTP request, and Referer headers if the protected site links to an external site.
 
 For example:
 
@@ -99,7 +99,7 @@ sessionID = session.sessionID // Current authenticated user session
 randomValue = cryptographic.randomValue() // Cryptographic random value
 
 // Create the CSRF Token
-message = sessionID + "!" + randomValue // HMAC message payload
+message = sessionID.length + "!" + sessionID + "!" + randomValue.length + "!" + randomValue // HMAC message payload
 hmac = hmac("SHA256", secret, message) // Generate the HMAC hash
 csrfToken = hmac + "." + randomValue // Add the `randomValue` to the HMAC hash to create the final CSRF token. Avoid using the `message` because it contains the sessionID in plain text, which the server already stores separately.
 
