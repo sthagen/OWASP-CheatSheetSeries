@@ -59,6 +59,7 @@ Orphaned Deployments – Test or deprecated models left accessible in production
 - Sign model binaries with digital signatures.
 - Ensure encryption at rest for model weights and datasets.
 - Restrict access to training logs and intermediate outputs.
+- Validate third-party or pre-trained models before production to ensure integrity and safe behavior.
 
 ### 4. Inference API Security
 
