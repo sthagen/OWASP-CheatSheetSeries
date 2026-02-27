@@ -4,6 +4,18 @@
 
 This document will provide a starting point for AJAX security and will hopefully be updated and expanded reasonably often to provide more detailed information about specific frameworks and technologies.
 
+**Before applying any specific control, developers must adopt a fundamental security mindset:**
+All data should be considered untrusted unless explicitly validated and safely handled.
+This applies to:
+
+- Client-side input
+- API response
+- Third-party integrations
+- Internal services and microservices
+- Cached responses
+- Browser storage (localStorage, sessionStorage)
+- Hidden form fields
+
 ### Client-Side (JavaScript)
 
 #### Use `innerHTML` with extreme caution
@@ -108,7 +120,7 @@ Don't forget that the user controls the client-side logic. A number of browser p
 
 #### Don't rely on client business logic
 
-Just like the security one, make sure any interesting business rules/logic is duplicated on the server-side lest a user bypass this logic, leading to unexpected or costly behavior.
+As with security logic, make sure any important business rules are duplicated on the server side so a user cannot bypass them, which could lead to unexpected or costly behavior.
 
 #### Avoid writing serialization code
 
@@ -133,7 +145,7 @@ Use TLS/SSL and encrypt on the server!
 
 #### Don't perform security impacting logic on client-side
 
-This principle serves as a fail-safe—if a security decision is ambiguous, default to performing it on the server.
+This principle serves as a fail-safe—if a security decision is ambiguous, perform it on the server.
 
 ### Server-Side
 
@@ -171,18 +183,18 @@ Always have the outside primitive be an object for JSON strings:
 
 #### Avoid writing serialization code server-side
 
-Remember ref vs. value types! Look for an existing library that has been reviewed.
+Remember reference vs. value types; use a reviewed library.
 
-#### Services can be called by users directly
+#### Services can be called directly by users
 
 Even though you only expect your AJAX client-side code to call those services, a malicious user can also call them directly.
 
-Make sure you validate inputs and treat them like they are under user control (because they are!).
+Validate inputs and treat them as if they are under user control.
 
 #### Avoid building XML or JSON by hand, use the framework
 
-Use the framework and be safe, do it by hand and have security issues.
+Use the framework to serialize data; building payloads by hand can introduce security issues.
 
 #### Use JSON and XML schema for web services
 
-You need to use a third-party library to validate web services.
+Use a third-party library to validate web service inputs.

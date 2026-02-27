@@ -59,6 +59,7 @@ Orphaned Deployments – Test or deprecated models left accessible in production
 - Sign model binaries with digital signatures.
 - Ensure encryption at rest for model weights and datasets.
 - Restrict access to training logs and intermediate outputs.
+- Validate third-party or pre-trained models before production to ensure integrity and safe behavior.
 
 ### 4. Inference API Security
 
@@ -86,6 +87,8 @@ Orphaned Deployments – Test or deprecated models left accessible in production
 - Include adversarial examples in testing and evaluation.
 - Use robust training techniques (e.g., adversarial training, input denoising).
 - Monitor model confidence thresholds to identify out-of-distribution inputs.
+- Use shadow deployments to evaluate candidate model behavior on real production inputs without affecting live outputs.
+- Use canary releases to gradually route a small percentage of traffic to the new model with rapid rollback capability if there are problems.
 
 ### 8. Incident Response & Governance
 
