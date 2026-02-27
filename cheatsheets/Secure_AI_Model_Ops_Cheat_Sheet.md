@@ -87,6 +87,8 @@ Orphaned Deployments – Test or deprecated models left accessible in production
 - Include adversarial examples in testing and evaluation.
 - Use robust training techniques (e.g., adversarial training, input denoising).
 - Monitor model confidence thresholds to identify out-of-distribution inputs.
+- Use shadow deployments to evaluate candidate model behavior on real production inputs without affecting live outputs.
+- Use canary releases to gradually route a small percentage of traffic to the new model with rapid rollback capability if there are problems.
 
 ### 8. Incident Response & Governance
 
