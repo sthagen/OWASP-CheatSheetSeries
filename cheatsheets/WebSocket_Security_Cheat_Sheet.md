@@ -176,6 +176,22 @@ ws.on('message', (data, isBinary) => {
 });
 ```
 
+**To prevent message replay attacks** include timestamps or nonces in messages and reject duplicates to ensure old messages cannot be maliciously resent.
+
+```javascript
+ws.on('message', (data) => {
+  const message = JSON.parse(data);
+  
+  // Check timestamp or nonce to prevent replay
+  if (!isValidNonce(message.nonce)) {
+    ws.close(1008, 'Replay detected');
+    return;
+  }
+
+  processMessage(message);
+});
+```
+
 **Always use `JSON.parse()` instead of `eval()`** for JSON processing - `eval()` enables code execution from untrusted input.
 
 ```javascript
